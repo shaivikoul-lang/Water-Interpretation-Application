@@ -1,0 +1,6492 @@
+{
+  "source": "HUD USPS ZIP\u2013COUNTY crosswalk (filtered to Colorado)",
+  "source_file": "ZIP_COUNTY_122025.xlsx",
+  "county_name_join": "CDPHE Public Drinking Water Data (unique county_fips \u2192 county)",
+  "cdphe_file": "EPHT_REF_COEPHT Public Drinking Water Data_2023_EN.xlsx - Public Drinking Water Data.csv",
+  "generated_at": "2026-04-26T17:41:43.428730+00:00",
+  "zip_count": 633,
+  "county_fips_names_resolved": 64,
+  "hud_rows_missing_cdph_county_name": 0,
+  "zips": {
+    "80001": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80002": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.966570994428499,
+        "tot_ratio": 0.9662585223319883
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.03342900557150093,
+        "tot_ratio": 0.033741477668011687
+      }
+    ],
+    "80003": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.8434929197572488,
+        "tot_ratio": 0.8448584736653529
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.15650708024275117,
+        "tot_ratio": 0.1551415263346471
+      }
+    ],
+    "80004": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80005": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80006": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80007": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80010": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.5071800446249786,
+        "tot_ratio": 0.5196930426386136
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.4777161164826363,
+        "tot_ratio": 0.466534532703156
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.015103838892385148,
+        "tot_ratio": 0.013772424658230422
+      }
+    ],
+    "80011": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.6569054214483577,
+        "tot_ratio": 0.6497338961277298
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.34309457855164227,
+        "tot_ratio": 0.35026610387227014
+      }
+    ],
+    "80012": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.990613266583229,
+        "tot_ratio": 0.9913474766490479
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.009386733416770964,
+        "tot_ratio": 0.00865252335095214
+      }
+    ],
+    "80013": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80014": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.8903901046622265,
+        "tot_ratio": 0.9057906024566192
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.10960989533777354,
+        "tot_ratio": 0.09420939754338077
+      }
+    ],
+    "80015": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80016": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.9290684542241976,
+        "tot_ratio": 0.9334562463723582
+      },
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.0709315457758024,
+        "tot_ratio": 0.06654375362764178
+      }
+    ],
+    "80017": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80018": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80019": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.9061063690085358,
+        "tot_ratio": 0.9081991683548353
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.09378419785511052,
+        "tot_ratio": 0.09169421047019938
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.0001094331363536879,
+        "tot_ratio": 0.00010662117496534811
+      }
+    ],
+    "80020": [
+      {
+        "county_fips": "08014",
+        "county_name": "Broomfield",
+        "res_ratio": 0.8019220043759921,
+        "tot_ratio": 0.8105392817275492
+      },
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.19413102235188126,
+        "tot_ratio": 0.18160822202548213
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 8.580376678536188e-05,
+        "tot_ratio": 0.003926248123484352
+      },
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.0038611695053412847,
+        "tot_ratio": 0.003926248123484352
+      }
+    ],
+    "80021": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.5687422047395184,
+        "tot_ratio": 0.5629200659424272
+      },
+      {
+        "county_fips": "08014",
+        "county_name": "Broomfield",
+        "res_ratio": 0.43125779526048164,
+        "tot_ratio": 0.43707993405757284
+      }
+    ],
+    "80022": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.9995627937479507
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.0004372062520494043
+      }
+    ],
+    "80023": [
+      {
+        "county_fips": "08014",
+        "county_name": "Broomfield",
+        "res_ratio": 0.7232972406566539,
+        "tot_ratio": 0.6998090388287714
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.27663290254977296,
+        "tot_ratio": 0.29840865690642904
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 6.985679357317499e-05,
+        "tot_ratio": 0.0017823042647994907
+      }
+    ],
+    "80024": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80025": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80026": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.999877668358921,
+        "tot_ratio": 0.9998953427524856
+      },
+      {
+        "county_fips": "08014",
+        "county_name": "Broomfield",
+        "res_ratio": 0.00012233164107896508,
+        "tot_ratio": 0.00010465724751439037
+      }
+    ],
+    "80027": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.9998801534036433,
+        "tot_ratio": 0.9993754228907511
+      },
+      {
+        "county_fips": "08014",
+        "county_name": "Broomfield",
+        "res_ratio": 0.00011984659635666346,
+        "tot_ratio": 0.000624577109248946
+      }
+    ],
+    "80030": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80031": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.896927242759595,
+        "tot_ratio": 0.8860546895502021
+      },
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.10307275724040499,
+        "tot_ratio": 0.11394531044979793
+      }
+    ],
+    "80033": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.9997166978299054
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.00028330217009462294
+      }
+    ],
+    "80034": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80035": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80036": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80037": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80038": [
+      {
+        "county_fips": "08014",
+        "county_name": "Broomfield",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80040": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80041": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80042": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80044": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80045": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.9901960784313726,
+        "tot_ratio": 0.994131455399061
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.00980392156862745,
+        "tot_ratio": 0.005868544600938967
+      }
+    ],
+    "80046": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80047": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80101": [
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80102": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.7787418655097614,
+        "tot_ratio": 0.7892266884309325
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.203470715835141,
+        "tot_ratio": 0.1940420322383187
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.017787418655097614,
+        "tot_ratio": 0.016731279330748826
+      }
+    ],
+    "80103": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.7401960784313726,
+        "tot_ratio": 0.7469990766389658
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.25980392156862747,
+        "tot_ratio": 0.2530009233610342
+      }
+    ],
+    "80104": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80105": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.7119815668202765,
+        "tot_ratio": 0.7166666666666667
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.27880184331797236,
+        "tot_ratio": 0.2733333333333333
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.009216589861751152,
+        "tot_ratio": 0.01
+      }
+    ],
+    "80106": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.608094262295082,
+        "tot_ratio": 0.5983033932135728
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.35809426229508196,
+        "tot_ratio": 0.36676646706586824
+      },
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.03381147540983607,
+        "tot_ratio": 0.03493013972055888
+      }
+    ],
+    "80107": [
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80108": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80109": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80110": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.9527386541471049,
+        "tot_ratio": 0.9563941043361263
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.04726134585289515,
+        "tot_ratio": 0.04360589566387377
+      }
+    ],
+    "80111": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.9826449616574734,
+        "tot_ratio": 0.982504556105181
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.01735503834252657,
+        "tot_ratio": 0.01749544389481906
+      }
+    ],
+    "80112": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.7945627648450828,
+        "tot_ratio": 0.8063623234916559
+      },
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.20543723515491719,
+        "tot_ratio": 0.19363767650834404
+      }
+    ],
+    "80113": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.9999239948316485,
+        "tot_ratio": 0.9992433101740387
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 7.60051683514479e-05,
+        "tot_ratio": 0.0007566898259613401
+      }
+    ],
+    "80116": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.9977125428898208,
+        "tot_ratio": 0.9975080099679601
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.002287457110179184,
+        "tot_ratio": 0.002491990032039872
+      }
+    ],
+    "80117": [
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80118": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.9962700484893696,
+        "tot_ratio": 0.9956427015250545
+      },
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.003729951510630362,
+        "tot_ratio": 0.004357298474945534
+      }
+    ],
+    "80120": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80121": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80122": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80123": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.3773683750982275,
+        "tot_ratio": 0.38937698078388894
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.3558019732821095,
+        "tot_ratio": 0.34219922172744416
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.266829651619663,
+        "tot_ratio": 0.2684237974886669
+      }
+    ],
+    "80124": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80125": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.9993054177416154
+      },
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.0006945822583846001
+      }
+    ],
+    "80126": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.9940291080980221,
+        "tot_ratio": 0.9937066604510226
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.005970891901977858,
+        "tot_ratio": 0.006293339548977333
+      }
+    ],
+    "80127": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.9999501917617174,
+        "tot_ratio": 0.9991025353376711
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 4.9808238282611946e-05,
+        "tot_ratio": 0.0008974646623289208
+      }
+    ],
+    "80128": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.9117857840901687,
+        "tot_ratio": 0.9126897389192471
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.08821421590983126,
+        "tot_ratio": 0.08731026108075289
+      }
+    ],
+    "80129": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.9973795219225361
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.0026204780774638885
+      }
+    ],
+    "80130": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80131": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80132": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80133": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80134": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80135": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.9972847168347556,
+        "tot_ratio": 0.9958592132505176
+      },
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.0023273855702094647,
+        "tot_ratio": 0.003795721187025535
+      },
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 0.0003878975950349108,
+        "tot_ratio": 0.0003450655624568668
+      }
+    ],
+    "80136": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.7814845704753962,
+        "tot_ratio": 0.7820887589689078
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.21851542952460384,
+        "tot_ratio": 0.21791124103109222
+      }
+    ],
+    "80137": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.7580645161290323,
+        "tot_ratio": 0.6576419213973799
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.24193548387096775,
+        "tot_ratio": 0.3423580786026201
+      }
+    ],
+    "80138": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.8712638917650307,
+        "tot_ratio": 0.8748533437622213
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.12839097121557258,
+        "tot_ratio": 0.12482075348715943
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.00034513701939670047,
+        "tot_ratio": 0.0003259027506192152
+      }
+    ],
+    "80150": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80151": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80155": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80160": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80161": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80162": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80163": [
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80165": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80166": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80201": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80202": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80203": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80204": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.999966788442378
+      },
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.0,
+        "tot_ratio": 3.321155762205247e-05
+      }
+    ],
+    "80205": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80206": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80207": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80208": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80209": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80210": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.9999545123726347
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.0,
+        "tot_ratio": 4.5487627365356625e-05
+      }
+    ],
+    "80211": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80212": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.831394824632585,
+        "tot_ratio": 0.8187139191789609
+      },
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.13073663330628438,
+        "tot_ratio": 0.14263951250801796
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.03786854206113065,
+        "tot_ratio": 0.03864656831302117
+      }
+    ],
+    "80214": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.9805012186738329,
+        "tot_ratio": 0.9798504692719656
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.019498781326167114,
+        "tot_ratio": 0.02014953072803436
+      }
+    ],
+    "80215": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80216": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.742992992992993,
+        "tot_ratio": 0.7424599789230693
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.257007007007007,
+        "tot_ratio": 0.2575400210769308
+      }
+    ],
+    "80217": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80218": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80219": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80220": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.9931083991385499,
+        "tot_ratio": 0.9927756486498392
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.004450825556353195,
+        "tot_ratio": 0.004933703361085414
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.002440775305096913,
+        "tot_ratio": 0.0022906479890753713
+      }
+    ],
+    "80221": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.8470017636684304,
+        "tot_ratio": 0.8505424063116371
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.15299823633156967,
+        "tot_ratio": 0.14945759368836292
+      }
+    ],
+    "80222": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.9170136823319452,
+        "tot_ratio": 0.932050829509354
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.08298631766805473,
+        "tot_ratio": 0.06794917049064596
+      }
+    ],
+    "80223": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80224": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.9956323930846224,
+        "tot_ratio": 0.9949127906976745
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.004367606915377616,
+        "tot_ratio": 0.005087209302325582
+      }
+    ],
+    "80225": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80226": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.9938297489965854,
+        "tot_ratio": 0.9882659713168188
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.006170251003414605,
+        "tot_ratio": 0.011734028683181226
+      }
+    ],
+    "80227": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.7703232644409115,
+        "tot_ratio": 0.7623365467213897
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.2296767355590885,
+        "tot_ratio": 0.2376634532786103
+      }
+    ],
+    "80228": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80229": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80230": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.9978742249778565,
+        "tot_ratio": 0.9925734581853407
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.0021257750221434896,
+        "tot_ratio": 0.007426541814659348
+      }
+    ],
+    "80231": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.6104376612628402,
+        "tot_ratio": 0.5981540336975925
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.38956233873715984,
+        "tot_ratio": 0.4018459663024076
+      }
+    ],
+    "80232": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.995193814648417,
+        "tot_ratio": 0.9875666074600356
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.004806185351582907,
+        "tot_ratio": 0.012433392539964476
+      }
+    ],
+    "80233": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80234": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.9551223241590214,
+        "tot_ratio": 0.9609248853581347
+      },
+      {
+        "county_fips": "08014",
+        "county_name": "Broomfield",
+        "res_ratio": 0.04487767584097859,
+        "tot_ratio": 0.03907511464186527
+      }
+    ],
+    "80235": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.67323356696344,
+        "tot_ratio": 0.6904114246854811
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.32676643303655994,
+        "tot_ratio": 0.3095885753145189
+      }
+    ],
+    "80236": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.9014370735955871,
+        "tot_ratio": 0.8978340825500613
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.09856292640441283,
+        "tot_ratio": 0.1021659174499387
+      }
+    ],
+    "80237": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.9998906625847365
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.00010933741526350318
+      }
+    ],
+    "80238": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.9858493775086741,
+        "tot_ratio": 0.9869619463505926
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.01415062249132594,
+        "tot_ratio": 0.013038053649407362
+      }
+    ],
+    "80239": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.9960292045600102,
+        "tot_ratio": 0.990685669397374
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.003970795439989753,
+        "tot_ratio": 0.009314330602625967
+      }
+    ],
+    "80241": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80243": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80246": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.6320592111933488,
+        "tot_ratio": 0.578567179400017
+      },
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.3679407888066511,
+        "tot_ratio": 0.421432820599983
+      }
+    ],
+    "80247": [
+      {
+        "county_fips": "08005",
+        "county_name": "Arapahoe",
+        "res_ratio": 0.5515877202236523,
+        "tot_ratio": 0.5619661321744343
+      },
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.44841227977634773,
+        "tot_ratio": 0.4380338678255657
+      }
+    ],
+    "80248": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80249": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.9998972725871899
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.00010272741281010838
+      }
+    ],
+    "80250": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80256": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80257": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80259": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80260": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80261": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80263": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80264": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80265": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80266": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.9529411764705882
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.047058823529411764
+      }
+    ],
+    "80271": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80273": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80281": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80290": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80291": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80293": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80294": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80299": [
+      {
+        "county_fips": "08031",
+        "county_name": "Denver",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80301": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80302": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80303": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.9998541529935098,
+        "tot_ratio": 0.9994247731049469
+      },
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.0001458470064901918,
+        "tot_ratio": 0.0005752268950530487
+      }
+    ],
+    "80304": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80305": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80306": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80307": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80308": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80309": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80310": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80314": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80401": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80402": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80403": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.9262548647839537,
+        "tot_ratio": 0.9328511474238771
+      },
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.0431094701127632,
+        "tot_ratio": 0.039378515938923116
+      },
+      {
+        "county_fips": "08047",
+        "county_name": "Gilpin",
+        "res_ratio": 0.030635665103283107,
+        "tot_ratio": 0.02777033663719975
+      }
+    ],
+    "80419": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80420": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80421": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 0.9964610717896866,
+        "tot_ratio": 0.9965346534653465
+      },
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.003538928210313448,
+        "tot_ratio": 0.0034653465346534654
+      }
+    ],
+    "80422": [
+      {
+        "county_fips": "08047",
+        "county_name": "Gilpin",
+        "res_ratio": 0.9848349687778769,
+        "tot_ratio": 0.9851851851851852
+      },
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.015165031222123104,
+        "tot_ratio": 0.014814814814814815
+      }
+    ],
+    "80423": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 0.9090909090909091,
+        "tot_ratio": 0.9
+      },
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 0.09090909090909091,
+        "tot_ratio": 0.1
+      }
+    ],
+    "80424": [
+      {
+        "county_fips": "08117",
+        "county_name": "Summit",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80425": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80426": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80427": [
+      {
+        "county_fips": "08047",
+        "county_name": "Gilpin",
+        "res_ratio": 0.9977973568281938,
+        "tot_ratio": 0.9978540772532188
+      },
+      {
+        "county_fips": "08019",
+        "county_name": "Clear Creek",
+        "res_ratio": 0.0022026431718061676,
+        "tot_ratio": 0.002145922746781116
+      }
+    ],
+    "80428": [
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80429": [
+      {
+        "county_fips": "08065",
+        "county_name": "Lake",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80430": [
+      {
+        "county_fips": "08057",
+        "county_name": "Jackson",
+        "res_ratio": 0.9928057553956835,
+        "tot_ratio": 0.9939024390243902
+      },
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.007194244604316547,
+        "tot_ratio": 0.006097560975609756
+      }
+    ],
+    "80432": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80433": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.9993852459016394,
+        "tot_ratio": 0.9994578966389591
+      },
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.0006147540983606558,
+        "tot_ratio": 0.0005421033610408384
+      }
+    ],
+    "80434": [
+      {
+        "county_fips": "08057",
+        "county_name": "Jackson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80435": [
+      {
+        "county_fips": "08117",
+        "county_name": "Summit",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80436": [
+      {
+        "county_fips": "08019",
+        "county_name": "Clear Creek",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80437": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80438": [
+      {
+        "county_fips": "08019",
+        "county_name": "Clear Creek",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80439": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.833069341781063,
+        "tot_ratio": 0.8488569663268458
+      },
+      {
+        "county_fips": "08019",
+        "county_name": "Clear Creek",
+        "res_ratio": 0.16649067229848644,
+        "tot_ratio": 0.15075687364843993
+      },
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 0.0004399859204505456,
+        "tot_ratio": 0.0003861600247142416
+      }
+    ],
+    "80440": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80442": [
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80443": [
+      {
+        "county_fips": "08117",
+        "county_name": "Summit",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80444": [
+      {
+        "county_fips": "08019",
+        "county_name": "Clear Creek",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80446": [
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80447": [
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80448": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80449": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80451": [
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80452": [
+      {
+        "county_fips": "08019",
+        "county_name": "Clear Creek",
+        "res_ratio": 0.9956355701036552,
+        "tot_ratio": 0.9957127545551983
+      },
+      {
+        "county_fips": "08047",
+        "county_name": "Gilpin",
+        "res_ratio": 0.00436442989634479,
+        "tot_ratio": 0.004287245444801715
+      }
+    ],
+    "80453": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80454": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80455": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80456": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80457": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80459": [
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80461": [
+      {
+        "county_fips": "08065",
+        "county_name": "Lake",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80463": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 0.7846153846153846,
+        "tot_ratio": 0.7714285714285715
+      },
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 0.2153846153846154,
+        "tot_ratio": 0.22857142857142856
+      }
+    ],
+    "80465": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80466": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.9966814159292036,
+        "tot_ratio": 0.9965644820295984
+      },
+      {
+        "county_fips": "08047",
+        "county_name": "Gilpin",
+        "res_ratio": 0.00331858407079646,
+        "tot_ratio": 0.003435517970401691
+      }
+    ],
+    "80467": [
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80468": [
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80469": [
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80470": [
+      {
+        "county_fips": "08059",
+        "county_name": "Jefferson",
+        "res_ratio": 0.7170315002669514,
+        "tot_ratio": 0.7087042532146389
+      },
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 0.2829684997330486,
+        "tot_ratio": 0.291295746785361
+      }
+    ],
+    "80471": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80473": [
+      {
+        "county_fips": "08057",
+        "county_name": "Jackson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80474": [
+      {
+        "county_fips": "08047",
+        "county_name": "Gilpin",
+        "res_ratio": 0.9636363636363636,
+        "tot_ratio": 0.9652173913043478
+      },
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.03636363636363636,
+        "tot_ratio": 0.034782608695652174
+      }
+    ],
+    "80475": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80476": [
+      {
+        "county_fips": "08019",
+        "county_name": "Clear Creek",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80477": [
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80478": [
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80479": [
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80480": [
+      {
+        "county_fips": "08057",
+        "county_name": "Jackson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80481": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80482": [
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80483": [
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80487": [
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80497": [
+      {
+        "county_fips": "08117",
+        "county_name": "Summit",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80498": [
+      {
+        "county_fips": "08117",
+        "county_name": "Summit",
+        "res_ratio": 0.9733771569433032,
+        "tot_ratio": 0.9744389027431422
+      },
+      {
+        "county_fips": "08049",
+        "county_name": "Grand",
+        "res_ratio": 0.026129827444535743,
+        "tot_ratio": 0.025093516209476308
+      },
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 0.0004930156121610517,
+        "tot_ratio": 0.0004675810473815461
+      }
+    ],
+    "80501": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.999953214185459,
+        "tot_ratio": 0.9999619178186526
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 4.678581454103116e-05,
+        "tot_ratio": 3.808218134734758e-05
+      }
+    ],
+    "80502": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80503": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.998231027772864,
+        "tot_ratio": 0.9983139436857191
+      },
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.0017689722271360339,
+        "tot_ratio": 0.001686056314280897
+      }
+    ],
+    "80504": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.5158885141132611,
+        "tot_ratio": 0.5059515937045365
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.48063199005858337,
+        "tot_ratio": 0.49080809416743815
+      },
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.003479495828155512,
+        "tot_ratio": 0.0032403121280253936
+      }
+    ],
+    "80510": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.9430051813471503,
+        "tot_ratio": 0.9392405063291139
+      },
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.05699481865284974,
+        "tot_ratio": 0.060759493670886074
+      }
+    ],
+    "80511": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80512": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80513": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.9616836542091355,
+        "tot_ratio": 0.9516398487646179
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.03756134390335976,
+        "tot_ratio": 0.04765673085377649
+      },
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.0007550018875047187,
+        "tot_ratio": 0.000703420381605557
+      }
+    ],
+    "80514": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80515": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80516": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.681496062992126,
+        "tot_ratio": 0.695223534373682
+      },
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.31749156355455566,
+        "tot_ratio": 0.3020877266975959
+      },
+      {
+        "county_fips": "08014",
+        "county_name": "Broomfield",
+        "res_ratio": 0.0010123734533183351,
+        "tot_ratio": 0.002688738928722058
+      }
+    ],
+    "80517": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80520": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80521": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80522": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80523": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80524": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.9821792502014314,
+        "tot_ratio": 0.9838273892234058
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.017820749798568652,
+        "tot_ratio": 0.016172610776594102
+      }
+    ],
+    "80525": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80526": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80527": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80528": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80530": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80532": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80533": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80534": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.6562978991975476,
+        "tot_ratio": 0.6458050271739131
+      },
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.34370210080245245,
+        "tot_ratio": 0.354194972826087
+      }
+    ],
+    "80535": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80536": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80537": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.9966910244036951,
+        "tot_ratio": 0.9970630258771234
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.003308975596304977,
+        "tot_ratio": 0.002936974122876647
+      }
+    ],
+    "80538": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80539": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80540": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 0.6033519553072626,
+        "tot_ratio": 0.6065873741994511
+      },
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.39664804469273746,
+        "tot_ratio": 0.3934126258005489
+      }
+    ],
+    "80541": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80542": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80543": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80544": [
+      {
+        "county_fips": "08013",
+        "county_name": "Boulder",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80545": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80546": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80547": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80549": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.9806563039723661,
+        "tot_ratio": 0.981081978094922
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.01934369602763385,
+        "tot_ratio": 0.018918021905077995
+      }
+    ],
+    "80550": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.8704398076668578,
+        "tot_ratio": 0.869947205094104
+      },
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.12956019233314217,
+        "tot_ratio": 0.1300527949058961
+      }
+    ],
+    "80553": [
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80601": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 0.9999531528155158
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.0,
+        "tot_ratio": 4.68471844842125e-05
+      }
+    ],
+    "80602": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.9998869864948862,
+        "tot_ratio": 0.9998901461056795
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.00011301350511386111,
+        "tot_ratio": 0.00010985389432055367
+      }
+    ],
+    "80603": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.6316950220541903,
+        "tot_ratio": 0.6418312387791741
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.3683049779458097,
+        "tot_ratio": 0.35816876122082586
+      }
+    ],
+    "80610": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80611": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80612": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.7696476964769647,
+        "tot_ratio": 0.7736842105263158
+      },
+      {
+        "county_fips": "08069",
+        "county_name": "Larimer",
+        "res_ratio": 0.23035230352303523,
+        "tot_ratio": 0.22631578947368422
+      }
+    ],
+    "80614": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80615": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80620": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80621": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80622": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80623": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80624": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80631": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80632": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80633": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80634": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80638": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80639": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80640": [
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80642": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.70996640537514,
+        "tot_ratio": 0.7216880341880342
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.29003359462486,
+        "tot_ratio": 0.2783119658119658
+      }
+    ],
+    "80643": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.896011396011396,
+        "tot_ratio": 0.8994951812758146
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.10398860398860399,
+        "tot_ratio": 0.1005048187241854
+      }
+    ],
+    "80644": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80645": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80646": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80648": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80649": [
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 0.5434782608695652,
+        "tot_ratio": 0.5531914893617021
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.45652173913043476,
+        "tot_ratio": 0.44680851063829785
+      }
+    ],
+    "80650": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80651": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80652": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80653": [
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80654": [
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 0.9654107473749228,
+        "tot_ratio": 0.9677975848188615
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.022235948116121063,
+        "tot_ratio": 0.020701552616446232
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.012353304508956145,
+        "tot_ratio": 0.011500862564692352
+      }
+    ],
+    "80701": [
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 0.9966726388533401,
+        "tot_ratio": 0.9969558599695586
+      },
+      {
+        "county_fips": "08001",
+        "county_name": "Adams",
+        "res_ratio": 0.0033273611466598414,
+        "tot_ratio": 0.0030441400304414
+      }
+    ],
+    "80705": [
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80720": [
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.9977989728539985,
+        "tot_ratio": 0.9980940279542567
+      },
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 0.0022010271460014674,
+        "tot_ratio": 0.0019059720457433292
+      }
+    ],
+    "80721": [
+      {
+        "county_fips": "08095",
+        "county_name": "Phillips",
+        "res_ratio": 0.9425287356321839,
+        "tot_ratio": 0.945054945054945
+      },
+      {
+        "county_fips": "08115",
+        "county_name": "Sedgwick",
+        "res_ratio": 0.05747126436781609,
+        "tot_ratio": 0.054945054945054944
+      }
+    ],
+    "80722": [
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80723": [
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 0.996135265700483,
+        "tot_ratio": 0.9965733866362079
+      },
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.003864734299516908,
+        "tot_ratio": 0.0034266133637921186
+      }
+    ],
+    "80726": [
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80727": [
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80728": [
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 0.9978118161925602,
+        "tot_ratio": 0.9978768577494692
+      },
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.002188183807439825,
+        "tot_ratio": 0.0021231422505307855
+      }
+    ],
+    "80729": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80731": [
+      {
+        "county_fips": "08095",
+        "county_name": "Phillips",
+        "res_ratio": 0.9017857142857143,
+        "tot_ratio": 0.9037122969837587
+      },
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 0.07270408163265306,
+        "tot_ratio": 0.07192575406032482
+      },
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 0.016581632653061226,
+        "tot_ratio": 0.016241299303944315
+      },
+      {
+        "county_fips": "08115",
+        "county_name": "Sedgwick",
+        "res_ratio": 0.008928571428571428,
+        "tot_ratio": 0.008120649651972157
+      }
+    ],
+    "80732": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80733": [
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 0.7798507462686567,
+        "tot_ratio": 0.7749077490774908
+      },
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.22014925373134328,
+        "tot_ratio": 0.22509225092250923
+      }
+    ],
+    "80734": [
+      {
+        "county_fips": "08095",
+        "county_name": "Phillips",
+        "res_ratio": 0.9624113475177305,
+        "tot_ratio": 0.9592081583683263
+      },
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 0.0375886524822695,
+        "tot_ratio": 0.04079184163167367
+      }
+    ],
+    "80735": [
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80736": [
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80737": [
+      {
+        "county_fips": "08115",
+        "county_name": "Sedgwick",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80740": [
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80741": [
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 0.9096638655462185,
+        "tot_ratio": 0.9117043121149897
+      },
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.0819327731092437,
+        "tot_ratio": 0.08008213552361396
+      },
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 0.0063025210084033615,
+        "tot_ratio": 0.006160164271047228
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.0021008403361344537,
+        "tot_ratio": 0.002053388090349076
+      }
+    ],
+    "80742": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.924812030075188,
+        "tot_ratio": 0.927007299270073
+      },
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 0.07518796992481203,
+        "tot_ratio": 0.072992700729927
+      }
+    ],
+    "80743": [
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80744": [
+      {
+        "county_fips": "08115",
+        "county_name": "Sedgwick",
+        "res_ratio": 0.9789473684210527,
+        "tot_ratio": 0.9794520547945206
+      },
+      {
+        "county_fips": "08095",
+        "county_name": "Phillips",
+        "res_ratio": 0.021052631578947368,
+        "tot_ratio": 0.02054794520547945
+      }
+    ],
+    "80745": [
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 0.9466666666666667,
+        "tot_ratio": 0.9473684210526315
+      },
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.05333333333333334,
+        "tot_ratio": 0.05263157894736842
+      }
+    ],
+    "80746": [
+      {
+        "county_fips": "08095",
+        "county_name": "Phillips",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80747": [
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80749": [
+      {
+        "county_fips": "08115",
+        "county_name": "Sedgwick",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80750": [
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80751": [
+      {
+        "county_fips": "08075",
+        "county_name": "Logan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80754": [
+      {
+        "county_fips": "08123",
+        "county_name": "Weld",
+        "res_ratio": 0.984375,
+        "tot_ratio": 0.9850746268656716
+      },
+      {
+        "county_fips": "08087",
+        "county_name": "Morgan",
+        "res_ratio": 0.015625,
+        "tot_ratio": 0.014925373134328358
+      }
+    ],
+    "80755": [
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80757": [
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80758": [
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 0.9994638069705094,
+        "tot_ratio": 0.9995511669658886
+      },
+      {
+        "county_fips": "08095",
+        "county_name": "Phillips",
+        "res_ratio": 0.0005361930294906167,
+        "tot_ratio": 0.0004488330341113106
+      }
+    ],
+    "80759": [
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 0.9810679611650486,
+        "tot_ratio": 0.9828920570264765
+      },
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.018932038834951457,
+        "tot_ratio": 0.017107942973523423
+      }
+    ],
+    "80801": [
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80802": [
+      {
+        "county_fips": "08017",
+        "county_name": "Cheyenne",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80804": [
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80805": [
+      {
+        "county_fips": "08063",
+        "county_name": "Kit Carson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80807": [
+      {
+        "county_fips": "08063",
+        "county_name": "Kit Carson",
+        "res_ratio": 0.9990884229717412,
+        "tot_ratio": 0.9992542878448919
+      },
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 0.0009115770282588879,
+        "tot_ratio": 0.0007457121551081282
+      }
+    ],
+    "80808": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.9663573085846868,
+        "tot_ratio": 0.9679869777536625
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.033642691415313224,
+        "tot_ratio": 0.032013022246337494
+      }
+    ],
+    "80809": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80810": [
+      {
+        "county_fips": "08017",
+        "county_name": "Cheyenne",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80812": [
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.9830508474576272,
+        "tot_ratio": 0.984
+      },
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 0.01694915254237288,
+        "tot_ratio": 0.016
+      }
+    ],
+    "80813": [
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80814": [
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80815": [
+      {
+        "county_fips": "08063",
+        "county_name": "Kit Carson",
+        "res_ratio": 0.9411764705882353,
+        "tot_ratio": 0.9444444444444444
+      },
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.058823529411764705,
+        "tot_ratio": 0.05555555555555555
+      }
+    ],
+    "80816": [
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 0.8887056883759274,
+        "tot_ratio": 0.8901843817787418
+      },
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 0.11129431162407255,
+        "tot_ratio": 0.10981561822125814
+      }
+    ],
+    "80817": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.992077863286555,
+        "tot_ratio": 0.9925768822905621
+      },
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.007922136713444997,
+        "tot_ratio": 0.007423117709437964
+      }
+    ],
+    "80818": [
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.9329608938547486,
+        "tot_ratio": 0.9289617486338798
+      },
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.0670391061452514,
+        "tot_ratio": 0.07103825136612021
+      }
+    ],
+    "80819": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.9753694581280788,
+        "tot_ratio": 0.9757281553398058
+      },
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 0.024630541871921183,
+        "tot_ratio": 0.024271844660194174
+      }
+    ],
+    "80820": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80821": [
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80822": [
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80823": [
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80824": [
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80825": [
+      {
+        "county_fips": "08017",
+        "county_name": "Cheyenne",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80826": [
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80827": [
+      {
+        "county_fips": "08093",
+        "county_name": "Park",
+        "res_ratio": 0.7735849056603774,
+        "tot_ratio": 0.7763636363636364
+      },
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 0.22641509433962265,
+        "tot_ratio": 0.22363636363636363
+      }
+    ],
+    "80828": [
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.9210307564422278,
+        "tot_ratio": 0.9256390395042603
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.07896924355777224,
+        "tot_ratio": 0.07436096049573973
+      }
+    ],
+    "80829": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80830": [
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80831": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.9962867944909533,
+        "tot_ratio": 0.9964398990225904
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.003713205509046719,
+        "tot_ratio": 0.003560100977409541
+      }
+    ],
+    "80832": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.568922305764411,
+        "tot_ratio": 0.57
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.40100250626566414,
+        "tot_ratio": 0.4
+      },
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.03007518796992481,
+        "tot_ratio": 0.03
+      }
+    ],
+    "80833": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.6046511627906976,
+        "tot_ratio": 0.599502487562189
+      },
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.35658914728682173,
+        "tot_ratio": 0.36318407960199006
+      },
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.03875968992248062,
+        "tot_ratio": 0.03731343283582089
+      }
+    ],
+    "80834": [
+      {
+        "county_fips": "08063",
+        "county_name": "Kit Carson",
+        "res_ratio": 0.9941520467836257,
+        "tot_ratio": 0.9943502824858758
+      },
+      {
+        "county_fips": "08121",
+        "county_name": "Washington",
+        "res_ratio": 0.005847953216374269,
+        "tot_ratio": 0.005649717514124294
+      }
+    ],
+    "80835": [
+      {
+        "county_fips": "08039",
+        "county_name": "Elbert",
+        "res_ratio": 0.9432624113475178,
+        "tot_ratio": 0.9443155452436195
+      },
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.05673758865248227,
+        "tot_ratio": 0.05568445475638051
+      }
+    ],
+    "80836": [
+      {
+        "county_fips": "08063",
+        "county_name": "Kit Carson",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80840": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80841": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80860": [
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80861": [
+      {
+        "county_fips": "08063",
+        "county_name": "Kit Carson",
+        "res_ratio": 0.9921259842519685,
+        "tot_ratio": 0.9923664122137404
+      },
+      {
+        "county_fips": "08125",
+        "county_name": "Yuma",
+        "res_ratio": 0.007874015748031496,
+        "tot_ratio": 0.007633587786259542
+      }
+    ],
+    "80862": [
+      {
+        "county_fips": "08017",
+        "county_name": "Cheyenne",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80863": [
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 0.9610169491525423,
+        "tot_ratio": 0.9645422943221321
+      },
+      {
+        "county_fips": "08035",
+        "county_name": "Douglas",
+        "res_ratio": 0.025032594524119947,
+        "tot_ratio": 0.022711471610660488
+      },
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.01395045632333768,
+        "tot_ratio": 0.012746234067207415
+      }
+    ],
+    "80864": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80866": [
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80901": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80902": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80903": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80904": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80905": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80906": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.9999453790692593,
+        "tot_ratio": 0.9999522786924362
+      },
+      {
+        "county_fips": "08119",
+        "county_name": "Teller",
+        "res_ratio": 5.462093074065982e-05,
+        "tot_ratio": 4.772130756382725e-05
+      }
+    ],
+    "80907": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80908": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80909": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80910": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80911": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80912": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80913": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80914": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80915": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80916": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80917": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80918": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80919": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80920": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80921": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80922": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80923": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80924": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80925": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80926": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.9659685863874345,
+        "tot_ratio": 0.966794380587484
+      },
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.034031413612565446,
+        "tot_ratio": 0.033205619412515965
+      }
+    ],
+    "80927": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80928": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80929": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80930": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80931": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80932": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80933": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80934": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80935": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80936": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80937": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80938": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80939": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80941": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80942": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80946": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80947": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80949": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80950": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80951": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80960": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80962": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80970": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80977": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "80997": [
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81001": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81002": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81003": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81004": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81005": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81006": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81007": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81008": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.9995967741935484,
+        "tot_ratio": 0.999669129811404
+      },
+      {
+        "county_fips": "08041",
+        "county_name": "El Paso",
+        "res_ratio": 0.0004032258064516129,
+        "tot_ratio": 0.0003308701885960075
+      }
+    ],
+    "81009": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81010": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81011": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81012": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81019": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81020": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81021": [
+      {
+        "county_fips": "08061",
+        "county_name": "Kiowa",
+        "res_ratio": 0.7619047619047619,
+        "tot_ratio": 0.7727272727272727
+      },
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.23809523809523808,
+        "tot_ratio": 0.22727272727272727
+      }
+    ],
+    "81022": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81023": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81024": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81025": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81027": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81029": [
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81030": [
+      {
+        "county_fips": "08089",
+        "county_name": "Otero",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81033": [
+      {
+        "county_fips": "08025",
+        "county_name": "Crowley",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81034": [
+      {
+        "county_fips": "08025",
+        "county_name": "Crowley",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81036": [
+      {
+        "county_fips": "08061",
+        "county_name": "Kiowa",
+        "res_ratio": 0.9922928709055877,
+        "tot_ratio": 0.9927404718693285
+      },
+      {
+        "county_fips": "08017",
+        "county_name": "Cheyenne",
+        "res_ratio": 0.007707129094412331,
+        "tot_ratio": 0.007259528130671506
+      }
+    ],
+    "81039": [
+      {
+        "county_fips": "08089",
+        "county_name": "Otero",
+        "res_ratio": 0.8734309623430963,
+        "tot_ratio": 0.8856607310215557
+      },
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.11297071129707113,
+        "tot_ratio": 0.1021555763823805
+      },
+      {
+        "county_fips": "08025",
+        "county_name": "Crowley",
+        "res_ratio": 0.012552301255230125,
+        "tot_ratio": 0.011246485473289597
+      },
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 0.0010460251046025104,
+        "tot_ratio": 0.0009372071227741331
+      }
+    ],
+    "81040": [
+      {
+        "county_fips": "08055",
+        "county_name": "Huerfano",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81041": [
+      {
+        "county_fips": "08099",
+        "county_name": "Prowers",
+        "res_ratio": 0.9890909090909091,
+        "tot_ratio": 0.9893238434163701
+      },
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 0.01090909090909091,
+        "tot_ratio": 0.010676156583629894
+      }
+    ],
+    "81043": [
+      {
+        "county_fips": "08099",
+        "county_name": "Prowers",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81044": [
+      {
+        "county_fips": "08011",
+        "county_name": "Bent",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81045": [
+      {
+        "county_fips": "08061",
+        "county_name": "Kiowa",
+        "res_ratio": 0.7058823529411765,
+        "tot_ratio": 0.7101449275362319
+      },
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.19117647058823528,
+        "tot_ratio": 0.18840579710144928
+      },
+      {
+        "county_fips": "08017",
+        "county_name": "Cheyenne",
+        "res_ratio": 0.10294117647058823,
+        "tot_ratio": 0.10144927536231885
+      }
+    ],
+    "81046": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81047": [
+      {
+        "county_fips": "08099",
+        "county_name": "Prowers",
+        "res_ratio": 0.9826435246995995,
+        "tot_ratio": 0.9828947368421053
+      },
+      {
+        "county_fips": "08061",
+        "county_name": "Kiowa",
+        "res_ratio": 0.010680907877169559,
+        "tot_ratio": 0.010526315789473684
+      },
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 0.006675567423230975,
+        "tot_ratio": 0.006578947368421052
+      }
+    ],
+    "81049": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81050": [
+      {
+        "county_fips": "08089",
+        "county_name": "Otero",
+        "res_ratio": 0.9964598084131612,
+        "tot_ratio": 0.9969495783240624
+      },
+      {
+        "county_fips": "08011",
+        "county_name": "Bent",
+        "res_ratio": 0.003540191586838817,
+        "tot_ratio": 0.003050421675937556
+      }
+    ],
+    "81052": [
+      {
+        "county_fips": "08099",
+        "county_name": "Prowers",
+        "res_ratio": 0.9995655007603736,
+        "tot_ratio": 0.9996340347666972
+      },
+      {
+        "county_fips": "08011",
+        "county_name": "Bent",
+        "res_ratio": 0.00043449923962633063,
+        "tot_ratio": 0.00036596523330283625
+      }
+    ],
+    "81054": [
+      {
+        "county_fips": "08011",
+        "county_name": "Bent",
+        "res_ratio": 0.9947970863683663,
+        "tot_ratio": 0.9954212454212454
+      },
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 0.0026014568158168575,
+        "tot_ratio": 0.0022893772893772895
+      },
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 0.0026014568158168575,
+        "tot_ratio": 0.0022893772893772895
+      }
+    ],
+    "81055": [
+      {
+        "county_fips": "08055",
+        "county_name": "Huerfano",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81057": [
+      {
+        "county_fips": "08011",
+        "county_name": "Bent",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81058": [
+      {
+        "county_fips": "08089",
+        "county_name": "Otero",
+        "res_ratio": 0.9206963249516441,
+        "tot_ratio": 0.9176029962546817
+      },
+      {
+        "county_fips": "08025",
+        "county_name": "Crowley",
+        "res_ratio": 0.07930367504835589,
+        "tot_ratio": 0.08239700374531835
+      }
+    ],
+    "81059": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 0.911504424778761,
+        "tot_ratio": 0.9145299145299145
+      },
+      {
+        "county_fips": "08089",
+        "county_name": "Otero",
+        "res_ratio": 0.08849557522123894,
+        "tot_ratio": 0.08547008547008547
+      }
+    ],
+    "81062": [
+      {
+        "county_fips": "08025",
+        "county_name": "Crowley",
+        "res_ratio": 0.9950372208436724,
+        "tot_ratio": 0.995249406175772
+      },
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.004962779156327543,
+        "tot_ratio": 0.004750593824228029
+      }
+    ],
+    "81063": [
+      {
+        "county_fips": "08025",
+        "county_name": "Crowley",
+        "res_ratio": 0.9562955254942768,
+        "tot_ratio": 0.9639794168096055
+      },
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.043704474505723206,
+        "tot_ratio": 0.036020583190394515
+      }
+    ],
+    "81064": [
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 0.875,
+        "tot_ratio": 0.8764044943820225
+      },
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 0.125,
+        "tot_ratio": 0.12359550561797752
+      }
+    ],
+    "81067": [
+      {
+        "county_fips": "08089",
+        "county_name": "Otero",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81069": [
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.7839388145315488,
+        "tot_ratio": 0.7949865711727843
+      },
+      {
+        "county_fips": "08055",
+        "county_name": "Huerfano",
+        "res_ratio": 0.121414913957935,
+        "tot_ratio": 0.11459265890778872
+      },
+      {
+        "county_fips": "08027",
+        "county_name": "Custer",
+        "res_ratio": 0.09464627151051626,
+        "tot_ratio": 0.09042076991942703
+      }
+    ],
+    "81071": [
+      {
+        "county_fips": "08061",
+        "county_name": "Kiowa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81073": [
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81076": [
+      {
+        "county_fips": "08025",
+        "county_name": "Crowley",
+        "res_ratio": 0.9918032786885246,
+        "tot_ratio": 0.9919354838709677
+      },
+      {
+        "county_fips": "08073",
+        "county_name": "Lincoln",
+        "res_ratio": 0.00819672131147541,
+        "tot_ratio": 0.008064516129032258
+      }
+    ],
+    "81077": [
+      {
+        "county_fips": "08089",
+        "county_name": "Otero",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81081": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81082": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81084": [
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81087": [
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81089": [
+      {
+        "county_fips": "08055",
+        "county_name": "Huerfano",
+        "res_ratio": 0.9971959341044515,
+        "tot_ratio": 0.997542242703533
+      },
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 0.0028040658955485456,
+        "tot_ratio": 0.002457757296466974
+      }
+    ],
+    "81090": [
+      {
+        "county_fips": "08009",
+        "county_name": "Baca",
+        "res_ratio": 0.9983660130718954,
+        "tot_ratio": 0.9984051036682615
+      },
+      {
+        "county_fips": "08099",
+        "county_name": "Prowers",
+        "res_ratio": 0.0016339869281045752,
+        "tot_ratio": 0.001594896331738437
+      }
+    ],
+    "81091": [
+      {
+        "county_fips": "08071",
+        "county_name": "Las Animas",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81092": [
+      {
+        "county_fips": "08099",
+        "county_name": "Prowers",
+        "res_ratio": 0.7750611246943765,
+        "tot_ratio": 0.7672209026128266
+      },
+      {
+        "county_fips": "08011",
+        "county_name": "Bent",
+        "res_ratio": 0.2176039119804401,
+        "tot_ratio": 0.22327790973871733
+      },
+      {
+        "county_fips": "08061",
+        "county_name": "Kiowa",
+        "res_ratio": 0.007334963325183374,
+        "tot_ratio": 0.009501187648456057
+      }
+    ],
+    "81101": [
+      {
+        "county_fips": "08003",
+        "county_name": "Alamosa",
+        "res_ratio": 0.9935491172476234,
+        "tot_ratio": 0.9944150216658643
+      },
+      {
+        "county_fips": "08021",
+        "county_name": "Conejos",
+        "res_ratio": 0.006450882752376641,
+        "tot_ratio": 0.005584978334135773
+      }
+    ],
+    "81102": [
+      {
+        "county_fips": "08003",
+        "county_name": "Alamosa",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81120": [
+      {
+        "county_fips": "08021",
+        "county_name": "Conejos",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81121": [
+      {
+        "county_fips": "08007",
+        "county_name": "Archuleta",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81122": [
+      {
+        "county_fips": "08067",
+        "county_name": "La Plata",
+        "res_ratio": 0.9854322407513897,
+        "tot_ratio": 0.984766050054407
+      },
+      {
+        "county_fips": "08007",
+        "county_name": "Archuleta",
+        "res_ratio": 0.014567759248610312,
+        "tot_ratio": 0.015233949945593036
+      }
+    ],
+    "81123": [
+      {
+        "county_fips": "08023",
+        "county_name": "Costilla",
+        "res_ratio": 0.9972972972972973,
+        "tot_ratio": 0.9973753280839895
+      },
+      {
+        "county_fips": "08003",
+        "county_name": "Alamosa",
+        "res_ratio": 0.002702702702702703,
+        "tot_ratio": 0.0026246719160104987
+      }
+    ],
+    "81124": [
+      {
+        "county_fips": "08021",
+        "county_name": "Conejos",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81125": [
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 0.7750556792873051,
+        "tot_ratio": 0.7714863498483316
+      },
+      {
+        "county_fips": "08105",
+        "county_name": "Rio Grande",
+        "res_ratio": 0.21603563474387527,
+        "tot_ratio": 0.21739130434782608
+      },
+      {
+        "county_fips": "08003",
+        "county_name": "Alamosa",
+        "res_ratio": 0.008908685968819599,
+        "tot_ratio": 0.011122345803842264
+      }
+    ],
+    "81126": [
+      {
+        "county_fips": "08023",
+        "county_name": "Costilla",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81128": [
+      {
+        "county_fips": "08007",
+        "county_name": "Archuleta",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81129": [
+      {
+        "county_fips": "08021",
+        "county_name": "Conejos",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81130": [
+      {
+        "county_fips": "08079",
+        "county_name": "Mineral",
+        "res_ratio": 0.9337231968810916,
+        "tot_ratio": 0.9291115311909263
+      },
+      {
+        "county_fips": "08053",
+        "county_name": "Hinsdale",
+        "res_ratio": 0.06627680311890838,
+        "tot_ratio": 0.07088846880907372
+      }
+    ],
+    "81131": [
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81132": [
+      {
+        "county_fips": "08105",
+        "county_name": "Rio Grande",
+        "res_ratio": 0.9334027055150884,
+        "tot_ratio": 0.9389204545454546
+      },
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 0.06659729448491156,
+        "tot_ratio": 0.061079545454545456
+      }
+    ],
+    "81133": [
+      {
+        "county_fips": "08023",
+        "county_name": "Costilla",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81135": [
+      {
+        "county_fips": "08105",
+        "county_name": "Rio Grande",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81136": [
+      {
+        "county_fips": "08003",
+        "county_name": "Alamosa",
+        "res_ratio": 0.9714285714285714,
+        "tot_ratio": 0.9727272727272728
+      },
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 0.02857142857142857,
+        "tot_ratio": 0.02727272727272727
+      }
+    ],
+    "81137": [
+      {
+        "county_fips": "08067",
+        "county_name": "La Plata",
+        "res_ratio": 0.9009584664536742,
+        "tot_ratio": 0.899955535793686
+      },
+      {
+        "county_fips": "08007",
+        "county_name": "Archuleta",
+        "res_ratio": 0.09904153354632587,
+        "tot_ratio": 0.10004446420631392
+      }
+    ],
+    "81138": [
+      {
+        "county_fips": "08023",
+        "county_name": "Costilla",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81140": [
+      {
+        "county_fips": "08021",
+        "county_name": "Conejos",
+        "res_ratio": 0.996186844613918,
+        "tot_ratio": 0.9963369963369964
+      },
+      {
+        "county_fips": "08105",
+        "county_name": "Rio Grande",
+        "res_ratio": 0.0038131553860819827,
+        "tot_ratio": 0.003663003663003663
+      }
+    ],
+    "81141": [
+      {
+        "county_fips": "08021",
+        "county_name": "Conejos",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81143": [
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81144": [
+      {
+        "county_fips": "08105",
+        "county_name": "Rio Grande",
+        "res_ratio": 0.9794285714285714,
+        "tot_ratio": 0.9816786333250804
+      },
+      {
+        "county_fips": "08003",
+        "county_name": "Alamosa",
+        "res_ratio": 0.02057142857142857,
+        "tot_ratio": 0.018321366674919536
+      }
+    ],
+    "81146": [
+      {
+        "county_fips": "08003",
+        "county_name": "Alamosa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81147": [
+      {
+        "county_fips": "08007",
+        "county_name": "Archuleta",
+        "res_ratio": 0.9988817891373802,
+        "tot_ratio": 0.9989838136023808
+      },
+      {
+        "county_fips": "08053",
+        "county_name": "Hinsdale",
+        "res_ratio": 0.0011182108626198084,
+        "tot_ratio": 0.0010161863976192204
+      }
+    ],
+    "81148": [
+      {
+        "county_fips": "08021",
+        "county_name": "Conejos",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81149": [
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81151": [
+      {
+        "county_fips": "08021",
+        "county_name": "Conejos",
+        "res_ratio": 0.9041095890410958,
+        "tot_ratio": 0.9029649595687331
+      },
+      {
+        "county_fips": "08023",
+        "county_name": "Costilla",
+        "res_ratio": 0.0958904109589041,
+        "tot_ratio": 0.09703504043126684
+      }
+    ],
+    "81152": [
+      {
+        "county_fips": "08023",
+        "county_name": "Costilla",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81154": [
+      {
+        "county_fips": "08105",
+        "county_name": "Rio Grande",
+        "res_ratio": 0.951408061844285,
+        "tot_ratio": 0.9475357710651828
+      },
+      {
+        "county_fips": "08079",
+        "county_name": "Mineral",
+        "res_ratio": 0.048591938155715074,
+        "tot_ratio": 0.05246422893481717
+      }
+    ],
+    "81155": [
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81157": [
+      {
+        "county_fips": "08007",
+        "county_name": "Archuleta",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81201": [
+      {
+        "county_fips": "08015",
+        "county_name": "Chaffee",
+        "res_ratio": 0.9943452380952381,
+        "tot_ratio": 0.995335133808004
+      },
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.005654761904761905,
+        "tot_ratio": 0.004664866191996072
+      }
+    ],
+    "81210": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81211": [
+      {
+        "county_fips": "08015",
+        "county_name": "Chaffee",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81212": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.9998519834221433,
+        "tot_ratio": 0.9998700370394438
+      },
+      {
+        "county_fips": "08027",
+        "county_name": "Custer",
+        "res_ratio": 0.00014801657785671994,
+        "tot_ratio": 0.00012996296055624147
+      }
+    ],
+    "81215": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81220": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 0.9659574468085106,
+        "tot_ratio": 0.9666666666666667
+      },
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 0.03404255319148936,
+        "tot_ratio": 0.03333333333333333
+      }
+    ],
+    "81221": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81222": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81223": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.9934043632673769,
+        "tot_ratio": 0.9935802469135803
+      },
+      {
+        "county_fips": "08027",
+        "county_name": "Custer",
+        "res_ratio": 0.006595636732623034,
+        "tot_ratio": 0.006419753086419753
+      }
+    ],
+    "81224": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81225": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81226": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.9916425586628094,
+        "tot_ratio": 0.9924506387921022
+      },
+      {
+        "county_fips": "08027",
+        "county_name": "Custer",
+        "res_ratio": 0.008357441337190614,
+        "tot_ratio": 0.007549361207897794
+      }
+    ],
+    "81227": [
+      {
+        "county_fips": "08015",
+        "county_name": "Chaffee",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81228": [
+      {
+        "county_fips": "08015",
+        "county_name": "Chaffee",
+        "res_ratio": 0.9259259259259259,
+        "tot_ratio": 0.9354838709677419
+      },
+      {
+        "county_fips": "08065",
+        "county_name": "Lake",
+        "res_ratio": 0.07407407407407407,
+        "tot_ratio": 0.06451612903225806
+      }
+    ],
+    "81230": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 0.9976769609182837,
+        "tot_ratio": 0.9981225842076201
+      },
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 0.002323039081716316,
+        "tot_ratio": 0.0018774157923799005
+      }
+    ],
+    "81231": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81232": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81233": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81235": [
+      {
+        "county_fips": "08053",
+        "county_name": "Hinsdale",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81236": [
+      {
+        "county_fips": "08015",
+        "county_name": "Chaffee",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81237": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81239": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81240": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81241": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81242": [
+      {
+        "county_fips": "08015",
+        "county_name": "Chaffee",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81243": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81244": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81248": [
+      {
+        "county_fips": "08109",
+        "county_name": "Saguache",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81251": [
+      {
+        "county_fips": "08065",
+        "county_name": "Lake",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81252": [
+      {
+        "county_fips": "08027",
+        "county_name": "Custer",
+        "res_ratio": 0.9980314960629921,
+        "tot_ratio": 0.9981690570643882
+      },
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.001968503937007874,
+        "tot_ratio": 0.00183094293561184
+      }
+    ],
+    "81253": [
+      {
+        "county_fips": "08027",
+        "county_name": "Custer",
+        "res_ratio": 0.8285714285714286,
+        "tot_ratio": 0.8301886792452831
+      },
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.1619047619047619,
+        "tot_ratio": 0.16037735849056603
+      },
+      {
+        "county_fips": "08101",
+        "county_name": "Pueblo",
+        "res_ratio": 0.009523809523809525,
+        "tot_ratio": 0.009433962264150943
+      }
+    ],
+    "81290": [
+      {
+        "county_fips": "08043",
+        "county_name": "Fremont",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81301": [
+      {
+        "county_fips": "08067",
+        "county_name": "La Plata",
+        "res_ratio": 0.9996614759647935,
+        "tot_ratio": 0.999574045151214
+      },
+      {
+        "county_fips": "08111",
+        "county_name": "San Juan",
+        "res_ratio": 0.00033852403520649965,
+        "tot_ratio": 0.0004259548487860287
+      }
+    ],
+    "81302": [
+      {
+        "county_fips": "08067",
+        "county_name": "La Plata",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81303": [
+      {
+        "county_fips": "08067",
+        "county_name": "La Plata",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81320": [
+      {
+        "county_fips": "08033",
+        "county_name": "Dolores",
+        "res_ratio": 0.989010989010989,
+        "tot_ratio": 0.9893238434163701
+      },
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 0.01098901098901099,
+        "tot_ratio": 0.010676156583629894
+      }
+    ],
+    "81321": [
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81323": [
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 0.9806576402321083,
+        "tot_ratio": 0.978808914870296
+      },
+      {
+        "county_fips": "08033",
+        "county_name": "Dolores",
+        "res_ratio": 0.019342359767891684,
+        "tot_ratio": 0.021191085129704055
+      }
+    ],
+    "81324": [
+      {
+        "county_fips": "08033",
+        "county_name": "Dolores",
+        "res_ratio": 0.99,
+        "tot_ratio": 0.9902173913043478
+      },
+      {
+        "county_fips": "08113",
+        "county_name": "San Miguel",
+        "res_ratio": 0.01,
+        "tot_ratio": 0.009782608695652175
+      }
+    ],
+    "81325": [
+      {
+        "county_fips": "08113",
+        "county_name": "San Miguel",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81326": [
+      {
+        "county_fips": "08067",
+        "county_name": "La Plata",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81327": [
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81328": [
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 0.9840490797546012,
+        "tot_ratio": 0.9842307692307692
+      },
+      {
+        "county_fips": "08067",
+        "county_name": "La Plata",
+        "res_ratio": 0.015950920245398775,
+        "tot_ratio": 0.015769230769230768
+      }
+    ],
+    "81329": [
+      {
+        "county_fips": "08067",
+        "county_name": "La Plata",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81330": [
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81331": [
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 0.9894179894179894,
+        "tot_ratio": 0.9895833333333334
+      },
+      {
+        "county_fips": "08033",
+        "county_name": "Dolores",
+        "res_ratio": 0.010582010582010581,
+        "tot_ratio": 0.010416666666666666
+      }
+    ],
+    "81332": [
+      {
+        "county_fips": "08033",
+        "county_name": "Dolores",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81334": [
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81335": [
+      {
+        "county_fips": "08083",
+        "county_name": "Montezuma",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81401": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81402": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81403": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 0.9056197074672825,
+        "tot_ratio": 0.9070816418583671
+      },
+      {
+        "county_fips": "08091",
+        "county_name": "Ouray",
+        "res_ratio": 0.09438029253271747,
+        "tot_ratio": 0.09291835814163284
+      }
+    ],
+    "81410": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81411": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81413": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81414": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81415": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 0.807843137254902,
+        "tot_ratio": 0.809478672985782
+      },
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 0.19215686274509805,
+        "tot_ratio": 0.190521327014218
+      }
+    ],
+    "81416": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 0.9623865110246433,
+        "tot_ratio": 0.9673085535154501
+      },
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 0.03761348897535668,
+        "tot_ratio": 0.032691446484549934
+      }
+    ],
+    "81418": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81419": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81420": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 0.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81422": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81423": [
+      {
+        "county_fips": "08113",
+        "county_name": "San Miguel",
+        "res_ratio": 0.9138888888888889,
+        "tot_ratio": 0.9137466307277629
+      },
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 0.08611111111111111,
+        "tot_ratio": 0.0862533692722372
+      }
+    ],
+    "81424": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81425": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81426": [
+      {
+        "county_fips": "08113",
+        "county_name": "San Miguel",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81427": [
+      {
+        "county_fips": "08091",
+        "county_name": "Ouray",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81428": [
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 0.9995425434583715,
+        "tot_ratio": 0.9995571302037201
+      },
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 0.0004574565416285453,
+        "tot_ratio": 0.0004428697962798937
+      }
+    ],
+    "81429": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81430": [
+      {
+        "county_fips": "08113",
+        "county_name": "San Miguel",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81431": [
+      {
+        "county_fips": "08085",
+        "county_name": "Montrose",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81432": [
+      {
+        "county_fips": "08091",
+        "county_name": "Ouray",
+        "res_ratio": 0.9986263736263736,
+        "tot_ratio": 0.9987546699875467
+      },
+      {
+        "county_fips": "08113",
+        "county_name": "San Miguel",
+        "res_ratio": 0.0013736263736263737,
+        "tot_ratio": 0.0012453300124533001
+      }
+    ],
+    "81433": [
+      {
+        "county_fips": "08111",
+        "county_name": "San Juan",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81434": [
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 0.9904761904761905,
+        "tot_ratio": 0.9911504424778761
+      },
+      {
+        "county_fips": "08029",
+        "county_name": "Delta",
+        "res_ratio": 0.009523809523809525,
+        "tot_ratio": 0.008849557522123894
+      }
+    ],
+    "81435": [
+      {
+        "county_fips": "08113",
+        "county_name": "San Miguel",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81501": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81502": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81503": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81504": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81505": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81506": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81507": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81520": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81521": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81522": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81523": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81524": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81525": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81526": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81527": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81601": [
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81602": [
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81610": [
+      {
+        "county_fips": "08081",
+        "county_name": "Moffat",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81611": [
+      {
+        "county_fips": "08097",
+        "county_name": "Pitkin",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81612": [
+      {
+        "county_fips": "08097",
+        "county_name": "Pitkin",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81615": [
+      {
+        "county_fips": "08097",
+        "county_name": "Pitkin",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81620": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81621": [
+      {
+        "county_fips": "08097",
+        "county_name": "Pitkin",
+        "res_ratio": 0.6878884341367288,
+        "tot_ratio": 0.66
+      },
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 0.31211156586327116,
+        "tot_ratio": 0.34
+      }
+    ],
+    "81623": [
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 0.7363420427553444,
+        "tot_ratio": 0.7569682151589242
+      },
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 0.17158692455604568,
+        "tot_ratio": 0.16029339853300734
+      },
+      {
+        "county_fips": "08097",
+        "county_name": "Pitkin",
+        "res_ratio": 0.05632846963013234,
+        "tot_ratio": 0.051051344743276286
+      },
+      {
+        "county_fips": "08051",
+        "county_name": "Gunnison",
+        "res_ratio": 0.03574256305847755,
+        "tot_ratio": 0.03168704156479218
+      }
+    ],
+    "81624": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81625": [
+      {
+        "county_fips": "08081",
+        "county_name": "Moffat",
+        "res_ratio": 0.9991648571905796,
+        "tot_ratio": 0.9992695398100804
+      },
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 0.0008351428094204109,
+        "tot_ratio": 0.0007304601899196494
+      }
+    ],
+    "81630": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 0.8910891089108911,
+        "tot_ratio": 0.8918406072106262
+      },
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 0.10891089108910891,
+        "tot_ratio": 0.10815939278937381
+      }
+    ],
+    "81631": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81632": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81633": [
+      {
+        "county_fips": "08081",
+        "county_name": "Moffat",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81635": [
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 0.9974034404414152,
+        "tot_ratio": 0.9975308641975309
+      },
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 0.002596559558584875,
+        "tot_ratio": 0.0024691358024691358
+      }
+    ],
+    "81637": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 0.9969178082191781,
+        "tot_ratio": 0.9964516129032258
+      },
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 0.0030821917808219177,
+        "tot_ratio": 0.0035483870967741938
+      }
+    ],
+    "81638": [
+      {
+        "county_fips": "08081",
+        "county_name": "Moffat",
+        "res_ratio": 0.9619047619047619,
+        "tot_ratio": 0.9622641509433962
+      },
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 0.02857142857142857,
+        "tot_ratio": 0.02830188679245283
+      },
+      {
+        "county_fips": "08103",
+        "county_name": "Rio Blanco",
+        "res_ratio": 0.009523809523809525,
+        "tot_ratio": 0.009433962264150943
+      }
+    ],
+    "81639": [
+      {
+        "county_fips": "08107",
+        "county_name": "Routt",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81640": [
+      {
+        "county_fips": "08081",
+        "county_name": "Moffat",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81641": [
+      {
+        "county_fips": "08103",
+        "county_name": "Rio Blanco",
+        "res_ratio": 0.9993265993265993,
+        "tot_ratio": 0.9981549815498155
+      },
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 0.0,
+        "tot_ratio": 0.0012300123001230013
+      },
+      {
+        "county_fips": "08081",
+        "county_name": "Moffat",
+        "res_ratio": 0.0006734006734006734,
+        "tot_ratio": 0.0006150061500615006
+      }
+    ],
+    "81642": [
+      {
+        "county_fips": "08097",
+        "county_name": "Pitkin",
+        "res_ratio": 0.9295774647887324,
+        "tot_ratio": 0.9333333333333333
+      },
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 0.07042253521126761,
+        "tot_ratio": 0.06666666666666667
+      }
+    ],
+    "81643": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81645": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81646": [
+      {
+        "county_fips": "08077",
+        "county_name": "Mesa",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81647": [
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81648": [
+      {
+        "county_fips": "08103",
+        "county_name": "Rio Blanco",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81649": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81650": [
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 0.9858362084619575,
+        "tot_ratio": 0.9835575485799701
+      },
+      {
+        "county_fips": "08103",
+        "county_name": "Rio Blanco",
+        "res_ratio": 0.014163791538042491,
+        "tot_ratio": 0.016442451420029897
+      }
+    ],
+    "81652": [
+      {
+        "county_fips": "08045",
+        "county_name": "Garfield",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81653": [
+      {
+        "county_fips": "08081",
+        "county_name": "Moffat",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81654": [
+      {
+        "county_fips": "08097",
+        "county_name": "Pitkin",
+        "res_ratio": 0.9985401459854014,
+        "tot_ratio": 0.9985974754558204
+      },
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 0.00145985401459854,
+        "tot_ratio": 0.001402524544179523
+      }
+    ],
+    "81655": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81656": [
+      {
+        "county_fips": "08097",
+        "county_name": "Pitkin",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81657": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ],
+    "81658": [
+      {
+        "county_fips": "08037",
+        "county_name": "Eagle",
+        "res_ratio": 1.0,
+        "tot_ratio": 1.0
+      }
+    ]
+  }
+}
