@@ -65,18 +65,48 @@ export default function App() {
       ? `${water.years_present[0]}–${water.years_present[water.years_present.length - 1]}`
       : water?.years_present?.[0]?.toString() ?? '—'
 
+  const topBar = (
+    <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+      <a
+        href="../index.html"
+        className="text-sm font-medium text-sky-700 underline-offset-2 hover:underline dark:text-sky-400"
+      >
+        Classic layout
+      </a>
+      <button
+        type="button"
+        onClick={() => setDark((d) => !d)}
+        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+        aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+      >
+        {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+        {dark ? 'Light' : 'Dark'}
+      </button>
+    </div>
+  )
+
   if (error) {
     return (
-      <div className="flex min-h-svh items-center justify-center p-6">
-        <p className="max-w-md text-center text-red-600 dark:text-red-400">{error}</p>
+      <div className="min-h-svh font-sans text-[15px] leading-relaxed">
+        <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
+          {topBar}
+          <div className="flex min-h-[50vh] items-center justify-center p-6">
+            <p className="max-w-md text-center text-red-600 dark:text-red-400">{error}</p>
+          </div>
+        </div>
       </div>
     )
   }
 
   if (!water || !selectedAnalyte) {
     return (
-      <div className="flex min-h-svh items-center justify-center p-6">
-        <p className="animate-pulse text-slate-500">Loading snapshot…</p>
+      <div className="min-h-svh font-sans text-[15px] leading-relaxed">
+        <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
+          {topBar}
+          <div className="flex min-h-[50vh] items-center justify-center p-6">
+            <p className="animate-pulse text-slate-500">Loading snapshot…</p>
+          </div>
+        </div>
       </div>
     )
   }
@@ -84,23 +114,7 @@ export default function App() {
   return (
     <div className="min-h-svh font-sans text-[15px] leading-relaxed">
       <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-          <a
-            href="../index.html"
-            className="text-sm font-medium text-sky-700 underline-offset-2 hover:underline dark:text-sky-400"
-          >
-            Classic layout
-          </a>
-          <button
-            type="button"
-            onClick={() => setDark((d) => !d)}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
-            aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            {dark ? 'Light' : 'Dark'}
-          </button>
-        </div>
+        {topBar}
 
         <HeroSnapshot
           utilityLabel={water.pws_label}
