@@ -1,5 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
-import { LayoutGrid, LineChart as LineChartIcon, Moon, Sun } from 'lucide-react'
+import {
+  LayoutGrid,
+  LineChart as LineChartIcon,
+  Moon,
+  Sun,
+  Table2,
+} from 'lucide-react'
 import { AttentionSection } from './components/AttentionSection'
 import { ContaminantCard } from './components/ContaminantCard'
 import { EducationAside } from './components/EducationAside'
@@ -14,6 +20,14 @@ function dataUrl(path: string) {
   const base = import.meta.env.BASE_URL
   const p = base.endsWith('/') ? base : `${base}/`
   return `${p}${path.replace(/^\//, '')}`
+}
+
+/** Classic PWS page; avoids `../index.html` from `.../dashboard/dist/` resolving to `dashboard/index.html` (redirect loop). */
+function classicLayoutHref(): string {
+  if (typeof window === 'undefined') return '../index.html'
+  const { pathname, search, hash } = window.location
+  const next = pathname.replace(/\/dashboard\/dist\/?(?:index\.html)?\/?$/i, '/index.html')
+  return next !== pathname ? `${next}${search}${hash}` : `../index.html${search}${hash}`
 }
 
 export default function App() {
@@ -65,13 +79,17 @@ export default function App() {
       ? `${water.years_present[0]}–${water.years_present[water.years_present.length - 1]}`
       : water?.years_present?.[0]?.toString() ?? '—'
 
+  const classicHref = useMemo(() => classicLayoutHref(), [])
+
   const topBar = (
     <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
       <a
-        href="../index.html"
-        className="text-sm font-medium text-sky-700 underline-offset-2 hover:underline dark:text-sky-400"
+        href={classicHref}
+        className="inline-flex items-center gap-2 rounded-full border border-transparent bg-[#005ea2] px-3 py-1.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#004880] dark:bg-sky-600 dark:hover:bg-sky-500"
+        title="Open the tables view (same as the classic layout)"
       >
-        Classic layout
+        <Table2 className="h-4 w-4 shrink-0" aria-hidden />
+        Classic view
       </a>
       <button
         type="button"
