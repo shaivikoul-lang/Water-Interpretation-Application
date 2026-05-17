@@ -1,0 +1,454 @@
+state,county,county_fips,year,analyte_name,time_period,quarter,average_concentration,maximum_concentration,sdwa_limit,units,pws_id_number,pws_name,pws_primary_source_code,pws_population_served,pws_latitude,pws_longitude
+Colorado,Douglas,08035,2012,TTHM (total trihalomethanes),Year,0,23.8,38.4,80,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,TTHM (total trihalomethanes),Quarter,1,24.8,NA,80,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,TTHM (total trihalomethanes),Quarter,2,33.7,NA,80,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,TTHM (total trihalomethanes),Quarter,3,33.5,NA,80,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,TTHM (total trihalomethanes),Quarter,4,3.4,NA,80,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,1999,TTHM (total trihalomethanes),Year,0,39.1,88,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,1999,TTHM (total trihalomethanes),Quarter,1,13,13,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,1999,TTHM (total trihalomethanes),Quarter,3,88,88,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,1999,TTHM (total trihalomethanes),Quarter,4,16.3,16.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2005,TTHM (total trihalomethanes),Year,0,40.7,65.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,TTHM (total trihalomethanes),Quarter,1,34.8,36.7,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,TTHM (total trihalomethanes),Quarter,2,61.3,65.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,TTHM (total trihalomethanes),Quarter,3,52.7,63.1,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,TTHM (total trihalomethanes),Quarter,4,15.3,53.2,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,TTHM (total trihalomethanes),Year,0,30.8,49.6,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,TTHM (total trihalomethanes),Quarter,1,28.8,44.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,TTHM (total trihalomethanes),Quarter,2,29.7,45.1,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,TTHM (total trihalomethanes),Quarter,3,31.7,49.6,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,TTHM (total trihalomethanes),Quarter,4,34.1,44.6,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,TTHM (total trihalomethanes),Year,0,38.4,56.5,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,TTHM (total trihalomethanes),Quarter,1,29.8,36.8,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,TTHM (total trihalomethanes),Quarter,2,32.1,38.8,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,TTHM (total trihalomethanes),Quarter,3,45.2,56.5,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,TTHM (total trihalomethanes),Quarter,4,46.6,51.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,TTHM (total trihalomethanes),Year,0,33.4,44.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,TTHM (total trihalomethanes),Quarter,1,27.3,36,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,TTHM (total trihalomethanes),Quarter,2,38.5,44.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,TTHM (total trihalomethanes),Quarter,3,26,37.5,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,TTHM (total trihalomethanes),Quarter,4,36.7,38.5,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,TTHM (total trihalomethanes),Year,0,24.1,35.7,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,TTHM (total trihalomethanes),Quarter,1,11.8,27.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,TTHM (total trihalomethanes),Quarter,2,30,33.7,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,TTHM (total trihalomethanes),Quarter,3,32,35,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,TTHM (total trihalomethanes),Quarter,4,31.6,35.7,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,TTHM (total trihalomethanes),Year,0,29.8,45.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,TTHM (total trihalomethanes),Quarter,1,15.2,16.1,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,TTHM (total trihalomethanes),Quarter,2,36.4,40.6,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,TTHM (total trihalomethanes),Quarter,3,39.9,45.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,TTHM (total trihalomethanes),Quarter,4,27.6,31.8,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,TTHM (total trihalomethanes),Year,0,22.7,28.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,TTHM (total trihalomethanes),Quarter,1,21.8,25.9,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,TTHM (total trihalomethanes),Quarter,2,24.4,26.8,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,TTHM (total trihalomethanes),Quarter,3,18.6,21.9,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,TTHM (total trihalomethanes),Quarter,4,26.3,28.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,TTHM (total trihalomethanes),Year,0,72.4,92.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,TTHM (total trihalomethanes),Quarter,1,56,56,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,TTHM (total trihalomethanes),Quarter,2,65.8,65.8,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,TTHM (total trihalomethanes),Quarter,3,75.3,75.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,TTHM (total trihalomethanes),Quarter,4,92.3,92.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,TTHM (total trihalomethanes),Year,0,49.3,69,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,TTHM (total trihalomethanes),Quarter,1,54,54,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,TTHM (total trihalomethanes),Quarter,2,69,69,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,TTHM (total trihalomethanes),Quarter,3,45,45,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,TTHM (total trihalomethanes),Quarter,4,29.2,29.2,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,TTHM (total trihalomethanes),Year,0,32.7,76.2,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,TTHM (total trihalomethanes),Quarter,1,18.1,37.7,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,TTHM (total trihalomethanes),Quarter,2,33.9,64,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,TTHM (total trihalomethanes),Quarter,3,38.3,76.2,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,TTHM (total trihalomethanes),Quarter,4,35,39.2,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,TTHM (total trihalomethanes),Year,0,29.23,51,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,TTHM (total trihalomethanes),Quarter,1,3.29,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,TTHM (total trihalomethanes),Quarter,2,39.36,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,TTHM (total trihalomethanes),Quarter,3,37.49,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,TTHM (total trihalomethanes),Quarter,4,36.76,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,TTHM (total trihalomethanes),Year,0,36.35,43.9,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,TTHM (total trihalomethanes),Quarter,1,36.83,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,TTHM (total trihalomethanes),Quarter,2,36,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,TTHM (total trihalomethanes),Quarter,3,36.74,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,TTHM (total trihalomethanes),Quarter,4,35.36,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,TTHM (total trihalomethanes),Quarter,3,19.7188,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,TTHM (total trihalomethanes),Quarter,2,42.45,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,TTHM (total trihalomethanes),Quarter,4,36.925,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,TTHM (total trihalomethanes),Year,0,30.93,52.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,TTHM (total trihalomethanes),Quarter,1,35.8375,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,TTHM (total trihalomethanes),Year,0,39.985,60.3,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,TTHM (total trihalomethanes),Quarter,1,45.081,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,TTHM (total trihalomethanes),Quarter,2,53.425,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,TTHM (total trihalomethanes),Quarter,3,17.313,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,TTHM (total trihalomethanes),Quarter,4,39.025,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,TTHM (total trihalomethanes),Year,0,29.5,55,80,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,TTHM (total trihalomethanes),Quarter,1,2.9875,NA,80,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,TTHM (total trihalomethanes),Quarter,2,52.2875,NA,80,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,TTHM (total trihalomethanes),Quarter,3,25.2125,NA,80,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,TTHM (total trihalomethanes),Quarter,4,37.5125,NA,80,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,TTHM (total trihalomethanes),Year,0,28.3531,41.9,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,TTHM (total trihalomethanes),Quarter,1,22.975,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,TTHM (total trihalomethanes),Quarter,2,27.925,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,TTHM (total trihalomethanes),Quarter,3,23.5375,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,TTHM (total trihalomethanes),Quarter,4,38.975,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,1999,Arsenic,Year,0,0.6,1,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2005,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,Arsenic,Year,0,0.9,2.6,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,Arsenic,Year,0,2.1,3,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,Arsenic,Year,0,2.5,2.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2002,Arsenic,Year,0,0.7,1.1,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,Arsenic,Year,0,1.2,5.9,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,Arsenic,Year,0,0.73,1.2,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,Arsenic,Year,0,0.5,0.5,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Arsenic,Year,0,0.7,1.1,10,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,Arsenic,Year,0,1.5,2,10,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Arsenic,Year,0,1,1,10,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,Arsenic,Year,0,0.75,1,10,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,1999,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,1999,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2005,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,Atrazine,Quarter,4,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,Atrazine,Quarter,2,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,Atrazine,Quarter,1,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Atrazine,Quarter,2,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,Atrazine,Quarter,1,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,Atrazine,Quarter,4,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2002,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2002,Atrazine,Quarter,3,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,Atrazine,Year,0,0,0,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,Atrazine,Quarter,3,0,0,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,Atrazine,Year,0,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,Atrazine,Quarter,2,0.1,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,Atrazine,Year,0,0.05,0.05,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,Atrazine,Quarter,1,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,Atrazine,Quarter,2,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,Atrazine,Year,0,0.05,0.05,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,Atrazine,Quarter,3,0.0494,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,Atrazine,Quarter,2,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,Atrazine,Year,0,0.0494,0.05,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Atrazine,Year,0,0.05,0.05,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Atrazine,Quarter,1,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Atrazine,Quarter,4,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,Atrazine,Year,0,0.0583,0.1,3,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,Atrazine,Quarter,2,0.1,NA,3,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,Atrazine,Quarter,4,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Atrazine,Year,0,0.05,0.05,3,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Atrazine,Quarter,1,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Atrazine,Quarter,2,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,Atrazine,Year,0,0.05,0.05,3,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,1999,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2005,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2002,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.4,1,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.57,1.9,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.42,1,6,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2005,HAA5 (haloacetic acids),Year,0,16.4,29.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,HAA5 (haloacetic acids),Quarter,1,14,15.4,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,HAA5 (haloacetic acids),Quarter,2,20.9,25.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,HAA5 (haloacetic acids),Quarter,3,22.6,29.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,HAA5 (haloacetic acids),Quarter,4,6.1,12.2,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,HAA5 (haloacetic acids),Year,0,13.6,22.5,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,HAA5 (haloacetic acids),Quarter,1,15.2,21.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,HAA5 (haloacetic acids),Quarter,2,13.8,22.5,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,HAA5 (haloacetic acids),Quarter,3,12.2,19,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,HAA5 (haloacetic acids),Quarter,4,13.2,15,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,HAA5 (haloacetic acids),Year,0,13.8,24.5,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,HAA5 (haloacetic acids),Quarter,1,13,24.5,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,HAA5 (haloacetic acids),Quarter,2,9.7,10.6,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,HAA5 (haloacetic acids),Quarter,3,17.3,23.9,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,HAA5 (haloacetic acids),Quarter,4,15.3,16.4,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,HAA5 (haloacetic acids),Year,0,13.4,18.1,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,HAA5 (haloacetic acids),Quarter,1,11.4,12.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,HAA5 (haloacetic acids),Quarter,2,14,15.2,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,HAA5 (haloacetic acids),Quarter,3,11.5,18.1,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,HAA5 (haloacetic acids),Quarter,4,16.2,16.2,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,HAA5 (haloacetic acids),Year,0,11.5,19.6,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,HAA5 (haloacetic acids),Quarter,1,7.7,19.6,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,HAA5 (haloacetic acids),Quarter,2,11.5,13.2,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,HAA5 (haloacetic acids),Quarter,3,13.4,15.6,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,HAA5 (haloacetic acids),Quarter,4,16.6,17.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,HAA5 (haloacetic acids),Year,0,14.9,22.3,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,HAA5 (haloacetic acids),Quarter,1,13.7,13.8,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,HAA5 (haloacetic acids),Quarter,2,15.1,15.8,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,HAA5 (haloacetic acids),Quarter,3,20.4,22.3,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,HAA5 (haloacetic acids),Quarter,4,10.3,10.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,HAA5 (haloacetic acids),Year,0,10.9,13.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,HAA5 (haloacetic acids),Quarter,1,9.7,10.6,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,HAA5 (haloacetic acids),Quarter,2,11.1,11.5,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,HAA5 (haloacetic acids),Quarter,3,9.4,10.4,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,HAA5 (haloacetic acids),Quarter,4,13.4,13.7,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,HAA5 (haloacetic acids),Year,0,11.8,30.9,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,HAA5 (haloacetic acids),Quarter,1,4.8,9.8,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,HAA5 (haloacetic acids),Quarter,2,10.5,27.5,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,HAA5 (haloacetic acids),Quarter,3,13.9,30.9,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,HAA5 (haloacetic acids),Quarter,4,16,18.8,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,HAA5 (haloacetic acids),Year,0,10.2781,21.8,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,HAA5 (haloacetic acids),Quarter,1,1.95,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,HAA5 (haloacetic acids),Quarter,2,14.525,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,HAA5 (haloacetic acids),Quarter,3,10.1125,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,HAA5 (haloacetic acids),Quarter,4,14.525,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,HAA5 (haloacetic acids),Year,0,13.5339,29.6,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,HAA5 (haloacetic acids),Quarter,1,14.2786,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,HAA5 (haloacetic acids),Quarter,2,14.2125,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,HAA5 (haloacetic acids),Quarter,3,13.3125,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,HAA5 (haloacetic acids),Quarter,4,11.5875,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,HAA5 (haloacetic acids),Quarter,4,11.8125,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,HAA5 (haloacetic acids),Quarter,3,5.0563,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,HAA5 (haloacetic acids),Quarter,2,20.4625,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,HAA5 (haloacetic acids),Year,0,11.8925,23.1,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,HAA5 (haloacetic acids),Quarter,1,17.075,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,HAA5 (haloacetic acids),Quarter,4,1.05,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,HAA5 (haloacetic acids),Year,0,10.2625,18.8,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,HAA5 (haloacetic acids),Quarter,2,10.8,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,HAA5 (haloacetic acids),Quarter,1,11.2,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,HAA5 (haloacetic acids),Quarter,3,18,NA,60,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,HAA5 (haloacetic acids),Year,0,19.734,40.1,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,HAA5 (haloacetic acids),Quarter,1,26.156,NA,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,HAA5 (haloacetic acids),Quarter,2,18.28,NA,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,HAA5 (haloacetic acids),Quarter,3,11.725,NA,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,HAA5 (haloacetic acids),Quarter,4,16.35,NA,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,HAA5 (haloacetic acids),Year,0,11.2719,19.6,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,HAA5 (haloacetic acids),Quarter,1,2.1875,NA,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,HAA5 (haloacetic acids),Quarter,2,17.3,NA,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,HAA5 (haloacetic acids),Quarter,3,14.425,NA,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,HAA5 (haloacetic acids),Quarter,4,11.175,NA,60,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,HAA5 (haloacetic acids),Year,0,12.4313,18,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,HAA5 (haloacetic acids),Quarter,1,10.1,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,HAA5 (haloacetic acids),Quarter,2,12.6875,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,HAA5 (haloacetic acids),Quarter,3,14.6375,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,HAA5 (haloacetic acids),Quarter,4,12.3,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,1999,Nitrate,Year,0,0,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,1999,Nitrate,Quarter,3,0,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2005,Nitrate,Year,0,0.1,0.3,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,Nitrate,Quarter,3,0.3,0.3,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2005,Nitrate,Quarter,4,0,0,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,Nitrate,Year,0,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,Nitrate,Quarter,2,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2006,Nitrate,Quarter,3,0,0,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,Nitrate,Year,0,0.1,0.2,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,Nitrate,Quarter,3,0.1,0.2,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Nitrate,Year,0,0.1,0.2,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Nitrate,Quarter,2,0,0,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Nitrate,Quarter,3,0.1,0.2,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,Nitrate,Year,0,0.1,0.4,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2009,Nitrate,Quarter,1,0.1,0.4,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,Nitrate,Year,0,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2010,Nitrate,Quarter,3,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,Nitrate,Year,0,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,Nitrate,Quarter,3,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,Nitrate,Year,0,0,0,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,Nitrate,Quarter,2,0,0,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,Nitrate,Quarter,3,0,0,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,Nitrate,Year,0,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,Nitrate,Quarter,3,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,Nitrate,Quarter,4,0,0,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2002,Nitrate,Year,0,0.1,0.2,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2002,Nitrate,Quarter,2,0.1,0.2,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,Nitrate,Year,0,0.1,0.2,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,Nitrate,Quarter,3,0.1,0.2,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,Nitrate,Year,0,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,Nitrate,Quarter,2,0.1,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,Nitrate,Quarter,3,0.05,NA,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,Nitrate,Year,0,0.05,0.06,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,Nitrate,Year,0,0.08,0.09,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,Nitrate,Quarter,1,0.08,NA,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2013,Nitrate,Quarter,3,0.09,NA,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,Nitrate,Year,0,0.04,0.05,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2014,Nitrate,Quarter,3,0.04,NA,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Nitrate,Quarter,4,0.005,NA,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Nitrate,Year,0,0.0367,0.1,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Nitrate,Quarter,3,0.0525,NA,10,mg/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,Nitrate,Year,0,0.06,0.09,10,mg/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2016,Nitrate,Quarter,3,0.06,NA,10,mg/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Nitrate,Year,0,0.2167,0.5,10,mg/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Nitrate,Quarter,1,0.26,NA,10,mg/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Nitrate,Quarter,3,0.13,NA,10,mg/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,Nitrate,Year,0,0.3667,0.5,10,mg/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,Nitrate,Quarter,3,0.3667,NA,10,mg/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,1999,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2005,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2002,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,PCE (tetrachloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,PCE (tetrachloroethylene),Year,0,0.25,NA,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2005,Radium,Year,0,1.5,2.8,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,Radium,Year,0,1.4,2.3,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,Radium,Year,0,1.4,2.1,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Radium,Year,0,1.5,2.7,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,Radium,Year,0,1.9,2.9,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,Radium,Year,0,0.1,0.1,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,Radium,Year,0,0.1,0.1,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,Radium,Year,0,1.2,1.6,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,Radium,Year,0,1.1,2.1,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,Radium,Year,0,1.25,1.8,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,Radium,Year,0,1.05,2,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,Radium,Year,0,1.3,2.5,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Radium,Year,0,1.0333,2.4,5,pCi/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,Radium,Year,0,1.4,2.4,5,pCi/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Radium,Year,0,0.9,1.3,5,pCi/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,Radium,Year,0,2.0667,3.5,5,pCi/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,1999,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2005,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2000,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2001,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2002,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,TCE (trichloroethylene),Year,0,0.3,0.3,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,1999,Uranium,Year,0,2.5,2.5,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2005,Uranium,Year,0,5.9,7.7,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2006,Uranium,Year,0,2.1,8,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2007,Uranium,Year,0,3.4,3.7,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2008,Uranium,Year,0,1.7,3,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2009,Uranium,Year,0,3.2,8.5,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2010,Uranium,Year,0,0.4,0.4,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2011,Uranium,Year,0,1.2,1.2,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2003,Uranium,Year,0,2.5,6,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2004,Uranium,Year,0,3.6,12,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2015,Uranium,Year,0,4.4,7.8,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2013,Uranium,Year,0,3.5667,4.8,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.93
+Colorado,Douglas,08035,2014,Uranium,Year,0,1.65,2.5,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2012,Uranium,Year,0,2,3,30,ug/L,CO0118015,Centennial Wsd,SW,88042,39.52,-104.94
+Colorado,Douglas,08035,2016,Uranium,Year,0,1.9333,3.2,30,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2017,Uranium,Year,0,1.2333,1.9,30,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2018,Uranium,Year,0,2.1,5.2,30,ug/L,CO0118015,Centennial Wsd,SW,96394,39.52,-104.94
+Colorado,Douglas,08035,2019,Arsenic,Year,0,2.1667,5,10,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,Nitrate,Year,0,0.4,0.5,10,mg/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,Atrazine,Year,0,0.05,0.05,3,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,HAA5 (haloacetic acids),Year,0,11.894,33,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,TTHM (total trihalomethanes),Year,0,35.525,53.5,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,Uranium,Year,0,0.667,2,30,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,Radium,Year,0,2.5667,4.6,5,pCi/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,HAA5 (haloacetic acids),Quarter,1,12.163,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,TTHM (total trihalomethanes),Quarter,1,27.65,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,HAA5 (haloacetic acids),Quarter,2,10.6,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,TTHM (total trihalomethanes),Quarter,2,25.963,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,Nitrate,Quarter,3,0.4,NA,10,mg/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,HAA5 (haloacetic acids),Quarter,3,13.488,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,TTHM (total trihalomethanes),Quarter,3,41.538,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,HAA5 (haloacetic acids),Quarter,4,11.325,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2019,TTHM (total trihalomethanes),Quarter,4,46.95,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96394,39.52,-104.93
+Colorado,Douglas,08035,2020,Arsenic,Year,0,4.1667,8,10,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,Nitrate,Year,0,0.5,0.5,10,mg/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,Atrazine,Year,0,0.05,0.05,3,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,HAA5 (haloacetic acids),Year,0,9.8156,14,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,TTHM (total trihalomethanes),Year,0,31.6687,49.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,Uranium,Year,0,0.6667,1,30,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,Radium,Year,0,1.9667,3.7,5,pCi/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,HAA5 (haloacetic acids),Quarter,1,11.375,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,TTHM (total trihalomethanes),Quarter,1,24.85,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,HAA5 (haloacetic acids),Quarter,2,10.4125,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,TTHM (total trihalomethanes),Quarter,2,42.65,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,HAA5 (haloacetic acids),Quarter,3,7.3,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,TTHM (total trihalomethanes),Quarter,3,23.95,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,HAA5 (haloacetic acids),Quarter,4,10.175,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,TTHM (total trihalomethanes),Quarter,4,35.225,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,Nitrate,Quarter,3,0.5,NA,10,mg/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2020,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,CENTENNIAL WSD,SW,96553,39.52,-104.94
+Colorado,Douglas,08035,2021,Arsenic,Year,0,2.3333,3,10,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,Nitrate,Year,0,0.1833,0.4,10,mg/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,DEHP [di(2-ethylhexyl)phthalate],Year,0,0.3,0.3,6,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,Atrazine,Year,0,0.05,0.05,3,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,HAA5 (haloacetic acids),Year,0,10.9219,16.5,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,TTHM (total trihalomethanes),Year,0,36.325,57.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,HAA5 (haloacetic acids),Quarter,1,9.0375,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,TTHM (total trihalomethanes),Quarter,1,28.8375,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,HAA5 (haloacetic acids),Quarter,2,12.95,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,TTHM (total trihalomethanes),Quarter,2,41.75,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,HAA5 (haloacetic acids),Quarter,3,11.1875,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,TTHM (total trihalomethanes),Quarter,3,37.5625,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,HAA5 (haloacetic acids),Quarter,4,10.5125,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,TTHM (total trihalomethanes),Quarter,4,37.15,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,Atrazine,Quarter,2,0.05,NA,3,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,Nitrate,Quarter,3,0.1833,NA,10,mg/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,08035,2021,Atrazine,Quarter,3,0.05,NA,3,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.52,-104.94
+Colorado,Douglas,8035,2022,Arsenic,Year,0,1.2667,2.2,10,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,Nitrate,Year,0,0.0867,0.12,10,mg/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,HAA5 (haloacetic acids),Year,0,9.1656,14,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,TTHM (total trihalomethanes),Year,0,22.7656,38.4,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,TCE (trichloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,PCE (tetrachloroethylene),Year,0,0.25,0.25,5,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,HAA5 (haloacetic acids),Quarter,1,11.55,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,TTHM (total trihalomethanes),Quarter,1,27.2875,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,HAA5 (haloacetic acids),Quarter,2,12.0875,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,TTHM (total trihalomethanes),Quarter,2,26.4,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,HAA5 (haloacetic acids),Quarter,3,11.4625,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,TTHM (total trihalomethanes),Quarter,3,33.2375,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,HAA5 (haloacetic acids),Quarter,4,1.5625,NA,60,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,TTHM (total trihalomethanes),Quarter,4,4.1375,NA,80,ug/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97
+Colorado,Douglas,8035,2022,Nitrate,Quarter,3,0.0867,NA,10,mg/L,CO0118015,CENTENNIAL WSD,SW,103444,39.54,-104.97

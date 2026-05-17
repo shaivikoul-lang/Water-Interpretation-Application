@@ -11,6 +11,10 @@ This repo helps residents browse **public** drinking water data for **Colorado c
 | `Data/zip_to_county_co.json` | Generated: Colorado-only ZIP → county (FIPS + **county names matched to CDPHE**). |
 | `output.json` | Generated: per-county summaries and exceedance lists from the CDPHE CSV. |
 
+## Stakeholder alignment (Phase A)
+
+Highlands Ranch Water focus: see **[docs/PHASE_A_LOCK.md](docs/PHASE_A_LOCK.md)** — verified **`pws_id_number`** and `pws_name` variants from the EPHT CSV, email draft for Nic George, and one-sentence pitch.
+
 ## Regenerate derived files
 
 From the project root (paths match macOS/Linux):

@@ -175,11 +175,6 @@
       margin: 0;
       color: var(--muted);
     }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
   </style>
 </head>
 <body>
@@ -233,11 +228,6 @@
       <div id="waterStatus" class="status" role="status" aria-live="polite"></div>
     </div>
 
-    <footer>
-      ZIP to county: <code>Data/zip_to_county_co.json</code> (HUD USPS ZIP–County, filtered to Colorado).
-      Water numbers: <code>output.json</code> from CDPHE public drinking water data — run <code>python3 build_output.py</code> to refresh.
-      Use a local server (e.g. <code>python3 -m http.server</code>) from the project folder so JSON files load.
-    </footer>
   </main>
 
   <script>
