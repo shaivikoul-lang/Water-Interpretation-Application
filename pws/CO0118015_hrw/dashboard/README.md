@@ -21,17 +21,15 @@ npm run dev
 npm run build
 ```
 
-Output is in `dist/`. `vite.config.ts` sets `base: './'` so assets resolve when the app is opened from a subfolder (for example GitHub Pages or static hosting under `pws/CO0118015_hrw/dashboard/`).
+Output is in `dist/`. `vite.config.ts` sets `base: './'` so assets resolve when the app is opened from a subfolder (for example GitHub Pages under `…/dashboard/dist/`).
+
+The **`dist/`** folder is **checked into git** for this repo so GitHub Pages can serve the built app without running `npm run build` on every push. After you change dashboard source or HRW JSON, run **`npm run build`** here and commit the updated `dist/` files.
 
 ### Opening `dashboard/index.html` from a static file server
 
-The file at `dashboard/index.html` is the **Vite entry** (it references `src/main.tsx`). A plain static server cannot compile TypeScript, so that URL used to look “blank.”
+The file at `dashboard/index.html` is the **Vite entry** (it references `src/main.tsx`). A plain static server cannot compile TypeScript, so that URL redirects to **`dist/index.html`** when not on the Vite dev server.
 
-A small inline script **redirects** `…/dashboard/index.html` → `…/dashboard/dist/index.html` when the path matches that pattern. The built bundle in `dist/` is what you should load for static hosting.
-
-Run **`npm run build`** in this folder first so `dist/` exists. For local development, use **`npm run dev`** (default port **5173**; **4173** is treated as `vite preview` and skips the redirect).
-
-If your dev server uses another port, open **`dist/index.html`** directly after a build, or temporarily rename paths so the redirect still applies.
+On **GitHub Pages**, use **`dist/index.html`** directly (the HRW classic page links there). For local development, use **`npm run dev`** (port **5173**).
 
 ## Classic layout
 

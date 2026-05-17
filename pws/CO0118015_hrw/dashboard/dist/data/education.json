@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "intro": "Plain-language pointers only. For medical questions or your own situation, talk to a health professional. Official rules and health information: CDPHE and EPA.",
+  "by_analyte_name": {
+    "TTHM (total trihalomethanes)": {
+      "tier": "expanded",
+      "hook": "TTHMs are a group of chemicals that can form when chlorine used for disinfection reacts with natural organic matter in water. They are tracked because water systems balance disinfection (to protect against germs) with byproduct control.",
+      "links": [
+        {
+          "label": "CDPHE — disinfectants and disinfection byproducts (rules and guidance)",
+          "url": "https://cdphe.colorado.gov/dbps"
+        },
+        {
+          "label": "EPA — Stage 2 DBP Rule (consumer overview)",
+          "url": "https://www.epa.gov/dwreginfo/stage-2-disinfectants-and-disinfection-byproducts-rules"
+        },
+        {
+          "label": "CDPHE — drinking water publications",
+          "url": "https://cdphe.colorado.gov/water-quality-publications"
+        }
+      ],
+      "expanded": [
+        "Disinfection (for example with chlorine) is important to protect people from waterborne disease. A side effect can be tiny amounts of byproducts such as trihalomethanes when chlorine meets organic material already in the water.",
+        "Public water systems manage treatment and distribution to meet limits for these byproducts while still keeping water microbiologically safe. How a specific system does that is described in official consumer confidence materials—not in this unofficial viewer.",
+        "If you see higher numbers in older years in the table, that usually reflects what was reported to the state for those years; use the official links above for what limits mean for health and how regulators think about risk."
+      ]
+    },
+    "Arsenic": {
+      "tier": "expanded",
+      "hook": "Arsenic can occur naturally in groundwater in some areas. Drinking water standards limit how much can be present in water supplied by a public system.",
+      "links": [
+        {
+          "label": "EPA — Arsenic in drinking water",
+          "url": "https://www.epa.gov/dwstandardsregulations/arsenic-rule"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "EPA lowered the arsenic drinking water standard to strengthen public health protection. Your water provider’s official reports explain how your system meets the standard.",
+        "This page only shows published monitoring summaries. It cannot tell you what is coming out of your tap today; a certified lab test is the way to answer home-specific questions."
+      ]
+    },
+    "Radium": {
+      "tier": "expanded",
+      "hook": "Radium is a naturally occurring radioactive element sometimes found in groundwater. Limits in drinking water rules are set to reduce long-term health risk from radionuclides.",
+      "links": [
+        {
+          "label": "EPA — Radionuclides Rule",
+          "url": "https://www.epa.gov/radiation/radionuclide-rule"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "Standards for radium and other radionuclides in drinking water are expressed in technical units (such as picocuries per liter). The official EPA materials explain what the limits are intended to protect.",
+        "Year-to-year changes in reported levels can reflect sampling, blending, treatment changes, or natural variability. Interpretation for your system belongs in official utility and regulator materials."
+      ]
+    },
+    "Nitrate": {
+      "tier": "expanded",
+      "hook": "Nitrate in drinking water is regulated largely because of concern for infants (methemoglobinemia, sometimes called “blue baby syndrome”). Public systems monitor and treat or manage sources to meet the standard.",
+      "links": [
+        {
+          "label": "EPA — Nitrate in drinking water",
+          "url": "https://www.epa.gov/dwreginfo/nitrate"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "Infants under about six months who drink formula mixed with water very high in nitrate can be especially vulnerable. If you have infant feeding questions, official public health guidance—not this tool—is the right place to start.",
+        "The numbers here are from public compliance monitoring reporting, not a diagnosis of risk for any one household."
+      ]
+    },
+    "Uranium": {
+      "tier": "expanded",
+      "hook": "Uranium can occur naturally in some groundwaters. The drinking water standard is designed to limit long-term exposure from water consumed over a lifetime.",
+      "links": [
+        {
+          "label": "EPA — Uranium rule",
+          "url": "https://www.epa.gov/dwreginfo/uranium"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "Kidney effects are the main health concern EPA considered when setting the uranium drinking water limit. Official EPA and CDPHE pages describe the science in more detail.",
+        "Treatment and source management for uranium are system-specific; this viewer does not describe how any particular utility removes or blends water."
+      ]
+    },
+    "HAA5 (haloacetic acids)": {
+      "tier": "links_only",
+      "hook": "HAA5 are another group of disinfection byproducts monitored alongside TTHM. They form from reactions between disinfectants and organic matter.",
+      "links": [
+        {
+          "label": "CDPHE — disinfectants and disinfection byproducts",
+          "url": "https://cdphe.colorado.gov/dbps"
+        },
+        {
+          "label": "EPA — Stage 2 DBP Rule",
+          "url": "https://www.epa.gov/dwreginfo/stage-2-disinfectants-and-disinfection-byproducts-rules"
+        }
+      ]
+    },
+    "Atrazine": {
+      "tier": "links_only",
+      "hook": "Atrazine is an herbicide that can occasionally be detected in source waters. Drinking water standards limit acceptable levels in finished water.",
+      "links": [
+        {
+          "label": "EPA — Atrazine in drinking water",
+          "url": "https://www.epa.gov/dwreginfo/atrazine"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ]
+    },
+    "DEHP [di(2-ethylhexyl)phthalate]": {
+      "tier": "links_only",
+      "hook": "DEHP is a plastic-related chemical sometimes monitored in drinking water programs. Limits reflect long-term exposure concerns from regulated levels.",
+      "links": [
+        {
+          "label": "EPA — National Primary Drinking Water Regulations",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ]
+    },
+    "PCE (tetrachloroethylene)": {
+      "tier": "links_only",
+      "hook": "PCE is a volatile solvent sometimes found when investigating industrial contamination or certain sources. Public water monitoring checks for it where rules require.",
+      "links": [
+        {
+          "label": "EPA — Volatile organic compounds in drinking water",
+          "url": "https://www.epa.gov/dwreginfo/volatile-organic-compounds-vocs"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ]
+    },
+    "TCE (trichloroethylene)": {
+      "tier": "links_only",
+      "hook": "TCE is another volatile chemical sometimes monitored in drinking water. Standards and monitoring are set under federal and state drinking water rules.",
+      "links": [
+        {
+          "label": "EPA — Volatile organic compounds in drinking water",
+          "url": "https://www.epa.gov/dwreginfo/volatile-organic-compounds-vocs"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ]
+    }
+  }
+}
