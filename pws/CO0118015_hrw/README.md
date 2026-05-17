@@ -30,6 +30,6 @@ python3 pws/CO0118015_hrw/build_pws_output.py \
 
 Serve the **repo root** (same as the global app), then open:
 
-**http://127.0.0.1:8765/pws/CO0118015_hrw/index.html**
+**http://127.0.0.1:8765/** or **http://127.0.0.1:8765/index.html** (redirects here), or directly **http://127.0.0.1:8765/pws/CO0118015_hrw/index.html**
 
 The page loads **`output.json`** and **`education.json`** from this folder (not root `output.json`).

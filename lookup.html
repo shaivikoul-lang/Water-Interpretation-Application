@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorado water lookup — choose your area</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #fff;
+      --text: #1a2332;
+      --muted: #5a6b7d;
+      --border: #c5d0e0;
+      --focus: #1e5a96;
+      --error: #8b2942;
+      --warn: #6b4e0a;
+      --good: #1e4d2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      line-height: 1.45;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      max-width: 36rem;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 3rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem;
+      line-height: 1.25;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin: 0 0 0.75rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .lede {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0 0 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.1rem;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+    }
+    .hint {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin: 0.25rem 0 0.6rem;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      font-size: 1.25rem;
+      padding: 0.65rem 0.75rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+    }
+    input[type="text"]:focus,
+    select:focus {
+      outline: 3px solid rgba(30, 90, 150, 0.35);
+      border-color: var(--focus);
+    }
+    select {
+      min-height: 3.25rem;
+    }
+    .status {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+    .status.error {
+      color: var(--error);
+    }
+    #waterPanel[hidden],
+    #detailPanel[hidden] {
+      display: none !important;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.95rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+    .pill strong {
+      font-weight: 600;
+    }
+    .exceed-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .exceed-list li {
+      margin-bottom: 0.5rem;
+    }
+    .exceed-btn {
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+      font-family: inherit;
+      padding: 0.75rem 0.85rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      line-height: 1.35;
+    }
+    .exceed-btn:hover,
+    .exceed-btn:focus {
+      border-color: var(--focus);
+      outline: none;
+    }
+    .exceed-btn .sub {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+    .cat-Above {
+      border-left: 4px solid var(--error);
+    }
+    .cat-Approaching {
+      border-left: 4px solid var(--warn);
+    }
+    .detail-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #fafbfd;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .detail-box p {
+      margin: 0 0 0.75rem;
+    }
+    .close-btn {
+      font-size: 1rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    dl.numbers {
+      margin: 0.5rem 0 0;
+    }
+    dl.numbers dt {
+      font-weight: 600;
+      margin-top: 0.35rem;
+    }
+    dl.numbers dd {
+      margin: 0;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Where do you want information for?</h1>
+    <p class="lede">
+      Optional: type your ZIP code to narrow the county list. Then choose your county.
+      Results use public water system data for that county — not a test of your tap.
+    </p>
+
+    <div class="card">
+      <label for="zip">ZIP code (optional)</label>
+      <p class="hint" id="zipHint">Digits only. You can enter part of a ZIP to narrow counties.</p>
+      <input
+        id="zip"
+        type="text"
+        inputmode="numeric"
+        maxlength="5"
+        autocomplete="postal-code"
+        aria-describedby="zipHint zipStatus"
+      />
+      <div id="zipStatus" class="status" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <label for="county">County</label>
+      <p class="hint" id="countyHint">Alphabetical list. If you used a ZIP, only matching counties appear.</p>
+      <select id="county" aria-describedby="countyHint countyStatus waterStatus">
+        <option value="">Select a county…</option>
+      </select>
+      <div id="countyStatus" class="status" role="status" aria-live="polite"></div>
+    </div>
+
+    <div id="waterPanel" class="card" hidden>
+      <h2 id="waterTitle">Water summary</h2>
+      <p id="waterMeta" class="hint" style="margin-top:0"></p>
+      <p id="waterLimitations" class="hint"></p>
+
+      <h3>Above the EPA limit in this summary</h3>
+      <p id="exceedIntro" class="hint"></p>
+      <ul id="exceedList" class="exceed-list" aria-label="Contaminants above limit"></ul>
+
+      <div id="detailPanel" class="detail-box" hidden tabindex="-1">
+        <h3 id="detailTitle" style="margin-top:0"></h3>
+        <p id="detailExplanation"></p>
+        <p id="detailGuidance"></p>
+        <dl class="numbers" id="detailNumbers"></dl>
+        <button type="button" class="close-btn" id="detailClose">Close detail</button>
+      </div>
+
+      <div id="waterStatus" class="status" role="status" aria-live="polite"></div>
+    </div>
+
+  </main>
+
+  <script>
+    (function () {
+      const ZIP_JSON = "Data/zip_to_county_co.json";
+      const WATER_JSON = "output.json";
+
+      const zipInput = document.getElementById("zip");
+      const countySelect = document.getElementById("county");
+      const zipStatus = document.getElementById("zipStatus");
+      const countyStatus = document.getElementById("countyStatus");
+      const waterPanel = document.getElementById("waterPanel");
+      const waterTitle = document.getElementById("waterTitle");
+      const waterMeta = document.getElementById("waterMeta");
+      const waterLimitations = document.getElementById("waterLimitations");
+      const exceedIntro = document.getElementById("exceedIntro");
+      const exceedList = document.getElementById("exceedList");
+      const detailPanel = document.getElementById("detailPanel");
+      const detailTitle = document.getElementById("detailTitle");
+      const detailExplanation = document.getElementById("detailExplanation");
+      const detailGuidance = document.getElementById("detailGuidance");
+      const detailNumbers = document.getElementById("detailNumbers");
+      const detailClose = document.getElementById("detailClose");
+      const waterStatus = document.getElementById("waterStatus");
+
+      let zipData = null;
+      let allCounties = [];
+      let waterData = null;
+
+      function digitsOnly(s) {
+        return (s || "").replace(/\D/g, "").slice(0, 5);
+      }
+
+      function collectAllCountyNames(zipsObj) {
+        const set = new Set();
+        for (const key of Object.keys(zipsObj)) {
+          for (const row of zipsObj[key]) {
+            if (row.county_name) set.add(row.county_name);
+          }
+        }
+        return Array.from(set).sort((a, b) => a.localeCompare(b, "en"));
+      }
+
+      function countiesMatchingZipDigits(d) {
+        if (!zipData || !d) return null;
+        const keys = Object.keys(zipData.zips).filter((k) => k.startsWith(d));
+        if (keys.length === 0) return [];
+        const names = new Set();
+        for (const k of keys) {
+          for (const row of zipData.zips[k]) {
+            if (row.county_name) names.add(row.county_name);
+          }
+        }
+        return Array.from(names).sort((a, b) => a.localeCompare(b, "en"));
+      }
+
+      function fillCountyOptions(names, previousValue) {
+        const keep = names.includes(previousValue) ? previousValue : "";
+        countySelect.innerHTML = "";
+        const opt0 = document.createElement("option");
+        opt0.value = "";
+        opt0.textContent = "Select a county…";
+        countySelect.appendChild(opt0);
+        for (const name of names) {
+          const o = document.createElement("option");
+          o.value = name;
+          o.textContent = name;
+          countySelect.appendChild(o);
+        }
+        countySelect.value = keep;
+      }
+
+      function refreshFromZip() {
+        const d = digitsOnly(zipInput.value);
+        zipInput.value = d;
+
+        if (!zipData) return;
+
+        if (d.length === 0) {
+          zipStatus.textContent = "";
+          zipStatus.classList.remove("error");
+          fillCountyOptions(allCounties, countySelect.value);
+          countyStatus.textContent =
+            allCounties.length +
+            " Colorado counties (from crosswalk data).";
+          return;
+        }
+
+        const counties = countiesMatchingZipDigits(d);
+        if (counties.length === 0) {
+          zipStatus.textContent =
+            "No ZIP codes in this dataset start with " + d + ". Try another ZIP.";
+          zipStatus.classList.add("error");
+          fillCountyOptions([], "");
+          countyStatus.textContent = "";
+          return;
+        }
+
+        zipStatus.classList.remove("error");
+        if (d.length === 5) {
+          zipStatus.textContent =
+            counties.length === 1
+              ? "This ZIP is associated with one county in this dataset."
+              : "This ZIP spans more than one county — please pick your county.";
+        } else {
+          zipStatus.textContent =
+            "Showing counties that appear with ZIPs starting with " +
+            d +
+            " (" +
+            counties.length +
+            " count" +
+            (counties.length === 1 ? "y" : "ies") +
+            ").";
+        }
+
+        fillCountyOptions(counties, countySelect.value);
+        countyStatus.textContent = counties.length + " count" + (counties.length === 1 ? "y" : "ies") + " in the list.";
+      }
+
+      function catClass(cat) {
+        if (!cat) return "";
+        if (cat.indexOf("Above") >= 0) return "cat-Above";
+        if (cat.indexOf("Approaching") >= 0) return "cat-Approaching";
+        return "";
+      }
+
+      function renderWater(county) {
+        detailPanel.hidden = true;
+        exceedList.innerHTML = "";
+        if (!county || !waterData || !waterData.resultsByCounty) {
+          waterPanel.hidden = true;
+          waterStatus.textContent = "";
+          return;
+        }
+        const block = waterData.resultsByCounty[county];
+        if (!block) {
+          waterPanel.hidden = false;
+          waterTitle.textContent = "Water summary for " + county;
+          waterMeta.textContent = "No precomputed water summary for this county name.";
+          waterLimitations.textContent = "";
+          exceedIntro.textContent = "";
+          waterStatus.textContent =
+            "Try another county, or regenerate output.json if CDPHE names differ.";
+          return;
+        }
+
+        waterPanel.hidden = false;
+        waterTitle.textContent = "Water summary — " + county + " County";
+        waterMeta.innerHTML =
+          '<span class="pill">Data year (latest in this summary): <strong>' +
+          (block.data_year != null ? block.data_year : "?") +
+          "</strong></span>" +
+          '<span class="pill">Confidence: <strong>' +
+          (block.confidence || "") +
+          "</strong></span>" +
+          '<span class="pill">Contaminants listed: <strong>' +
+          block.analytes.length +
+          "</strong></span>";
+        waterLimitations.textContent = block.limitations || waterData.limitations || "";
+
+        const ex = block.exceedances || [];
+        if (ex.length === 0) {
+          exceedIntro.textContent =
+            "None of the contaminants in this county summary were above the EPA limit used here. You can still read notices from your water provider.";
+        } else {
+          exceedIntro.textContent =
+            "Tap a row for plain-language meaning and ideas for what to do next. This is not medical advice.";
+          ex.forEach(function (item, idx) {
+            const li = document.createElement("li");
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "exceed-btn " + catClass(item.category);
+            btn.innerHTML =
+              "<span>" +
+              (item.analyte_name || "Unknown") +
+              '</span><span class="sub">' +
+              (item.amount_over_display || "over limit") +
+              " · " +
+              (item.category || "") +
+              "</span>";
+            btn.addEventListener("click", function () {
+              openDetail(item);
+            });
+            li.appendChild(btn);
+            exceedList.appendChild(li);
+          });
+        }
+        waterStatus.textContent = "";
+      }
+
+      function openDetail(item) {
+        detailPanel.hidden = false;
+        detailTitle.textContent = item.analyte_name || "Contaminant";
+        detailExplanation.textContent = item.plain_explanation || item.summary || "";
+        detailGuidance.textContent = item.guidance || "";
+        detailNumbers.innerHTML = "";
+        function addRow(label, val) {
+          const dt = document.createElement("dt");
+          dt.textContent = label;
+          const dd = document.createElement("dd");
+          dd.textContent = val != null ? String(val) : "—";
+          detailNumbers.appendChild(dt);
+          detailNumbers.appendChild(dd);
+        }
+        addRow("Worst-case level in this summary", item.max_concentration);
+        addRow("EPA limit used here", item.sdwa_limit);
+        addRow("Amount over limit", item.amount_over_display || "—");
+        addRow("Unit", item.unit || "—");
+        addRow("Index score (0–100)", item.risk_score != null ? item.risk_score : "—");
+        detailPanel.focus();
+      }
+
+      detailClose.addEventListener("click", function () {
+        detailPanel.hidden = true;
+      });
+
+      countySelect.addEventListener("change", function () {
+        renderWater(countySelect.value);
+      });
+
+      Promise.all([
+        fetch(ZIP_JSON).then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status + " " + ZIP_JSON);
+          return r.json();
+        }),
+        fetch(WATER_JSON).then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status + " " + WATER_JSON);
+          return r.json();
+        }),
+      ])
+        .then(function (pair) {
+          zipData = pair[0];
+          waterData = pair[1];
+          if (!zipData.zips || typeof zipData.zips !== "object") {
+            throw new Error("Invalid zip JSON");
+          }
+          if (!waterData.resultsByCounty) {
+            throw new Error("Invalid water JSON");
+          }
+          allCounties = collectAllCountyNames(zipData.zips);
+          fillCountyOptions(allCounties, "");
+          countyStatus.textContent =
+            allCounties.length +
+            " Colorado counties. Water data loaded. Type a ZIP to narrow, then pick a county.";
+          zipInput.addEventListener("input", refreshFromZip);
+          zipInput.addEventListener("change", refreshFromZip);
+          if (countySelect.value) renderWater(countySelect.value);
+        })
+        .catch(function (err) {
+          zipStatus.textContent =
+            "Load error: " +
+            (err && err.message ? err.message : String(err)) +
+            ". Use a local web server from the project folder.";
+          zipStatus.classList.add("error");
+          countyStatus.textContent = "";
+          fetch(ZIP_JSON)
+            .then(function (r) {
+              return r.json();
+            })
+            .then(function (json) {
+              zipData = json;
+              allCounties = collectAllCountyNames(json.zips);
+              fillCountyOptions(allCounties, "");
+              countyStatus.textContent = "ZIP data OK; water file missing or error — run python3 build_output.py";
+              zipInput.addEventListener("input", refreshFromZip);
+              zipInput.addEventListener("change", refreshFromZip);
+            })
+            .catch(function () {});
+        });
+    })();
+  </script>
+</body>
+</html>

@@ -6,8 +6,8 @@ This repo helps residents browse **public** drinking water data for **Colorado c
 
 | Track | Script | Output | Site entry |
 |--------|--------|--------|------------|
-| **Global Colorado** (county-level) | [`build_output.py`](build_output.py) | [`output.json`](output.json) at repo root | [`index.html`](index.html) |
-| **Highlands Ranch Water only** (PWS `CO0118015`, multi-year) | [`pws/CO0118015_hrw/build_pws_output.py`](pws/CO0118015_hrw/build_pws_output.py) | [`pws/CO0118015_hrw/output.json`](pws/CO0118015_hrw/output.json) | [`pws/CO0118015_hrw/index.html`](pws/CO0118015_hrw/index.html) |
+| **Global Colorado** (county-level) | [`build_output.py`](build_output.py) | [`output.json`](output.json) at repo root | [`lookup.html`](lookup.html) |
+| **Highlands Ranch Water only** (PWS `CO0118015`, multi-year) | [`pws/CO0118015_hrw/build_pws_output.py`](pws/CO0118015_hrw/build_pws_output.py) | [`pws/CO0118015_hrw/output.json`](pws/CO0118015_hrw/output.json) | [`pws/CO0118015_hrw/index.html`](pws/CO0118015_hrw/index.html) (also the default site entry via root [`index.html`](index.html)) |
 
 The root pipeline **aggregates by county** across systems in that county. The **`pws/CO0118015_hrw/`** folder is **one public water system** only — not “all of Douglas County.” See [`pws/CO0118015_hrw/README.md`](pws/CO0118015_hrw/README.md). Adding another district later: copy the `pws/<PWS_ID>_<slug>/` pattern.
 
@@ -58,9 +58,9 @@ cd /path/to/CAC_WaterInterpretation
 python3 -m http.server 8765
 ```
 
-Open **http://127.0.0.1:8765/index.html** (global county app) or **http://127.0.0.1:8765/pws/CO0118015_hrw/index.html** (HRW single-PWS demo).
+Open **http://127.0.0.1:8765/** or **http://127.0.0.1:8765/index.html** (redirects to HRW). For the statewide county app only, use **http://127.0.0.1:8765/lookup.html**.
 
-If the HRW URL returns **404**, the server was almost certainly started in the **wrong folder** (not the repo root). Stop it (`Ctrl+C`), `cd` to the folder that contains both `index.html` and `pws/`, then run `python3 -m http.server 8765` again.
+If pages return **404**, the server was almost certainly started in the **wrong folder** (not the repo root). Stop it (`Ctrl+C`), `cd` to the folder that contains both `index.html` and `pws/`, then run `python3 -m http.server 8765` again.
 
 ## Product spec
 
