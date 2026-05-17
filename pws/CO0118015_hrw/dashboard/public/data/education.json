@@ -11,8 +11,8 @@
           "url": "https://cdphe.colorado.gov/dbps"
         },
         {
-          "label": "EPA — Stage 2 DBP Rule (consumer overview)",
-          "url": "https://www.epa.gov/dwreginfo/stage-2-disinfectants-and-disinfection-byproducts-rules"
+          "label": "EPA — Stage 1 and Stage 2 DBP Rules",
+          "url": "https://www.epa.gov/dwreginfo/stage-1-and-stage-2-disinfectants-and-disinfection-byproducts-rules"
         },
         {
           "label": "CDPHE — drinking water publications",
@@ -30,8 +30,8 @@
       "hook": "Arsenic can occur naturally in groundwater in some areas. Drinking water standards limit how much can be present in water supplied by a public system.",
       "links": [
         {
-          "label": "EPA — Arsenic in drinking water",
-          "url": "https://www.epa.gov/dwstandardsregulations/arsenic-rule"
+          "label": "EPA — Drinking water arsenic rule (history)",
+          "url": "https://www.epa.gov/dwreginfo/drinking-water-arsenic-rule-history"
         },
         {
           "label": "CDPHE — drinking water consumer information",
@@ -49,7 +49,7 @@
       "links": [
         {
           "label": "EPA — Radionuclides Rule",
-          "url": "https://www.epa.gov/radiation/radionuclide-rule"
+          "url": "https://www.epa.gov/dwreginfo/radionuclides-rule"
         },
         {
           "label": "CDPHE — drinking water consumer information",
@@ -66,8 +66,8 @@
       "hook": "Nitrate in drinking water is regulated largely because of concern for infants (methemoglobinemia, sometimes called “blue baby syndrome”). Public systems monitor and treat or manage sources to meet the standard.",
       "links": [
         {
-          "label": "EPA — Nitrate in drinking water",
-          "url": "https://www.epa.gov/dwreginfo/nitrate"
+          "label": "EPA — Nitrate (water supply guidance)",
+          "url": "https://www.epa.gov/dwreginfo/nitrate-wsg"
         },
         {
           "label": "CDPHE — drinking water consumer information",
@@ -84,8 +84,8 @@
       "hook": "Uranium can occur naturally in some groundwaters. The drinking water standard is designed to limit long-term exposure from water consumed over a lifetime.",
       "links": [
         {
-          "label": "EPA — Uranium rule",
-          "url": "https://www.epa.gov/dwreginfo/uranium"
+          "label": "EPA — Radionuclides Rule (includes uranium)",
+          "url": "https://www.epa.gov/dwreginfo/radionuclides-rule"
         },
         {
           "label": "CDPHE — drinking water consumer information",
@@ -106,8 +106,8 @@
           "url": "https://cdphe.colorado.gov/dbps"
         },
         {
-          "label": "EPA — Stage 2 DBP Rule",
-          "url": "https://www.epa.gov/dwreginfo/stage-2-disinfectants-and-disinfection-byproducts-rules"
+          "label": "EPA — Stage 1 and Stage 2 DBP Rules",
+          "url": "https://www.epa.gov/dwreginfo/stage-1-and-stage-2-disinfectants-and-disinfection-byproducts-rules"
         }
       ]
     },
@@ -116,8 +116,8 @@
       "hook": "Atrazine is an herbicide that can occasionally be detected in source waters. Drinking water standards limit acceptable levels in finished water.",
       "links": [
         {
-          "label": "EPA — Atrazine in drinking water",
-          "url": "https://www.epa.gov/dwreginfo/atrazine"
+          "label": "EPA — Chemical contaminant rules",
+          "url": "https://www.epa.gov/dwreginfo/chemical-contaminant-rules"
         },
         {
           "label": "CDPHE — drinking water consumer information",
@@ -144,8 +144,8 @@
       "hook": "PCE is a volatile solvent sometimes found when investigating industrial contamination or certain sources. Public water monitoring checks for it where rules require.",
       "links": [
         {
-          "label": "EPA — Volatile organic compounds in drinking water",
-          "url": "https://www.epa.gov/dwreginfo/volatile-organic-compounds-vocs"
+          "label": "EPA — Chemical contaminant rules (VOCs and other chemicals)",
+          "url": "https://www.epa.gov/dwreginfo/chemical-contaminant-rules"
         },
         {
           "label": "CDPHE — drinking water consumer information",
@@ -158,8 +158,8 @@
       "hook": "TCE is another volatile chemical sometimes monitored in drinking water. Standards and monitoring are set under federal and state drinking water rules.",
       "links": [
         {
-          "label": "EPA — Volatile organic compounds in drinking water",
-          "url": "https://www.epa.gov/dwreginfo/volatile-organic-compounds-vocs"
+          "label": "EPA — Chemical contaminant rules (VOCs and other chemicals)",
+          "url": "https://www.epa.gov/dwreginfo/chemical-contaminant-rules"
         },
         {
           "label": "CDPHE — drinking water consumer information",

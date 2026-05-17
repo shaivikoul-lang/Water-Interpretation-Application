@@ -9,7 +9,7 @@ It is **not** a county-wide blend and **not** “all of Douglas County.” Do no
 | Repo root `build_output.py` → `output.json` | **Global Colorado** — county-level aggregation for the main site. |
 | This folder `build_pws_output.py` → `output.json` | **HRW / CO0118015 only** — multi-year, single-system JSON for the HRW-focused demo page. |
 
-- **`education.json`** — Curated “learn more” copy and official CDPHE/EPA links (hybrid: short hooks + links for all analytes in the export; longer paragraphs for five priority topics). Edit this file to adjust wording before stakeholder review.
+- **`education.json`** — Curated “learn more” copy and official CDPHE/EPA links (hybrid: short hooks + links for all analytes in the export; longer paragraphs for five priority topics). Edit this file to adjust wording before stakeholder review. **Re-check EPA/CDPHE URLs occasionally** — agencies move pages and old links will 404.
 
 ## Regenerate HRW JSON
 
