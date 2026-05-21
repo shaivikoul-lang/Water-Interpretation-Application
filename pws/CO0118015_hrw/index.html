@@ -396,6 +396,23 @@
       font-size: 0.9375rem;
     }
     .exceed li:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+    .exceed-action {
+      display: inline-flex;
+      margin-left: 0.25rem;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--link);
+      font: inherit;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      cursor: pointer;
+    }
+    .exceed-action:hover,
+    .exceed-action:focus-visible {
+      color: var(--link-hover);
+    }
     a { color: var(--link); }
     a:hover { color: var(--link-hover); }
     .edu-panel {
@@ -971,6 +988,20 @@
         statusEl.className = isError ? "error" : "";
       }
 
+      function selectMeasure(data, measureName, shouldScroll) {
+        if (!measureName) return;
+        var hasOption = Array.prototype.some.call(analyteSelect.options, function (option) {
+          return option.value === measureName;
+        });
+        if (!hasOption) return;
+        analyteSelect.value = measureName;
+        renderDetail(data, educationPayload, measureName);
+        if (shouldScroll) {
+          analyteSelect.focus({ preventScroll: true });
+          analyteSelect.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
       function categoryCellHtml(y) {
         if (y.score_reason === "turbidity_treatment_technique") {
           return (
@@ -1370,12 +1401,15 @@
             exceedList.innerHTML = ex
               .map(function (e) {
                 return (
-                  "<li><strong>" +
+                  '<li><strong>' +
                   escapeHtml(e.analyte_name) +
                   "</strong> (" +
                   e.year +
                   ") — " +
                   escapeHtml(e.summary || "") +
+                  ' <button type="button" class="exceed-action" data-measure="' +
+                  escapeHtml(e.analyte_name) +
+                  '">View this measure</button>' +
                   "</li>"
                 );
               })
@@ -1394,16 +1428,15 @@
           analyteSelect.addEventListener("change", function () {
             renderDetail(data, educationPayload, analyteSelect.value);
           });
-          var firstExceedanceName = ex.length ? ex[0].analyte_name : null;
-          var firstExceedanceAnalyte = firstExceedanceName
-            ? analytes.find(function (x) {
-                return x.analyte_name === firstExceedanceName && x.by_year && x.by_year.length;
-              })
-            : null;
+          exceedList.addEventListener("click", function (event) {
+            var action = event.target.closest ? event.target.closest(".exceed-action") : null;
+            if (!action) return;
+            selectMeasure(data, action.getAttribute("data-measure"), true);
+          });
           var firstLive = analytes.find(function (x) {
             return x.by_year && x.by_year.length;
           });
-          var initialName = firstExceedanceAnalyte ? firstExceedanceAnalyte.analyte_name : firstLive ? firstLive.analyte_name : analytes[0] ? analytes[0].analyte_name : null;
+          var initialName = firstLive ? firstLive.analyte_name : analytes[0] ? analytes[0].analyte_name : null;
           if (initialName) {
             analyteSelect.value = initialName;
             renderDetail(data, educationPayload, initialName);
