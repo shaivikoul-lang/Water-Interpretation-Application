@@ -1,0 +1,19 @@
+analyte_name,sdwa_limit,source_note,effective_as_of
+Arsenic,10,"EPA NPDWR inorganic MCL 0.01 mg/L as arsenic; HRW extract ug/L. https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations",
+Atrazine,3,"EPA NPDWR organic MCL 0.003 mg/L; HRW extract ug/L. https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations",
+Copper,1.3,"EPA Lead and Copper Rule action level 1.3 mg/L for copper; use with MG/L sample rows. https://www.epa.gov/dwreginfo/lead-and-copper-rule",
+DEHP [di(2-ethylhexyl)phthalate],6,"EPA NPDWR organic MCL 0.006 mg/L DEHP; HRW extract ug/L. https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations",
+HAA5 (haloacetic acids),60,"EPA Stage 2 DBP Rule MCL 0.060 mg/L as HAA5; HRW extract ug/L. https://www.epa.gov/dwreginfo/stage-1-and-stage-2-disinfectants-and-disinfection-byproducts-rules",
+Lead,10,"EPA Lead and Copper Rule (treatment technique): tap-sample action level 0.010 mg/L as lead = 10 ug/L when concentrations are UG/L; see NPDWR page footnote. LCRI (2024) https://www.epa.gov/ground-water-and-drinking-water/lead-and-copper-rule-improvements",
+Nitrate,10,"EPA NPDWR MCL 10 mg/L as nitrogen (nitrate); HRW extract MG/L. https://www.epa.gov/dwreginfo/nitrate-wsg",
+PCE (tetrachloroethylene),5,"EPA VOC MCL 0.005 mg/L PCE; HRW extract ug/L. https://www.epa.gov/dwreginfo/chemical-contaminant-rules",
+PFBS,2000,"Not an individual drinking water MCL; EPA PFAS rule hazard-index basis includes HBWC 0.002 mg/L (2000 ng/L) for PFBS in ng/L data—see doc warning. https://www.epa.gov/sdwa/per-and-polyfluoroalkyl-substances-pfas",
+PFHxS,10,"EPA PFAS NPDWR individual MCL 10 ng/L PFHxS. https://www.epa.gov/sdwa/per-and-polyfluoroalkyl-substances-pfas",2024-04-10
+PFNA,10,"EPA PFAS NPDWR individual MCL 10 ng/L PFNA. https://www.epa.gov/sdwa/per-and-polyfluoroalkyl-substances-pfas",2024-04-10
+PFOA,4,"EPA PFAS NPDWR individual MCL 4 ng/L PFOA. https://www.epa.gov/sdwa/per-and-polyfluoroalkyl-substances-pfas",2024-04-10
+PFOS,4,"EPA PFAS NPDWR individual MCL 4 ng/L PFOS. https://www.epa.gov/sdwa/per-and-polyfluoroalkyl-substances-pfas",2024-04-10
+Radium,5,"EPA Radionuclides Rule combined radium-226 and radium-228 MCL 5 pCi/L; HRW extract PCI/L. https://www.epa.gov/dwreginfo/radionuclides-rule",
+TCE (trichloroethylene),5,"EPA VOC MCL 0.005 mg/L TCE; HRW extract ug/L. https://www.epa.gov/dwreginfo/chemical-contaminant-rules",
+TTHM (total trihalomethanes),80,"EPA Stage 2 DBP Rule MCL 0.080 mg/L as TTHM; HRW extract ug/L. https://www.epa.gov/dwreginfo/stage-1-and-stage-2-disinfectants-and-disinfection-byproducts-rules",
+Turbidity,1,"TT (not MCL): 1 NTU conventional/direct instantaneous reference; 0.3 NTU monthly 95% rule and 5 NTU other-filtration ceiling per EPA. HRW output.json does NOT auto-score turbidity vs this number—reference/context only. https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations",
+Uranium,30,"EPA Radionuclides Rule MCL 30 ug/L uranium. https://www.epa.gov/dwreginfo/radionuclides-rule",

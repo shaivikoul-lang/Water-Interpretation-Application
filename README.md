@@ -66,6 +66,8 @@ If pages return **404**, the server was almost certainly started in the **wrong 
 
 See [prmpt/WATER_INTERPRETATION_BUILD_SPEC.md](prmpt/WATER_INTERPRETATION_BUILD_SPEC.md), including the **V1 implementation slice** section for JSON shape and aggregation rules.
 
+**Competition / engineering documentation:** [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md) (full detail) and [PROJECT_DOCUMENTATION.html](PROJECT_DOCUMENTATION.html) (styled, browser-readable companion).
+
 ## License / attribution
 
 Attribute CDPHE and HUD (and quarter) wherever you present the app. Follow each provider’s terms for redistribution of raw files.

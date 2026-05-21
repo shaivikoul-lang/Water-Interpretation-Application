@@ -2,3 +2,10 @@
 email/
 
 .DS_Store
+
+# Large CDPHE “all sample results” pulls from dwinfo Google Drive (see Data/README_CDPHE_dwinfo_downloads.md)
+Data/CDPHE_all_sample_results_*_dwinfo.csv
+
+# Project engineering docs (temporary — remove these lines when ready to commit)
+PROJECT_DOCUMENTATION.md
+PROJECT_DOCUMENTATION.html

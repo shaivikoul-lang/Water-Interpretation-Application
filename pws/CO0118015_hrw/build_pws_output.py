@@ -20,6 +20,34 @@ from statistics import mean
 PWS_ID = "CO0118015"
 PWS_LABEL = "Highlands Ranch Water (PWS CO0118015)"
 
+# Stakeholder (Douglas County) requested measures to show alongside current export.
+# When absent from the EPHT CSV, we still emit placeholder packs so UI + education can explain the gap.
+PENDING_ANALYTES_STAKEHOLDER: tuple[str, ...] = (
+    "Lithium",
+)
+
+# HRW allowlist analytes: when the extract omits `units`, use the same basis as regulatory sidecar limits.
+DEFAULT_DISPLAY_UNIT_BY_ANALYTE: dict[str, str] = {
+    "Arsenic": "ug/L",
+    "Atrazine": "ug/L",
+    "DEHP [di(2-ethylhexyl)phthalate]": "ug/L",
+    "HAA5 (haloacetic acids)": "ug/L",
+    "Nitrate": "mg/L",
+    "PCE (tetrachloroethylene)": "ug/L",
+    "Radium": "pCi/L",
+    "TCE (trichloroethylene)": "ug/L",
+    "TTHM (total trihalomethanes)": "ug/L",
+    "Uranium": "ug/L",
+    "Turbidity": "NTU",
+    "Lead": "ug/L",
+    "Copper": "mg/L",
+    "PFOA": "ng/L",
+    "PFOS": "ng/L",
+    "PFHxS": "ng/L",
+    "PFBS": "ng/L",
+    "PFNA": "ng/L",
+}
+
 
 def to_float(x) -> float | None:
     if x is None:
@@ -50,7 +78,28 @@ def unit_recognized(unit: str) -> bool:
     u = (unit or "").strip().lower()
     if not u:
         return False
-    return bool(re.search(r"µg/l|ug/l|ppb|mg/l|ppm", u))
+    return bool(re.search(r"µg/l|ug/l|ppb|mg/l|ppm|ntu|pci/l|pcil|ng/l", u))
+
+
+def normalize_unit_display(unit_raw: str) -> str:
+    """Same canonical UOM strings as merge_dwinfo_bulk_to_epht_hrw.normalize_unit_display."""
+    s = (unit_raw or "").strip()
+    if not s:
+        return ""
+    t = s.upper().replace("Μ", "M").replace("µ", "U")
+    t = re.sub(r"\s+", "", t)
+    t = t.replace("／", "/")
+    if t in ("UG/L", "PPB") or t == "UGL":
+        return "ug/L"
+    if t in ("MG/L", "PPM") or t == "MGL":
+        return "mg/L"
+    if t in ("NG/L",) or t == "NGL":
+        return "ng/L"
+    if t == "NTU":
+        return "NTU"
+    if t in ("PCI/L", "PC/L") or t == "PCIL":
+        return "pCi/L"
+    return s
 
 
 def risk_category(score: float) -> str:
@@ -106,6 +155,10 @@ def aggregate_pws_analyte_year(subset: list[dict]) -> dict:
     units_raw = [(r.get("units") or "").strip() for r in subset if (r.get("units") or "").strip()]
     distinct_units = list({u.lower() for u in units_raw})
     unit_str = units_raw[0] if len(distinct_units) == 1 and units_raw else (units_raw[0] if units_raw else "")
+    analyte_display = (subset[0].get("analyte_name") or "").strip() if subset else ""
+    if not (unit_str or "").strip():
+        unit_str = DEFAULT_DISPLAY_UNIT_BY_ANALYTE.get(analyte_display, unit_str or "")
+    unit_str = normalize_unit_display(unit_str or "")
 
     if len(distinct_units) > 1:
         return {
@@ -170,6 +223,47 @@ def aggregate_pws_analyte_year(subset: list[dict]) -> dict:
         return {
             "score_available": False,
             "score_reason": "missing_concentration",
+            "unit": unit_str or None,
+            "unit_recognized": unit_recognized(unit_str),
+            "max_concentration": max_c,
+            "avg_concentration": avg_c,
+            "sdwa_limit": limit_val,
+            "n_pws_names": n_names,
+        }
+
+    # D+1: keep sidecar NTU (e.g. 1) as a federal *reference* only. EPA turbidity is a treatment technique
+    # (instantaneous vs monthly 95% rules; up to 5 NTU under some filtration/state rules). Year-level highs
+    # are not scored like an MCL.
+    if analyte_display == "Turbidity":
+        return {
+            "score_available": False,
+            "score_reason": "turbidity_treatment_technique",
+            "unit": unit_str or None,
+            "unit_recognized": unit_recognized(unit_str),
+            "max_concentration": max_c,
+            "avg_concentration": avg_c,
+            "sdwa_limit": limit_val,
+            "n_pws_names": n_names,
+        }
+
+    # PFBS: no individual MCL; sidecar HBWC scale for hazard-index context only—not scored vs yearly max.
+    if analyte_display == "PFBS":
+        return {
+            "score_available": False,
+            "score_reason": "pfbs_hazard_index_reference",
+            "unit": unit_str or None,
+            "unit_recognized": unit_recognized(unit_str),
+            "max_concentration": max_c,
+            "avg_concentration": avg_c,
+            "sdwa_limit": limit_val,
+            "n_pws_names": n_names,
+        }
+
+    # Lead / Copper: action levels + LCR tap-sampling framework; year summaries here are not auto-scored vs action level.
+    if analyte_display in ("Lead", "Copper"):
+        return {
+            "score_available": False,
+            "score_reason": "lead_copper_action_level",
             "unit": unit_str or None,
             "unit_recognized": unit_recognized(unit_str),
             "max_concentration": max_c,
@@ -302,6 +396,42 @@ def main() -> None:
             rec = {"year": y, **agg}
             if rec["score_available"]:
                 rec["plain_explanation"] = explanation_pws(rec["category"], rec["risk_score"])
+            elif rec.get("score_reason") == "turbidity_treatment_technique":
+                lim_t = rec.get("sdwa_limit")
+                lim_txt = f"{lim_t:g} " if isinstance(lim_t, (int, float)) and lim_t == lim_t else ""
+                rec["plain_explanation"] = (
+                    f"For {PWS_LABEL}: turbidity in {y} is not auto-scored here. EPA uses treatment-technique rules "
+                    "(for example, conventional/direct filtration: not above 1 NTU at any time, and most samples in a month "
+                    "at or below 0.3 NTU; other filtration types may use state limits that can include a ceiling such as 5 NTU). "
+                    f"The {lim_txt}NTU value in this file is only a federal reference line for context—not a compliance verdict from these yearly summary numbers."
+                )
+                rec["guidance"] = (
+                    "See EPA and CDPHE official materials for how turbidity is monitored and evaluated at water treatment plants."
+                )
+            elif rec.get("score_reason") == "pfbs_hazard_index_reference":
+                lim_t = rec.get("sdwa_limit")
+                lim_txt = f"{lim_t:g} " if isinstance(lim_t, (int, float)) and lim_t == lim_t else ""
+                rec["plain_explanation"] = (
+                    f"For {PWS_LABEL}: PFBS in {y} is not auto-scored here. EPA's PFAS drinking water rule sets individual MCLs for some PFAS; "
+                    "PFBS is addressed in hazard-index materials (the numeric value in this file is a hazard-index-related reference scale in ng/L, not an individual PFBS MCL). "
+                    f"The {lim_txt}ng/L figure is for orientation only—not a pass/fail line for PFBS alone from these yearly summaries."
+                )
+                rec["guidance"] = (
+                    "See EPA's PFAS in drinking water materials and CDPHE for how PFBS is evaluated with other PFAS in rulemaking and monitoring."
+                )
+            elif rec.get("score_reason") == "lead_copper_action_level":
+                lim_t = rec.get("sdwa_limit")
+                lim_txt = f"{lim_t:g} " if isinstance(lim_t, (int, float)) and lim_t == lim_t else ""
+                u = (rec.get("unit") or "").strip()
+                uq = f" {u}" if u else ""
+                rec["plain_explanation"] = (
+                    f"For {PWS_LABEL}: {display} in {y} is not auto-scored here. The Lead and Copper Rule uses action levels and tap sampling programs "
+                    "(for example, follow-up when more than 10% of targeted tap samples exceed an action level)—not a single yearly maximum compared to one number. "
+                    f"The {lim_txt}{uq} value shown is the federal action-level reference used in this dataset for context only."
+                )
+                rec["guidance"] = (
+                    "See EPA's Lead and Copper Rule / LCRI materials and CDPHE for how action levels apply to tap sampling, corrosion control, and public education."
+                )
             else:
                 rec["plain_explanation"] = (
                     f"For {PWS_LABEL}: {display} in {y} could not be scored the same way as other items "
@@ -347,6 +477,23 @@ def main() -> None:
         key=lambda e: ((e["max_concentration"] or 0) - (e["sdwa_limit"] or 0), e["year"]),
         reverse=True,
     )
+
+    seen_names = {a["analyte_name"].strip().lower() for a in analytes_out}
+    for pname in PENDING_ANALYTES_STAKEHOLDER:
+        key = pname.strip().lower()
+        if key in seen_names:
+            continue
+        analytes_out.append(
+            {
+                "analyte_name": pname,
+                "summary_latest_year": None,
+                "dataset_status": "pending_export",
+                "by_year": [],
+            }
+        )
+        seen_names.add(key)
+
+    analytes_out.sort(key=lambda x: (x["analyte_name"] or "").lower())
 
     all_years = sorted({y for a in analytes_out for y in (x["year"] for x in a["by_year"])})
     data_max_year = max(all_years) if all_years else None

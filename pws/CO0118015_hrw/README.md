@@ -16,10 +16,13 @@ It is **not** a county-wide blend and **not** “all of Douglas County.” Do no
 From the **repository root**:
 
 ```bash
+python3 pws/CO0118015_hrw/merge_dwinfo_bulk_to_epht_hrw.py
 python3 pws/CO0118015_hrw/build_pws_output.py
 ```
 
-Optional: point at the full EPHT CSV (still filtered to `CO0118015`):
+The **merge** step rebuilds `Data/EPHT_CO0118015_Highlands_Ranch_Water_all_rows.csv` from the CDPHE **dwinfo → Drive** “all sample results” CSVs (`Data/CDPHE_all_sample_results_*_dwinfo.csv`). It **appends legacy EPHT Year-only rows** for CO0118015 (annual maxima / limits like the older EPHT page), **converts Arsenic bulk MG/L → µg/L**, **backfills `sdwa_limit`** from legacy `(analyte, year)` when needed, and supports an optional limits sidecar (`--no-legacy-epht-year-rows`, `--no-legacy-epht-limit-backfill` — see [`Data/README_CDPHE_dwinfo_downloads.md`](../../Data/README_CDPHE_dwinfo_downloads.md) and [`Data/README_regulatory_limits_by_analyte.md`](../../Data/README_regulatory_limits_by_analyte.md)). The **build** step reads that extract and writes this folder’s `output.json`.
+
+Optional: point `build_pws_output.py` at the older statewide EPHT file instead (still filtered to `CO0118015`):
 
 ```bash
 python3 pws/CO0118015_hrw/build_pws_output.py \

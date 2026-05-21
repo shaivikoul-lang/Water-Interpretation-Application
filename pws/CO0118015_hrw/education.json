@@ -58,7 +58,8 @@
       ],
       "expanded": [
         "Standards for radium and other radionuclides in drinking water are expressed in technical units (such as picocuries per liter). The official EPA materials explain what the limits are intended to protect.",
-        "Year-to-year changes in reported levels can reflect sampling, blending, treatment changes, or natural variability. Interpretation for your system belongs in official utility and regulator materials."
+        "Year-to-year changes in reported levels can reflect sampling, blending, treatment changes, or natural variability. Interpretation for your system belongs in official utility and regulator materials.",
+        "In parts of Colorado, radium can reflect natural geology in groundwater as well as how sources are blended—your water provider’s official materials describe what matters locally."
       ]
     },
     "Nitrate": {
@@ -94,7 +95,8 @@
       ],
       "expanded": [
         "Kidney effects are the main health concern EPA considered when setting the uranium drinking water limit. Official EPA and CDPHE pages describe the science in more detail.",
-        "Treatment and source management for uranium are system-specific; this viewer does not describe how any particular utility removes or blends water."
+        "Treatment and source management for uranium are system-specific; this viewer does not describe how any particular utility removes or blends water.",
+        "Natural uranium in groundwater varies by geology; Colorado systems often discuss radionuclides together with other source-water characteristics in official consumer information."
       ]
     },
     "HAA5 (haloacetic acids)": {
@@ -160,6 +162,168 @@
         {
           "label": "EPA — Chemical contaminant rules (VOCs and other chemicals)",
           "url": "https://www.epa.gov/dwreginfo/chemical-contaminant-rules"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ]
+    },
+    "Turbidity": {
+      "tier": "expanded",
+      "hook": "Turbidity is cloudiness from tiny particles in water. Utilities track it because particles can shield microbes from disinfection and because it is a day-to-day treatment performance indicator.",
+      "links": [
+        {
+          "label": "EPA — National Primary Drinking Water Regulations (includes turbidity)",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "Rows shown here come from Colorado’s public “all sample results” files linked from CDPHE’s consumer information page (dwinfo). They are monitoring summaries, not a tap test at your home.",
+        "EPA turbidity rules are treatment techniques (for example, conventional/direct filtration: not above 1 NTU at any time, and most samples in a month at or below 0.3 NTU; other filtration types may follow state limits that can include a ceiling such as 5 NTU). This community view may show a 1 NTU reference line for context, but it does not run a full plant compliance score from these yearly summary numbers.",
+        "Utilities often discuss very low NTU targets (for example well below typical regulatory benchmarks) as part of pathogen protection—see your provider’s official materials for how they describe performance."
+      ]
+    },
+    "Lithium": {
+      "tier": "expanded",
+      "hook": "Lithium is drawing more attention in drinking water as researchers and regulators study possible long-term health effects at low levels. Rules and monitoring requirements may evolve.",
+      "links": [
+        {
+          "label": "EPA — Drinking water regulations hub",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "No lithium rows for this system appear in the CDPHE bulk “all sample results” files used for this rebuild. When published monitoring includes lithium under a clear analyte name, add it to the merge script’s name map and regenerate the extract."
+      ]
+    },
+    "Lead": {
+      "tier": "expanded",
+      "hook": "Lead in drinking water usually comes from plumbing materials or service lines—not from the treatment plant chemistry alone. Public systems follow sampling plans under the Lead and Copper Rule.",
+      "links": [
+        {
+          "label": "EPA — Lead and Copper Rule Improvements",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/lead-and-copper-rule-improvements"
+        },
+        {
+          "label": "EPA — Basic information about lead in drinking water",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/basic-information-about-lead-drinking-water"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "Rows shown here come from Colorado’s public “all sample results” files linked from CDPHE’s consumer information page (dwinfo). They are compliance monitoring summaries, not a diagnosis for any one tap.",
+        "This page does not auto-score lead against the action level from a single yearly high: the Lead and Copper Rule is built around tap sampling programs and follow-up when too many taps exceed an action level—not the same as an MCL chart for every analyte.",
+        "If you are worried about lead at the tap, EPA and CDPHE describe flushing, filtering, and testing options in their official materials."
+      ]
+    },
+    "Copper": {
+      "tier": "expanded",
+      "hook": "Copper in tap water is often related to building plumbing and can be managed through corrosion control treatment and monitoring under the Lead and Copper Rule.",
+      "links": [
+        {
+          "label": "EPA — Lead and Copper Rule Improvements",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/lead-and-copper-rule-improvements"
+        },
+        {
+          "label": "EPA — Chemical contaminants in drinking water",
+          "url": "https://www.epa.gov/dwreginfo/chemical-contaminant-rules"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "Rows shown here come from Colorado’s public “all sample results” files linked from CDPHE’s consumer information page (dwinfo). Official action levels and corrosion-control context belong in your provider’s Lead and Copper Rule materials.",
+        "This page does not auto-score copper against the action level from a single yearly high: the rule is built around tap sampling and system response—not the same as a simple MCL bar chart for every contaminant."
+      ]
+    },
+    "PFOA": {
+      "tier": "expanded",
+      "hook": "PFOA (perfluorooctanoic acid) is one of several PFAS compounds that can be measured in drinking water. Rules and health guidance for PFAS have been evolving at EPA and in states.",
+      "links": [
+        {
+          "label": "EPA — PFAS in drinking water",
+          "url": "https://www.epa.gov/pfas/pfas-drinking-water"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "PFAS is a large family of chemicals; regulators often start with a handful of well-studied compounds like PFOA and PFOS. Use official EPA and CDPHE pages for current limits and health reference material.",
+        "The chart reflects published sample results for this water system in CDPHE’s bulk public data—not a prediction of your tap water today."
+      ]
+    },
+    "PFOS": {
+      "tier": "expanded",
+      "hook": "PFOS (perfluorooctane sulfonic acid) is another PFAS compound monitored in some public water systems. It can persist in the environment and has been a focus of drinking water standards and research.",
+      "links": [
+        {
+          "label": "EPA — PFAS in drinking water",
+          "url": "https://www.epa.gov/pfas/pfas-drinking-water"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "Compare levels over time using the chart, but interpret limits and health meaning using official sources linked above."
+      ]
+    },
+    "PFHxS": {
+      "tier": "links_only",
+      "hook": "PFHxS (perfluorohexane sulfonic acid) is a PFAS compound sometimes included in expanded PFAS monitoring programs.",
+      "links": [
+        {
+          "label": "EPA — PFAS in drinking water",
+          "url": "https://www.epa.gov/pfas/pfas-drinking-water"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ]
+    },
+    "PFBS": {
+      "tier": "expanded",
+      "hook": "PFBS (perfluorobutane sulfonic acid) can appear in PFAS monitoring. EPA’s drinking water rule addresses PFBS through hazard-index concepts rather than a standalone MCL like PFOA or PFOS.",
+      "links": [
+        {
+          "label": "EPA — PFAS in drinking water",
+          "url": "https://www.epa.gov/pfas/pfas-drinking-water"
+        },
+        {
+          "label": "CDPHE — drinking water consumer information",
+          "url": "https://cdphe.colorado.gov/dwinfo"
+        }
+      ],
+      "expanded": [
+        "The numeric reference shown for PFBS in this community tool is a scale used in hazard-index materials—it is not an individual PFBS MCL and this page does not auto-score PFBS against it like arsenic or nitrate.",
+        "Use EPA and CDPHE official pages for how PFBS is evaluated together with other PFAS under current rules."
+      ]
+    },
+    "PFNA": {
+      "tier": "links_only",
+      "hook": "PFNA (perfluorononanoic acid) is another PFAS analyte that may appear in multi-compound PFAS monitoring.",
+      "links": [
+        {
+          "label": "EPA — PFAS in drinking water",
+          "url": "https://www.epa.gov/pfas/pfas-drinking-water"
         },
         {
           "label": "CDPHE — drinking water consumer information",

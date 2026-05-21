@@ -137,32 +137,62 @@
       font-weight: 400;
     }
     main {
-      padding-top: 1.75rem;
+      padding-top: 1.25rem;
     }
-    .intro-grid {
-      display: grid;
-      gap: 1rem;
-      margin-bottom: 1.75rem;
-    }
-    .intro-dash {
-      margin: 0;
-      padding: 0.85rem 1rem;
+    /* Slim top context — keeps the fold clear for “look up a measure” */
+    .hero-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 1rem;
+      margin-bottom: 1.25rem;
+      padding: 0.65rem 1rem;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
       box-shadow: var(--shadow-sm);
-      align-self: start;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: var(--text);
     }
-    @media (min-width: 52rem) {
-      .intro-grid {
-        grid-template-columns: 1fr auto;
-        align-items: start;
-        gap: 1.25rem;
-      }
-      .intro-dash {
-        max-width: 20rem;
-        justify-self: end;
-      }
+    .hero-strip strong { color: var(--navy); }
+    .hero-strip-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 0.75rem;
+      margin-left: auto;
+    }
+    .hero-strip-meta a {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .card.card-primary {
+      border-color: #c5d4e4;
+      box-shadow: 0 4px 24px rgba(16, 42, 76, 0.1);
+    }
+    .card-primary-badge {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--link);
+      margin-bottom: 0.35rem;
+    }
+    .card.card-primary h2 {
+      margin-top: 0;
+    }
+    .card.card-primary select {
+      max-width: none;
+      width: 100%;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      font-size: 1.0625rem;
+      border-radius: var(--radius-sm);
+    }
+    .card.card-support {
+      background: #fafbfc;
     }
     .callout {
       background: var(--callout-bg);
@@ -177,11 +207,11 @@
     }
     .callout strong { font-weight: 700; }
     .lede {
-      font-size: 1.0625rem;
+      font-size: 1rem;
       color: var(--text);
-      margin: 0 0 1.5rem;
-      line-height: 1.65;
-      max-width: 65ch;
+      margin: 0 0 1rem;
+      line-height: 1.6;
+      max-width: 58ch;
     }
     .lede a { font-weight: 600; }
     h2 {
@@ -349,6 +379,15 @@
       color: var(--muted);
       border-color: var(--line);
     }
+    .badge .badge-link {
+      color: inherit;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .badge .badge-link:hover {
+      color: #005ea2;
+    }
     .exceed { list-style: none; margin: 0; padding: 0; }
     .exceed li {
       margin-bottom: 0.75rem;
@@ -473,6 +512,262 @@
       font-size: 0.8125rem !important;
       color: var(--muted);
     }
+    .interpretive-layer {
+      position: relative;
+      margin: 1rem 0 1.2rem;
+      padding: 1rem;
+      border: 1px solid #bdd3e5;
+      border-radius: var(--radius-sm);
+      background:
+        radial-gradient(circle at 85% 5%, rgba(126, 179, 217, 0.22), transparent 15rem),
+        linear-gradient(180deg, rgba(248, 251, 253, 0.94), rgba(255, 255, 255, 0.96));
+      box-shadow: var(--shadow-sm);
+    }
+    .interpretive-kicker {
+      display: inline-flex;
+      margin: 0 0 0.35rem;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--link);
+    }
+    .interpretive-title {
+      margin: 0 0 0.3rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 1.1rem;
+      line-height: 1.25;
+      color: var(--navy);
+    }
+    .interpretive-sub {
+      margin: 0 0 0.9rem;
+      max-width: 68ch;
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .timeline-rail {
+      display: grid;
+      gap: 0.55rem;
+      grid-template-columns: repeat(4, minmax(8rem, 1fr));
+      overflow-x: auto;
+      padding-bottom: 0.25rem;
+      margin-bottom: 0.9rem;
+    }
+    .timeline-marker {
+      position: relative;
+      min-width: 8rem;
+      padding: 0.75rem 0.75rem 0.7rem;
+      border: 1px solid rgba(126, 179, 217, 0.52);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--text);
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+    .timeline-marker::before {
+      content: "";
+      display: block;
+      width: 0.55rem;
+      height: 0.55rem;
+      margin-bottom: 0.45rem;
+      border-radius: 999px;
+      background: #d8dee6;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px #9aa3ad;
+    }
+    .timeline-marker:hover,
+    .timeline-marker:focus-visible,
+    .timeline-marker.is-active {
+      transform: translateY(-1px);
+      border-color: var(--link);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 6px 18px rgba(16, 42, 76, 0.12);
+      outline: none;
+    }
+    .timeline-marker:hover::before,
+    .timeline-marker:focus-visible::before,
+    .timeline-marker.is-active::before {
+      background: var(--link);
+      box-shadow: 0 0 0 3px rgba(0, 94, 162, 0.14);
+    }
+    .timeline-year {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--link);
+      line-height: 1.2;
+    }
+    .timeline-label {
+      display: block;
+      margin-top: 0.15rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--navy);
+    }
+    .timeline-note {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .interpretive-grid {
+      display: grid;
+      gap: 0.9rem;
+    }
+    @media (min-width: 58rem) {
+      .interpretive-grid {
+        grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.65fr);
+      }
+    }
+    .story-panel,
+    .context-card {
+      border: 1px solid rgba(216, 222, 230, 0.95);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow-sm);
+    }
+    .story-panel {
+      padding: 1rem;
+    }
+    .story-panel h4,
+    .context-card h4 {
+      margin: 0 0 0.4rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+    .story-panel p,
+    .context-card p {
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+    .story-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+    .story-chip {
+      display: inline-flex;
+      border: 1px solid #c5d4e4;
+      border-radius: 999px;
+      padding: 0.12rem 0.5rem;
+      background: #f2f7fb;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--navy-mid);
+    }
+    .mini-chart {
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--line);
+    }
+    .mini-chart svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+    }
+    .chart-highlight-band {
+      fill: rgba(126, 179, 217, 0.24);
+      opacity: 0;
+      transition: opacity 0.18s ease;
+    }
+    .chart-highlight-band.is-active { opacity: 1; }
+    .chart-point {
+      fill: #fff;
+      stroke: var(--link);
+      stroke-width: 1.5;
+      opacity: 0;
+      transition: opacity 0.18s ease;
+    }
+    .chart-point.is-active { opacity: 1; }
+    .context-stack {
+      display: grid;
+      gap: 0.55rem;
+    }
+    .context-card {
+      padding: 0.75rem 0.85rem;
+    }
+    .context-card h4 {
+      font-size: 0.95rem;
+    }
+    .context-card p {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+    tr.is-year-highlight td {
+      background: #edf6fc !important;
+      box-shadow: inset 3px 0 0 var(--link);
+      transition: background 0.18s ease;
+    }
+    .pattern-signal {
+      margin: 0.95rem 0 1rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid #bdd3e5;
+      border-radius: var(--radius-sm);
+      background:
+        radial-gradient(circle at top right, rgba(126, 179, 217, 0.18), transparent 13rem),
+        linear-gradient(180deg, #f8fbfd 0%, #fff 100%);
+      box-shadow: var(--shadow-sm);
+    }
+    .pattern-signal-kicker {
+      display: inline-flex;
+      margin: 0 0 0.25rem;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--link);
+    }
+    .pattern-signal-title {
+      margin: 0 0 0.35rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 1.05rem;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+    .pattern-signal p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .signal-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.65rem 0 0;
+    }
+    .signal-stat {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.25rem;
+      padding: 0.28rem 0.55rem;
+      border: 1px solid #d8dee6;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .signal-stat strong {
+      color: var(--navy);
+      font-size: 0.86rem;
+    }
+    .pattern-signal-link {
+      display: inline-flex;
+      margin-top: 0.7rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .pattern-signal-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -494,13 +789,12 @@
 
   <div class="wrap">
     <main>
-      <div class="intro-grid">
-        <div class="callout" role="note">
-          <strong>Who this is for.</strong> If you get drinking water from <strong>Highlands Ranch Water</strong>, the tables on this page summarize what appears in Colorado’s public drinking water data for your system. For all of Colorado by county, use the <a href="../../lookup.html">statewide lookup</a>.
-        </div>
-        <p class="fine-print intro-dash">
-          Want charts, cards, and dark mode? <a href="./dashboard/dist/index.html">Open the dashboard layout</a>.
-        </p>
+      <div class="hero-strip" role="note">
+        <span><strong>Who this is for.</strong> Drinking water customers of <strong>Highlands Ranch Water</strong> — levels from Colorado’s public monitoring data.</span>
+        <span class="hero-strip-meta">
+          <a href="../../lookup.html">Statewide lookup</a>
+          <a href="./dashboard/dist/index.html">Dashboard view</a>
+        </span>
       </div>
 
       <p class="lede" id="subtitle">Loading…</p>
@@ -508,23 +802,25 @@
       <div id="status" role="status" aria-live="polite"></div>
 
       <div id="content" hidden>
-        <div class="card">
-          <h2>Before you read the numbers</h2>
-          <p class="fine-print" id="plainDisclaimer"></p>
-        </div>
-
         <div class="card card-warn" id="exceedPanel" hidden>
           <h2>Readings above the drinking water limit in this data</h2>
           <ul class="exceed" id="exceedList"></ul>
         </div>
 
-        <div class="card">
+        <div class="card card-primary">
+          <span class="card-primary-badge">Start here</span>
           <h2>Look up a water quality measure</h2>
           <label for="analyteSelect">Choose a measure</label>
           <select id="analyteSelect" aria-label="Choose water quality measure"></select>
           <div id="detailPanel"></div>
         </div>
+
+        <div class="card card-support">
+          <h2>Before you read the numbers</h2>
+          <p class="fine-print" id="plainDisclaimer"></p>
+        </div>
       </div>
+
     </main>
   </div>
 
@@ -676,6 +972,27 @@
       }
 
       function categoryCellHtml(y) {
+        if (y.score_reason === "turbidity_treatment_technique") {
+          return (
+            '<td><span class="badge badge-muted" title="EPA turbidity uses treatment-technique rules (not a single MCL). The 1 NTU value is a reference line only.">' +
+            '<a href="#hrw-learn-more" class="badge-link">Based on treatment</a> — see Learn more' +
+            "</span></td>"
+          );
+        }
+        if (y.score_reason === "pfbs_hazard_index_reference") {
+          return (
+            '<td><span class="badge badge-muted" title="PFBS has no individual MCL; EPA uses hazard-index concepts. The ng/L number here is a reference scale only.">' +
+            '<a href="#hrw-learn-more" class="badge-link">Hazard index context</a> — see Learn more' +
+            "</span></td>"
+          );
+        }
+        if (y.score_reason === "lead_copper_action_level") {
+          return (
+            '<td><span class="badge badge-muted" title="Lead and Copper Rule uses tap sampling and action levels—not a single yearly max vs one number.">' +
+            '<a href="#hrw-learn-more" class="badge-link">Action level (tap rule)</a> — see Learn more' +
+            "</span></td>"
+          );
+        }
         var cat = y.category || "";
         if (!cat) {
           return "<td>—</td>";
@@ -688,41 +1005,315 @@
         return '<td><span class="' + cls + '">' + escapeHtml(cat) + "</span></td>";
       }
 
+      function isDbpStoryAnalyte(analyteName) {
+        var n = String(analyteName || "").toLowerCase();
+        return n.indexOf("trihalomethane") !== -1 || n.indexOf("tthm") !== -1 || n.indexOf("haloacetic") !== -1 || n.indexOf("haa5") !== -1;
+      }
+
+      function isTthmAnalyte(analyteName) {
+        var n = String(analyteName || "").toLowerCase();
+        return n.indexOf("trihalomethane") !== -1 || n.indexOf("tthm") !== -1;
+      }
+
+      function pointsForMiniChart(byYear) {
+        var points = (byYear || [])
+          .filter(function (y) {
+            return y && y.year != null && y.max_concentration != null && !isNaN(Number(y.max_concentration));
+          })
+          .map(function (y) {
+            return { year: Number(y.year), value: Number(y.max_concentration) };
+          })
+          .sort(function (a, b) {
+            return a.year - b.year;
+          });
+        if (!points.length) return { path: "", circles: "", years: [] };
+        var minYear = points[0].year;
+        var maxYear = points[points.length - 1].year;
+        var maxValue = Math.max.apply(null, points.map(function (p) { return p.value; }));
+        var minValue = Math.min.apply(null, points.map(function (p) { return p.value; }));
+        var spanYear = Math.max(1, maxYear - minYear);
+        var spanValue = Math.max(1, maxValue - minValue);
+        var coords = points.map(function (p) {
+          var x = 12 + ((p.year - minYear) / spanYear) * 276;
+          var y = 70 - ((p.value - minValue) / spanValue) * 54;
+          return { year: p.year, x: x, y: y };
+        });
+        return {
+          path: coords
+            .map(function (p, idx) {
+              return (idx === 0 ? "M" : "L") + p.x.toFixed(1) + " " + p.y.toFixed(1);
+            })
+            .join(" "),
+          coords: coords,
+          circles: coords
+            .map(function (p) {
+              return '<circle class="chart-point" data-year="' + p.year + '" cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="3.3"></circle>';
+            })
+            .join(""),
+          years: coords.map(function (p) { return p.year; }),
+        };
+      }
+
+      function yearsInData(byYear, candidates) {
+        var present = {};
+        (byYear || []).forEach(function (y) {
+          present[String(y.year)] = true;
+        });
+        return candidates.filter(function (year) {
+          return present[String(year)];
+        });
+      }
+
+      function yearLabel(years) {
+        if (!years.length) return "";
+        if (years.length === 1) return String(years[0]);
+        var contiguous = true;
+        for (var i = 1; i < years.length; i++) {
+          if (years[i] !== years[i - 1] + 1) contiguous = false;
+        }
+        return contiguous ? years[0] + "-" + years[years.length - 1] : years.join(", ");
+      }
+
+      function timelineMarkerHtml(id, years, label, note, active) {
+        if (!years.length) return "";
+        return (
+          '<button type="button" class="timeline-marker' +
+          (active ? " is-active" : "") +
+          '" data-story-id="' +
+          id +
+          '" data-story-years="' +
+          years.join(" ") +
+          '" role="listitem">' +
+          '<span class="timeline-year">' +
+          escapeHtml(yearLabel(years)) +
+          '</span><span class="timeline-label">' +
+          escapeHtml(label) +
+          '</span><span class="timeline-note">' +
+          escapeHtml(note) +
+          "</span></button>"
+        );
+      }
+
+      function chartBandHtml(mini, id, years, active) {
+        var coords = mini.coords || [];
+        var matched = coords.filter(function (p) {
+          return years.indexOf(p.year) !== -1;
+        });
+        if (!matched.length) return "";
+        var minX = Math.min.apply(null, matched.map(function (p) { return p.x; }));
+        var maxX = Math.max.apply(null, matched.map(function (p) { return p.x; }));
+        var x = Math.max(8, minX - 8);
+        var width = Math.max(20, maxX - minX + 16);
+        return (
+          '<rect class="chart-highlight-band' +
+          (active ? " is-active" : "") +
+          '" data-story-id="' +
+          id +
+          '" x="' +
+          x.toFixed(1) +
+          '" y="8" width="' +
+          width.toFixed(1) +
+          '" height="64" rx="6"></rect>'
+        );
+      }
+
+      function fmtNumber(n) {
+        if (n == null || isNaN(Number(n))) return "—";
+        return String(Math.round(Number(n) * 100) / 100);
+      }
+
+      function dbpTurnaroundStats(byYear) {
+        var points = (byYear || [])
+          .filter(function (y) {
+            return y && y.year != null && y.max_concentration != null && !isNaN(Number(y.max_concentration));
+          })
+          .map(function (y) {
+            return {
+              year: Number(y.year),
+              value: Number(y.max_concentration),
+              unit: y.unit || "",
+            };
+          })
+          .sort(function (a, b) {
+            return a.year - b.year;
+          });
+        if (!points.length) return null;
+        var peak = points[0];
+        points.forEach(function (p) {
+          if (p.value > peak.value) peak = p;
+        });
+        var latest = points[points.length - 1];
+        var pctLower = peak.value > 0 ? Math.round(((peak.value - latest.value) / peak.value) * 100) : null;
+        return { peak: peak, latest: latest, pctLower: pctLower, unit: latest.unit || peak.unit || "" };
+      }
+
+      function buildDbpPatternSignalHtml(analyteName, byYear) {
+        if (!isDbpStoryAnalyte(analyteName)) return "";
+        var stats = dbpTurnaroundStats(byYear);
+        if (!stats) return "";
+        var unit = stats.unit ? " " + escapeHtml(stats.unit) : "";
+        var isTthm = isTthmAnalyte(analyteName);
+        var lowerText = stats.pctLower != null && stats.pctLower > 0
+          ? '<span class="signal-stat"><strong>' + stats.pctLower + '% lower</strong> than peak</span>'
+          : "";
+        var title = isTthm
+          ? "A treatment turnaround is visible in this public record"
+          : "The latest value is lower than this dataset's peak";
+        var body = isTthm
+          ? "Early TTHM readings were high, then the long-term baseline moved lower. That kind of shift is evidence of treatment decisions, monitoring, and operational follow-through showing up in the data."
+          : "This DBP record does not follow the same early-peak story as TTHM. It still shows a useful signal: the latest value is below the dataset peak, and most recent years sit well below the benchmark.";
+        return (
+          '<aside class="pattern-signal" aria-label="Pattern detected in this measure">' +
+          '<p class="pattern-signal-kicker">Pattern detected</p>' +
+          '<h3 class="pattern-signal-title">' + escapeHtml(title) + '</h3>' +
+          '<p>' + escapeHtml(body) + '</p>' +
+          '<div class="signal-stats">' +
+          '<span class="signal-stat">Peak <strong>' + fmtNumber(stats.peak.value) + unit + '</strong> in ' + stats.peak.year + '</span>' +
+          '<span class="signal-stat">Latest <strong>' + fmtNumber(stats.latest.value) + unit + '</strong> in ' + stats.latest.year + '</span>' +
+          lowerText +
+          '</div>' +
+          '<a class="pattern-signal-link" href="#dbp-turnaround-story">See the turnaround below</a>' +
+          '</aside>'
+        );
+      }
+
+      function buildDbpInterpretationHtml(analyteName, byYear) {
+        if (!isDbpStoryAnalyte(analyteName)) return "";
+        var mini = pointsForMiniChart(byYear);
+        var isTthm = isTthmAnalyte(analyteName);
+        var earlyPeakYears = yearsInData(byYear, isTthm ? [1999, 2000, 2001] : [2004, 2005, 2006, 2007, 2008]);
+        var treatmentYears = yearsInData(byYear, isTthm ? [2004, 2005, 2006] : [2016]);
+        var lowerBaselineYears = yearsInData(byYear, isTthm ? [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015] : [2017, 2018, 2019, 2020, 2021, 2022]);
+        var watchpointYears = yearsInData(byYear, isTthm ? [2016] : [2023, 2024, 2025, 2026]);
+        var markers =
+          timelineMarkerHtml("peaks", earlyPeakYears, isTthm ? "Early DBP peaks" : "Early baseline", isTthm ? "Above-limit and near-limit years appear at the start of the record." : "The first HAA5 years in this file are moderate to well below the benchmark.", true) +
+          timelineMarkerHtml("treatment", treatmentYears, isTthm ? "Treatment response" : "Dataset peak", isTthm ? "Reported levels move out of the above-limit range." : "The highest HAA5 value in this dataset appears here, still below the EPA benchmark used on this page.", false) +
+          timelineMarkerHtml("stabilize", lowerBaselineYears, "Lower recent baseline", isTthm ? "The later record mostly sits below the early peak period." : "Most following years return to well-below or moderate levels.", false) +
+          timelineMarkerHtml("watchpoint", watchpointYears, isTthm ? "Watchpoint" : "Latest record", isTthm ? "One later year is still worth noticing in the table." : "The newest years keep the record in context rather than focusing only on the peak.", false);
+        var bands =
+          chartBandHtml(mini, "peaks", earlyPeakYears, true) +
+          chartBandHtml(mini, "treatment", treatmentYears, false) +
+          chartBandHtml(mini, "stabilize", lowerBaselineYears, false) +
+          chartBandHtml(mini, "watchpoint", watchpointYears, false);
+        return (
+          '<section class="interpretive-layer" id="dbp-turnaround-story" aria-label="A visible treatment turnaround">' +
+          '<p class="interpretive-kicker">Infrastructure doing its job</p>' +
+          '<h3 class="interpretive-title">' + (isTthm ? "A visible treatment turnaround" : "A DBP trend worth reading in context") + '</h3>' +
+          '<p class="interpretive-sub">' + (isTthm ? "This appears for TTHM because this disinfection by-product shows a clear improvement arc in the public record. Each marker maps only to years that appear in the table." : "This appears for HAA5 because it is also a disinfection by-product, but its pattern is different from TTHM. Each marker maps only to years that appear in the table.") + '</p>' +
+          '<div class="timeline-rail" role="list">' +
+          markers +
+          "</div>" +
+          '<div class="interpretive-grid">' +
+          '<article class="story-panel">' +
+          '<div class="story-chip-row"><span class="story-chip">Public-data kudos</span><span class="story-chip">Treatment</span><span class="story-chip">Trend shift</span></div>' +
+          "<h4>" + (isTthm ? "What Highlands Ranch Water appears to have improved" : "What the HAA5 record suggests") + "</h4>" +
+          "<p>" + (isTthm ? "The early record shows DBP values near or above the benchmark; the later record shows a lower baseline. This is the kind of improvement residents rarely see directly, but it is exactly what public monitoring data can make visible: treatment work, operational discipline, and follow-through over time." : "The HAA5 record does not show the same early above-limit turnaround as TTHM. It shows something quieter but still useful: a moderate peak followed by a recent record that generally remains well below the benchmark used here.") + "</p>" +
+          '<div class="mini-chart" aria-hidden="true">' +
+          '<svg viewBox="0 0 300 86" role="img">' +
+          bands +
+          '<line x1="12" y1="70" x2="288" y2="70" stroke="#d8dee6" stroke-width="1"></line>' +
+          '<path d="' + escapeHtml(mini.path) + '" fill="none" stroke="#005ea2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>' +
+          mini.circles +
+          '<text x="12" y="84" fill="#5c5c5c" font-size="9">published yearly maximums</text>' +
+          '</svg></div>' +
+          "</article>" +
+          '<div class="context-stack" aria-label="Interpretation modules">' +
+          '<article class="context-card"><h4>Why this matters</h4><p>Disinfection protects public health. The achievement is keeping that protection while reducing unwanted by-products.</p></article>' +
+          '<article class="context-card"><h4>What changed</h4><p>The data is consistent with treatment optimization and organic-material control after DBP rules matured.</p></article>' +
+          '<article class="context-card"><h4>What experts watch</h4><p>Experts look for sustained lower baselines, not just one good year. That is what makes the later record meaningful.</p></article>' +
+          "</div></div></section>"
+        );
+      }
+
+      function attachInterpretiveInteractions() {
+        var layer = detailPanel.querySelector(".interpretive-layer");
+        if (!layer) return;
+        var markers = Array.prototype.slice.call(layer.querySelectorAll(".timeline-marker"));
+        var rows = Array.prototype.slice.call(detailPanel.querySelectorAll("tr[data-year]"));
+        var points = Array.prototype.slice.call(layer.querySelectorAll(".chart-point"));
+        var bands = Array.prototype.slice.call(layer.querySelectorAll(".chart-highlight-band"));
+        function setActive(marker) {
+          markers.forEach(function (m) { m.classList.toggle("is-active", m === marker); });
+          var storyId = marker.getAttribute("data-story-id") || "";
+          var yearSet = {};
+          String(marker.getAttribute("data-story-years") || "")
+            .split(/\s+/)
+            .forEach(function (y) {
+              if (y) yearSet[y] = true;
+            });
+          rows.forEach(function (row) {
+            row.classList.toggle("is-year-highlight", !!yearSet[row.getAttribute("data-year")]);
+          });
+          points.forEach(function (point) {
+            point.classList.toggle("is-active", !!yearSet[point.getAttribute("data-year")]);
+          });
+          bands.forEach(function (band) {
+            band.classList.toggle("is-active", band.getAttribute("data-story-id") === storyId);
+          });
+        }
+        markers.forEach(function (marker) {
+          marker.addEventListener("mouseenter", function () { setActive(marker); });
+          marker.addEventListener("focus", function () { setActive(marker); });
+          marker.addEventListener("click", function () { setActive(marker); });
+        });
+        setActive(layer.querySelector(".timeline-marker.is-active") || markers[0]);
+      }
+
       function renderDetail(data, education, name) {
         var a = data.analytes.find(function (x) { return x.analyte_name === name; });
         if (!a) {
           detailPanel.innerHTML = "<p class=\"fine-print\">No data for that choice.</p>";
           return;
         }
-        var rows = a.by_year.map(function (y) {
-          return (
-            "<tr><td class=\"num\">" +
-            y.year +
-            "</td><td class=\"num\">" +
-            (y.max_concentration != null ? String(y.max_concentration) : "—") +
-            "</td><td class=\"num\">" +
-            (y.sdwa_limit != null ? String(y.sdwa_limit) : "—") +
-            "</td><td>" +
-            escapeHtml(y.unit || "—") +
-            "</td>" +
-            categoryCellHtml(y) +
-            "</tr>"
-          );
-        }).join("");
-        var edu = buildEducationHtml(name, education || { by_analyte_name: {} }, a.by_year || []);
+        var byy = a.by_year || [];
+        var patternSignal = buildDbpPatternSignalHtml(name, byy);
+        var interpretation = buildDbpInterpretationHtml(name, byy);
+        var rows = byy
+          .map(function (y) {
+            return (
+              '<tr data-year="' +
+              escapeHtml(y.year) +
+              '"><td class="num">' +
+              y.year +
+              "</td><td class=\"num\">" +
+              (y.max_concentration != null ? String(y.max_concentration) : "—") +
+              "</td><td class=\"num\">" +
+              (y.sdwa_limit != null ? String(y.sdwa_limit) : "—") +
+              "</td><td>" +
+              escapeHtml(y.unit || "—") +
+              "</td>" +
+              categoryCellHtml(y) +
+              "</tr>"
+            );
+          })
+          .join("");
+        var latestLabel =
+          a.summary_latest_year != null && a.summary_latest_year !== undefined
+            ? String(a.summary_latest_year)
+            : "—";
+        var emptyNote =
+          byy.length === 0
+            ? '<p class="fine-print" role="status" style="margin-bottom:0.75rem">No monitoring rows for this measure appear in the CDPHE extract used for this page. Use the learn-more column for context until a newer export includes it.</p>'
+            : "";
+        var edu = buildEducationHtml(name, education || { by_analyte_name: {} }, byy);
         detailPanel.innerHTML =
           '<div class="detail-layout">' +
           '<div class="detail-main">' +
           "<p class=\"fine-print\">Latest reporting year in this file for this measure: <strong>" +
-          a.summary_latest_year +
+          escapeHtml(latestLabel) +
           "</strong>.</p>" +
+          emptyNote +
+          patternSignal +
           '<h3 class="detail-section-title">Year-by-year levels</h3>' +
           '<div class="table-wrap"><table><thead><tr><th scope="col">Year</th><th scope="col">Highest level</th><th scope="col">Limit</th><th scope="col">Unit</th><th scope="col">Compared to limit</th></tr></thead><tbody>' +
           rows +
-          "</tbody></table></div></div>" +
-          '<aside class="detail-aside" aria-label="Learn more about this measure">' +
+          "</tbody></table></div>" +
+          interpretation +
+          "</div>" +
+          '<aside class="detail-aside" id="hrw-learn-more" aria-label="Learn more about this measure">' +
           edu +
           "</aside></div>";
+        attachInterpretiveInteractions();
       }
 
       Promise.all([
@@ -803,7 +1394,20 @@
           analyteSelect.addEventListener("change", function () {
             renderDetail(data, educationPayload, analyteSelect.value);
           });
-          if (analytes.length) renderDetail(data, educationPayload, analytes[0].analyte_name);
+          var firstExceedanceName = ex.length ? ex[0].analyte_name : null;
+          var firstExceedanceAnalyte = firstExceedanceName
+            ? analytes.find(function (x) {
+                return x.analyte_name === firstExceedanceName && x.by_year && x.by_year.length;
+              })
+            : null;
+          var firstLive = analytes.find(function (x) {
+            return x.by_year && x.by_year.length;
+          });
+          var initialName = firstExceedanceAnalyte ? firstExceedanceAnalyte.analyte_name : firstLive ? firstLive.analyte_name : analytes[0] ? analytes[0].analyte_name : null;
+          if (initialName) {
+            analyteSelect.value = initialName;
+            renderDetail(data, educationPayload, initialName);
+          }
 
           contentEl.hidden = false;
         })
