@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   LayoutGrid,
   LineChart as LineChartIcon,
@@ -10,8 +10,11 @@ import { AttentionSection } from './components/AttentionSection'
 import { ContaminantCard } from './components/ContaminantCard'
 import { EducationAside } from './components/EducationAside'
 import { HeroSnapshot } from './components/HeroSnapshot'
+import { TopicGuide } from './components/TopicGuide'
 import { TrendPanel } from './components/TrendPanel'
 import { TrustFooter } from './components/TrustFooter'
+import { TopicsHub, type TopicId } from './components/TopicsHub'
+import { WelcomeIntro } from './components/WelcomeIntro'
 import { cn } from './lib/cn'
 import { overallStatus } from './lib/derive'
 import type { EducationPayload, PwsPayload } from './types/water'
@@ -37,6 +40,11 @@ export default function App() {
   const [dark, setDark] = useState(false)
   const [selected, setSelected] = useState<string | null>(null)
   const [mobileTab, setMobileTab] = useState<'overview' | 'detail'>('overview')
+  const [activeTopic, setActiveTopic] = useState<TopicId | null>(null)
+  const [guideTopic, setGuideTopic] = useState<
+    Extract<TopicId, 'hard-water' | 'taste-odor'> | null
+  >(null)
+  const dataSectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
@@ -80,6 +88,36 @@ export default function App() {
       : water?.years_present?.[0]?.toString() ?? '—'
 
   const classicHref = useMemo(() => classicLayoutHref(), [])
+
+  const scrollToData = useCallback(() => {
+    dataSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [])
+
+  const handleTopicSelect = useCallback(
+    (topic: TopicId) => {
+      setActiveTopic(topic)
+
+      if (topic === 'hard-water' || topic === 'taste-odor') {
+        setGuideTopic(topic)
+        scrollToData()
+        return
+      }
+
+      setGuideTopic(null)
+      const analyte =
+        topic === 'pfas'
+          ? (water?.analytes.find((a) => a.analyte_name === 'PFOA') ??
+            water?.analytes.find((a) => a.analyte_name.startsWith('PF')))
+          : water?.analytes.find((a) => a.analyte_name === 'Lead')
+
+      if (analyte) {
+        setSelected(analyte.analyte_name)
+        setMobileTab('detail')
+        scrollToData()
+      }
+    },
+    [scrollToData, water?.analytes],
+  )
 
   const topBar = (
     <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
@@ -134,6 +172,8 @@ export default function App() {
       <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
         {topBar}
 
+        <WelcomeIntro />
+
         <HeroSnapshot
           utilityLabel={water.pws_label}
           pwsId={water.pws_id_number}
@@ -142,7 +182,13 @@ export default function App() {
           tone={tone}
         />
 
-        <div className="mt-8 space-y-8">
+        <TopicsHub activeTopic={activeTopic} onSelectTopic={handleTopicSelect} />
+
+        {guideTopic && (
+          <TopicGuide topic={guideTopic} onClose={() => setGuideTopic(null)} />
+        )}
+
+        <div ref={dataSectionRef} className="mt-8 space-y-8 scroll-mt-6">
           <div className="flex gap-2 rounded-2xl bg-slate-200/60 p-1 dark:bg-slate-800/80 lg:hidden">
             <button
               type="button"

@@ -68,9 +68,9 @@ export function HeroSnapshot({
             <ShieldCheck className="h-3.5 w-3.5" aria-hidden />
             Colorado public monitoring data
           </p>
-          <h1 className="font-sans text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          <h2 className="font-sans text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Your water snapshot
-          </h1>
+          </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             <span className="font-semibold text-slate-900 dark:text-white">
               {utilityLabel}
