@@ -31,9 +31,11 @@ function spikes(analyte: AnalytePack): number[] {
 export function EducationAside({
   analyte,
   education,
+  sticky = true,
 }: {
   analyte: AnalytePack
   education: EducationPayload | null
+  sticky?: boolean
 }) {
   const entry =
     education?.by_analyte_name?.[analyte.analyte_name] ?? defaultEntry()
@@ -42,7 +44,10 @@ export function EducationAside({
   return (
     <motion.aside
       layout
-      className="sticky top-4 rounded-2xl bg-slate-900 p-5 text-slate-100 shadow-xl ring-1 ring-white/10 dark:bg-slate-950"
+      className={cn(
+        'rounded-2xl bg-slate-900 p-5 text-slate-100 shadow-xl ring-1 ring-white/10 dark:bg-slate-950',
+        sticky && 'sticky top-4',
+      )}
     >
       <div className="flex items-center gap-2 text-sm font-semibold text-sky-300">
         <BookOpen className="h-4 w-4" />

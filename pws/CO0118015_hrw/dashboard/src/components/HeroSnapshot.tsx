@@ -1,59 +1,79 @@
 import { motion } from 'framer-motion'
-import { Droplets, ShieldCheck } from 'lucide-react'
+import { Droplets } from 'lucide-react'
 import { cn } from '../lib/cn'
-import type { OverallTone } from '../lib/derive'
+import { snapshotSummaryLine, type MeasureSummary, type OverallTone } from '../lib/derive'
 
-const toneCopy: Record<
+const alertTone: Record<
   OverallTone,
-  { label: string; desc: string; className: string }
+  { title: string; className: string }
 > = {
   calm: {
-    label: 'Looking steady',
-    desc: 'Latest reported year in this file does not show levels above limits for the measures we summarize.',
+    title: 'Looking steady',
     className:
       'bg-emerald-500/10 text-emerald-800 ring-emerald-500/20 dark:text-emerald-200 dark:ring-emerald-400/30',
   },
   watch: {
-    label: 'Worth a closer read',
-    desc: 'Some measures are in a “moderate” or “approaching” range in the latest year—see cards below and official links.',
+    title: 'Worth a closer look',
     className:
       'bg-amber-500/10 text-amber-900 ring-amber-500/25 dark:text-amber-100 dark:ring-amber-400/30',
   },
   act: {
-    label: 'Attention items',
-    desc: 'At least one measure is above the limit used in this dataset for a reported year—review details calmly with official guidance.',
+    title: 'Attention needed',
     className:
       'bg-rose-500/10 text-rose-900 ring-rose-500/25 dark:text-rose-100 dark:ring-rose-400/30',
   },
 }
 
-function formatUpdated(iso: string) {
-  try {
-    const d = new Date(iso)
-    return d.toLocaleDateString(undefined, {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    })
-  } catch {
-    return iso
-  }
+const statusCopy: Record<
+  OverallTone,
+  { emoji: string; label: string; className: string }
+> = {
+  calm: {
+    emoji: '🟢',
+    label: 'Within safe limits',
+    className: 'text-emerald-700 dark:text-emerald-300',
+  },
+  watch: {
+    emoji: '🟡',
+    label: 'Approaching limits',
+    className: 'text-amber-700 dark:text-amber-300',
+  },
+  act: {
+    emoji: '🔴',
+    label: 'Above limits',
+    className: 'text-rose-700 dark:text-rose-300',
+  },
 }
 
 export function HeroSnapshot({
   utilityLabel,
-  pwsId,
   yearSpan,
-  generatedAt,
   tone,
+  safetyTone,
+  summary,
+  watchCopy,
+  onViewAffected,
 }: {
   utilityLabel: string
-  pwsId: string
   yearSpan: string
-  generatedAt: string
   tone: OverallTone
+  safetyTone: OverallTone
+  summary: MeasureSummary
+  watchCopy?: { title: string; desc: string; action: string; targetName: string | null }
+  onViewAffected?: (targetName: string) => void
 }) {
-  const t = toneCopy[tone]
+  const status = statusCopy[safetyTone]
+  const alert = alertTone[tone]
+  const showAlert = tone !== 'calm'
+  const alertTitle = watchCopy?.title ?? alert.title
+  const alertDesc =
+    watchCopy?.desc ??
+    (tone === 'act'
+      ? `${summary.above} measure${summary.above === 1 ? '' : 's'} exceed${summary.above === 1 ? 's' : ''} the limit in recent data.`
+      : '')
+  const alertAction =
+    watchCopy?.action ?? (tone === 'act' ? '👉 View affected measures' : '')
+
   return (
     <motion.header
       initial={{ opacity: 0, y: 12 }}
@@ -62,42 +82,85 @@ export function HeroSnapshot({
       className="relative overflow-hidden rounded-3xl bg-white/80 p-6 shadow-sm ring-1 ring-slate-200/80 backdrop-blur dark:bg-slate-900/70 dark:ring-slate-700/80 sm:p-8"
     >
       <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-sky-400/10 blur-3xl dark:bg-sky-500/10" />
-      <div className="relative flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-        <div className="max-w-2xl space-y-3 text-left">
-          <p className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-            <ShieldCheck className="h-3.5 w-3.5" aria-hidden />
-            Colorado public monitoring data
-          </p>
+
+      <div
+        className={cn(
+          'relative grid gap-6',
+          showAlert && 'lg:grid-cols-[minmax(0,1fr)_min(17rem,34%)] lg:items-stretch',
+        )}
+      >
+        <div className="space-y-3 text-left">
           <h2 className="font-sans text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Your water snapshot
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300">
-            <span className="font-semibold text-slate-900 dark:text-white">
-              {utilityLabel}
-            </span>{' '}
-            · Public system ID {pwsId}. Chart uses reporting years{' '}
-            <span className="font-medium text-slate-800 dark:text-slate-200">
-              {yearSpan}
-            </span>{' '}
-            from the state file—interpretation, not a lab test of your tap.
+
+          <p className="text-lg font-semibold text-slate-900 dark:text-white">
+            {utilityLabel}
           </p>
-          <p className="text-sm text-slate-500 dark:text-slate-400">
-            Data refresh shown:{' '}
-            <time dateTime={generatedAt}>{formatUpdated(generatedAt)}</time>
+
+          <p className={cn('text-base font-medium', status.className)} role="status">
+            {status.emoji} {status.label}
+          </p>
+
+          <p className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-slate-600 dark:text-slate-400">
+            <span>
+              Safe:{' '}
+              <strong className="font-semibold text-emerald-700 dark:text-emerald-400">
+                {summary.safe}
+              </strong>
+            </span>
+            <span>
+              Moderate:{' '}
+              <strong className="font-semibold text-amber-700 dark:text-amber-400">
+                {summary.moderate}
+              </strong>
+            </span>
+            <span>
+              Above limit:{' '}
+              <strong className="font-semibold text-rose-700 dark:text-rose-400">
+                {summary.above}
+              </strong>
+            </span>
+          </p>
+
+          <p className="text-[15px] leading-relaxed text-slate-600 dark:text-slate-300">
+            {snapshotSummaryLine(summary)}
           </p>
         </div>
-        <div
-          className={cn(
-            'flex max-w-md flex-col gap-2 rounded-2xl px-4 py-3 text-left ring-1',
-            t.className,
-          )}
-        >
-          <div className="flex items-center gap-2 text-sm font-semibold">
-            <Droplets className="h-4 w-4 shrink-0" aria-hidden />
-            {t.label}
+
+        {showAlert && (
+          <div
+            className={cn(
+              'flex flex-col justify-center gap-2 rounded-2xl px-4 py-3.5 text-left ring-1 lg:min-h-[9rem]',
+              alert.className,
+            )}
+          >
+            <div className="flex items-center gap-2 text-sm font-semibold">
+              <Droplets className="h-4 w-4 shrink-0" aria-hidden />
+              {alertTitle}
+            </div>
+            <p className="text-sm leading-snug opacity-95">{alertDesc}</p>
+            {watchCopy?.targetName && onViewAffected ? (
+              <button
+                type="button"
+                onClick={() => onViewAffected(watchCopy.targetName!)}
+                className="mt-0.5 text-left text-sm font-semibold opacity-95 underline-offset-2 hover:underline"
+              >
+                {alertAction}
+              </button>
+            ) : (
+              <p className="text-sm font-semibold opacity-95">{alertAction}</p>
+            )}
           </div>
-          <p className="text-sm leading-relaxed opacity-95">{t.desc}</p>
-        </div>
+        )}
+      </div>
+
+      <div className="relative mt-5 border-t border-slate-200/80 pt-4 text-left text-xs leading-relaxed text-[#6b7280] dark:border-slate-700 dark:text-slate-500">
+        <p className="m-0">Data covers reporting years {yearSpan}</p>
+        <p className="m-0">Source: Colorado public monitoring files</p>
+        <p className="m-0">
+          Published monitoring for the whole system — your home tap may differ
+        </p>
       </div>
     </motion.header>
   )

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Drinking water — Highlands Ranch Water | Community data view</title>
+  <title>Drinking water quality — Highlands Ranch Water</title>
   <style>
     /*
       Inspired by common Colorado .gov patterns (navy bar, white content, serif titles):
@@ -29,7 +29,7 @@
       --radius-sm: 8px;
     }
     * { box-sizing: border-box; }
-    html { font-size: 16px; }
+    html { font-size: 16px; scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -60,7 +60,7 @@
     .masthead {
       background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
       border-bottom: 1px solid var(--line);
-      padding: 1.35rem 0 1.15rem;
+      padding: 2rem 0 2.25rem;
       margin-bottom: 0;
       box-shadow: var(--shadow-sm);
     }
@@ -72,47 +72,58 @@
     @media (min-width: 40rem) {
       .masthead-inner { padding-left: 1.5rem; padding-right: 1.5rem; }
     }
+    .masthead-copy {
+      max-width: 40rem;
+    }
     .masthead-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem 0.75rem;
-      margin-top: 1rem;
+      gap: 0.65rem 0.85rem;
+      margin-top: 1.5rem;
       align-items: center;
     }
-    .btn-dash {
+    .btn-primary,
+    .btn-secondary {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       font-weight: 600;
       text-decoration: none;
+      padding: 0.6rem 1.15rem;
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn-primary {
       color: #fff;
       background: var(--link);
-      border: 1px solid transparent;
-      padding: 0.5rem 1rem;
-      border-radius: 999px;
+      border: 1.5px solid var(--link);
       box-shadow: 0 1px 3px rgba(0, 94, 162, 0.25);
-      transition: background 0.15s ease, transform 0.1s ease;
     }
-    .btn-dash:hover {
+    .btn-primary:hover {
       color: #fff;
       background: var(--link-hover);
+      border-color: var(--link-hover);
     }
-    .btn-dash:focus-visible {
+    .btn-secondary {
+      color: var(--link);
+      background: transparent;
+      border: 1.5px solid var(--link);
+    }
+    .btn-secondary:hover {
+      color: var(--link-hover);
+      border-color: var(--link-hover);
+      background: #f0f7fc;
+    }
+    .btn-primary:focus-visible,
+    .btn-secondary:focus-visible {
       outline: 3px solid var(--focus);
       outline-offset: 2px;
-    }
-    .masthead-actions .masthead-secondary {
-      font-size: 0.875rem;
-      color: var(--muted);
-    }
-    .masthead-actions .masthead-secondary a {
-      font-weight: 600;
     }
     .crumb {
       font-size: 0.8125rem;
       color: var(--muted);
-      margin-bottom: 0.5rem;
+      margin: 0 0 1rem;
     }
     .crumb a {
       color: var(--link);
@@ -120,52 +131,46 @@
       font-weight: 500;
     }
     .crumb a:hover { text-decoration: underline; }
+    .hero-label {
+      margin: 0;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--link);
+    }
     .page-title {
       font-family: Georgia, "Times New Roman", Times, serif;
-      font-size: clamp(1.5rem, 2.5vw + 1rem, 2rem);
+      font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
       font-weight: 700;
-      line-height: 1.2;
-      margin: 0;
+      line-height: 1.15;
+      margin: 0.35rem 0 0;
       color: var(--navy);
       letter-spacing: -0.02em;
     }
-    .page-sub {
-      font-family: system-ui, -apple-system, sans-serif;
-      font-size: 1rem;
+    .hero-subhead {
+      margin: 0.85rem 0 0;
+      max-width: 38ch;
+      font-size: 1.0625rem;
+      line-height: 1.5;
       color: var(--muted);
+    }
+    .hero-location {
       margin: 0.5rem 0 0;
-      font-weight: 400;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    .hero-source {
+      margin: 2rem 0 0;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      max-width: 40rem;
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      color: #8b929a;
     }
     main {
-      padding-top: 1.25rem;
-    }
-    /* Slim top context — keeps the fold clear for “look up a measure” */
-    .hero-strip {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.5rem 1rem;
-      margin-bottom: 1.25rem;
-      padding: 0.65rem 1rem;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-sm);
-      font-size: 0.875rem;
-      line-height: 1.5;
-      color: var(--text);
-    }
-    .hero-strip strong { color: var(--navy); }
-    .hero-strip-meta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.35rem 0.75rem;
-      margin-left: auto;
-    }
-    .hero-strip-meta a {
-      font-weight: 600;
-      white-space: nowrap;
+      padding-top: 1.75rem;
     }
     .card.card-primary {
       border-color: #c5d4e4;
@@ -206,14 +211,6 @@
       box-shadow: var(--shadow-sm);
     }
     .callout strong { font-weight: 700; }
-    .lede {
-      font-size: 1rem;
-      color: var(--text);
-      margin: 0 0 1rem;
-      line-height: 1.6;
-      max-width: 58ch;
-    }
-    .lede a { font-weight: 600; }
     h2 {
       font-family: Georgia, "Times New Roman", Times, serif;
       font-size: 1.25rem;
@@ -234,9 +231,102 @@
     @media (min-width: 40rem) {
       .card { padding: 1.5rem 1.6rem; }
     }
-    .card.card-warn {
-      border-color: #e8c48a;
-      background: linear-gradient(180deg, #fffdf8 0%, #fff 48%);
+    .card.card-insights {
+      border-color: #c5d4e4;
+      background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+      scroll-margin-top: 1.25rem;
+    }
+    .card.card-insights h2 {
+      margin-top: 0;
+    }
+    .insights-lede {
+      margin: 0.35rem 0 0;
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .insight-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.15rem;
+    }
+    @media (min-width: 48rem) {
+      .insight-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .insight-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.1rem 1.15rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+    .insight-title {
+      margin: 0;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+    .insight-steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .insight-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      border-left: 3px solid transparent;
+      font-size: 0.875rem;
+      line-height: 1.45;
+    }
+    .insight-step--past {
+      background: #fffbeb;
+      border-left-color: #f59e0b;
+      color: #78350f;
+    }
+    .insight-step--trend {
+      background: #eff6ff;
+      border-left-color: #3b82f6;
+      color: #1e3a8a;
+    }
+    .insight-step--safe {
+      background: #f0fdf4;
+      border-left-color: #22c55e;
+      color: #14532d;
+    }
+    .insight-icon {
+      flex-shrink: 0;
+      width: 1.15rem;
+      text-align: center;
+    }
+    .insight-cta {
+      align-self: flex-start;
+      margin-top: auto;
+      padding: 0.25rem 0;
+      border: 0;
+      background: transparent;
+      color: var(--link);
+      font: inherit;
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .insight-cta:hover,
+    .insight-cta:focus-visible {
+      color: var(--link-hover);
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
     .fine-print {
       font-size: 0.875rem;
@@ -387,31 +477,6 @@
     }
     .badge .badge-link:hover {
       color: #005ea2;
-    }
-    .exceed { list-style: none; margin: 0; padding: 0; }
-    .exceed li {
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--line);
-      font-size: 0.9375rem;
-    }
-    .exceed li:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
-    .exceed-action {
-      display: inline-flex;
-      margin-left: 0.25rem;
-      border: 0;
-      padding: 0;
-      background: transparent;
-      color: var(--link);
-      font: inherit;
-      font-weight: 700;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      cursor: pointer;
-    }
-    .exceed-action:hover,
-    .exceed-action:focus-visible {
-      color: var(--link-hover);
     }
     a { color: var(--link); }
     a:hover { color: var(--link-hover); }
@@ -785,6 +850,14 @@
       text-decoration: none;
     }
     .pattern-signal-link:hover { text-decoration: underline; }
+    .site-disclaimer {
+      max-width: 44rem;
+      margin: 2rem auto 0;
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      color: var(--muted);
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -794,34 +867,79 @@
 
   <div class="masthead">
     <div class="masthead-inner">
-      <p class="crumb"><a href="../../lookup.html">Colorado water lookup</a> · Highlands Ranch Water</p>
-      <h1 class="page-title">Drinking water information for Highlands Ranch Water</h1>
-      <p class="page-sub">Douglas County, Colorado — levels reported to the state over time</p>
-      <div class="masthead-actions">
-        <a class="btn-dash" href="./dashboard/dist/index.html">Dashboard view</a>
-        <span class="masthead-secondary">Same data · <a href="../../lookup.html">Colorado lookup</a></span>
+      <div class="masthead-copy">
+        <p class="crumb"><a href="../../index.html">Home</a></p>
+        <p class="hero-label">Highlands Ranch Water</p>
+        <h1 class="page-title">Drinking water quality</h1>
+        <p class="hero-subhead">Clear, plain-language view of your system&rsquo;s data</p>
+        <p class="hero-location">📍 Douglas County, Colorado</p>
+        <div class="masthead-actions">
+          <a class="btn-primary" href="#insightsPanel" id="exploreCta">Explore your water →</a>
+          <a class="btn-secondary" href="./dashboard/dist/index.html">Dashboard view</a>
+        </div>
+        <p class="hero-source" id="heroSource">Source: Colorado public monitoring data</p>
       </div>
     </div>
   </div>
 
   <div class="wrap">
     <main>
-      <div class="hero-strip" role="note">
-        <span><strong>Who this is for.</strong> Drinking water customers of <strong>Highlands Ranch Water</strong> — levels from Colorado’s public monitoring data.</span>
-        <span class="hero-strip-meta">
-          <a href="../../lookup.html">Statewide lookup</a>
-          <a href="./dashboard/dist/index.html">Dashboard view</a>
-        </span>
-      </div>
-
-      <p class="lede" id="subtitle">Loading…</p>
-
       <div id="status" role="status" aria-live="polite"></div>
 
       <div id="content" hidden>
-        <div class="card card-warn" id="exceedPanel" hidden>
-          <h2>Readings above the drinking water limit in this data</h2>
-          <ul class="exceed" id="exceedList"></ul>
+        <div class="card card-insights" id="insightsPanel">
+          <h2>Key water quality insights</h2>
+          <p class="insights-lede">How disinfection byproducts have changed over time in this dataset.</p>
+          <div class="insight-grid">
+            <article class="insight-card">
+              <h3 class="insight-title">TTHM (disinfection byproducts)</h3>
+              <ul class="insight-steps">
+                <li class="insight-step insight-step--past">
+                  <span class="insight-icon" aria-hidden="true">⚠️</span>
+                  Exceeded limits in early data (1999–2000)
+                </li>
+                <li class="insight-step insight-step--trend">
+                  <span class="insight-icon" aria-hidden="true">↓</span>
+                  Improved over time
+                </li>
+                <li class="insight-step insight-step--safe">
+                  <span class="insight-icon" aria-hidden="true">✅</span>
+                  No recent exceedances
+                </li>
+              </ul>
+              <button
+                type="button"
+                class="insight-cta"
+                data-measure="TTHM (total trihalomethanes)"
+              >
+                Explore this trend →
+              </button>
+            </article>
+            <article class="insight-card">
+              <h3 class="insight-title">HAA5 (disinfection byproducts)</h3>
+              <ul class="insight-steps">
+                <li class="insight-step insight-step--trend">
+                  <span class="insight-icon" aria-hidden="true">📈</span>
+                  Peaked in mid-2010s
+                </li>
+                <li class="insight-step insight-step--trend">
+                  <span class="insight-icon" aria-hidden="true">↓</span>
+                  Declined since
+                </li>
+                <li class="insight-step insight-step--safe">
+                  <span class="insight-icon" aria-hidden="true">✅</span>
+                  Now well below limits
+                </li>
+              </ul>
+              <button
+                type="button"
+                class="insight-cta"
+                data-measure="HAA5 (haloacetic acids)"
+              >
+                Explore this trend →
+              </button>
+            </article>
+          </div>
         </div>
 
         <div class="card card-primary">
@@ -838,6 +956,10 @@
         </div>
       </div>
 
+      <p class="site-disclaimer">
+        This application is an independent, student-built tool and is not developed,
+        endorsed, or maintained by Highlands Ranch Water.
+      </p>
     </main>
   </div>
 
@@ -853,13 +975,21 @@
 
       var statusEl = document.getElementById("status");
       var contentEl = document.getElementById("content");
-      var subtitleEl = document.getElementById("subtitle");
+      var heroSourceEl = document.getElementById("heroSource");
+      var exploreCta = document.getElementById("exploreCta");
       var plainDisclaimerEl = document.getElementById("plainDisclaimer");
-      var exceedPanel = document.getElementById("exceedPanel");
-      var exceedList = document.getElementById("exceedList");
+      var insightsPanel = document.getElementById("insightsPanel");
       var analyteSelect = document.getElementById("analyteSelect");
       var detailPanel = document.getElementById("detailPanel");
       var educationPayload = null;
+
+      if (exploreCta) {
+        exploreCta.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (contentEl.hidden) return;
+          insightsPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
 
       function safeHref(url) {
         var u = String(url || "").trim();
@@ -998,7 +1128,8 @@
         renderDetail(data, educationPayload, measureName);
         if (shouldScroll) {
           analyteSelect.focus({ preventScroll: true });
-          analyteSelect.scrollIntoView({ behavior: "smooth", block: "start" });
+          var scrollTarget = detailPanel.querySelector(".detail-layout") || detailPanel;
+          scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
 
@@ -1236,7 +1367,9 @@
           "</div>" +
           '<div class="interpretive-grid">' +
           '<article class="story-panel">' +
-          '<div class="story-chip-row"><span class="story-chip">Public-data kudos</span><span class="story-chip">Treatment</span><span class="story-chip">Trend shift</span></div>' +
+          '<div class="story-chip-row"><span class="story-chip">' +
+          (isTthm ? "Utility turnaround" : "Public monitoring") +
+          '</span><span class="story-chip">Treatment</span><span class="story-chip">Trend shift</span></div>' +
           "<h4>" + (isTthm ? "What Highlands Ranch Water appears to have improved" : "What the HAA5 record suggests") + "</h4>" +
           "<p>" + (isTthm ? "The early record shows DBP values near or above the benchmark; the later record shows a lower baseline. This is the kind of improvement residents rarely see directly, but it is exactly what public monitoring data can make visible: treatment work, operational discipline, and follow-through over time." : "The HAA5 record does not show the same early above-limit turnaround as TTHM. It shows something quieter but still useful: a moderate peak followed by a recent record that generally remains well below the benchmark used here.") + "</p>" +
           '<div class="mini-chart" aria-hidden="true">' +
@@ -1382,41 +1515,15 @@
                 ? String(ys[0])
                 : "";
 
-          subtitleEl.innerHTML =
-            "These figures come from Colorado\u2019s " +
-            "<a href=\"https://coepht.colorado.gov/public-drinking-water-data\" target=\"_blank\" rel=\"noopener noreferrer\">public drinking water data</a>" +
-            (ySpan ? " and include reporting from <strong>" + escapeHtml(ySpan) + "</strong> for your water system where it appears in that data." : ". ") +
-            " For the utility\u2019s own consumer information and official materials, visit " +
-            "<a href=\"https://cdphe.colorado.gov/dwinfo\" target=\"_blank\" rel=\"noopener noreferrer\">CDPHE Drinking Water Information</a>.";
+          heroSourceEl.textContent = ySpan
+            ? "Source: Colorado public monitoring data (" + ySpan + ")"
+            : "Source: Colorado public monitoring data";
 
           plainDisclaimerEl.textContent =
             "This is a neighborhood-friendly summary of published monitoring results. It is not a test of the water at your kitchen sink, and it is not a legal decision about compliance. " +
             (ySpan
               ? "The table covers " + ySpan + "."
               : "");
-
-          var ex = data.exceedances_all_years || [];
-          if (ex.length) {
-            exceedPanel.hidden = false;
-            exceedList.innerHTML = ex
-              .map(function (e) {
-                return (
-                  '<li><strong>' +
-                  escapeHtml(e.analyte_name) +
-                  "</strong> (" +
-                  e.year +
-                  ") — " +
-                  escapeHtml(e.summary || "") +
-                  ' <button type="button" class="exceed-action" data-measure="' +
-                  escapeHtml(e.analyte_name) +
-                  '">View this measure</button>' +
-                  "</li>"
-                );
-              })
-              .join("");
-          } else {
-            exceedPanel.hidden = true;
-          }
 
           var analytes = data.analytes || [];
           analyteSelect.innerHTML = analytes
@@ -1428,8 +1535,8 @@
           analyteSelect.addEventListener("change", function () {
             renderDetail(data, educationPayload, analyteSelect.value);
           });
-          exceedList.addEventListener("click", function (event) {
-            var action = event.target.closest ? event.target.closest(".exceed-action") : null;
+          insightsPanel.addEventListener("click", function (event) {
+            var action = event.target.closest ? event.target.closest(".insight-cta") : null;
             if (!action) return;
             selectMeasure(data, action.getAttribute("data-measure"), true);
           });

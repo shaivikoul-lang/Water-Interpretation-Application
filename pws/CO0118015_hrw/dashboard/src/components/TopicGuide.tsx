@@ -6,7 +6,7 @@ const guides: Record<
   {
     title: string
     sections: { heading: string; bullets: string[] }[]
-    hrLinkLabel: string
+    hrLink: { label: string; url: string }
   }
 > = {
   'hard-water': {
@@ -20,10 +20,10 @@ const guides: Record<
         ],
       },
       {
-        heading: 'What this tool shows',
+        heading: 'How this shows up in the data',
         bullets: [
-          'Hardness is not in the state monitoring file this dashboard uses, so there is no chart here.',
-          'Use official HR Water materials for local hardness ranges and any treatment guidance.',
+          'Hardness is not measured as a single number in this dataset, so there is no chart for it.',
+          'The charts in this dashboard show regulated contaminants reported to the state — not mineral hardness levels.',
         ],
       },
       {
@@ -34,7 +34,10 @@ const guides: Record<
         ],
       },
     ],
-    hrLinkLabel: 'HR Water — hardness info (link pending)',
+    hrLink: {
+      label: 'CDPHE — Drinking Water Information',
+      url: 'https://cdphe.colorado.gov/dwinfo',
+    },
   },
   'taste-odor': {
     title: 'Taste & odor',
@@ -49,10 +52,10 @@ const guides: Record<
         ],
       },
       {
-        heading: 'What this tool shows',
+        heading: 'How this shows up in the data',
         bullets: [
           'Taste and odor are not measured as a single number in this dataset.',
-          'Charts here cover regulated contaminants and disinfection byproducts—not whether water “tastes fine” at your sink.',
+          'The charts in this dashboard show regulated contaminants and disinfection byproducts — not whether water tastes or smells fine at your sink.',
         ],
       },
       {
@@ -63,7 +66,10 @@ const guides: Record<
         ],
       },
     ],
-    hrLinkLabel: 'HR Water — taste, odor & source changes (link pending)',
+    hrLink: {
+      label: 'CDPHE — Drinking Water Information',
+      url: 'https://cdphe.colorado.gov/dwinfo',
+    },
   },
 }
 
@@ -118,10 +124,15 @@ export function TopicGuide({
         ))}
       </div>
 
-      <p className="mt-5 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+      <a
+        href={guide.hrLink.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-sky-700 transition hover:underline dark:text-sky-400"
+      >
         <ExternalLink className="h-4 w-4 shrink-0" aria-hidden />
-        <span className="italic">{guide.hrLinkLabel}</span>
-      </p>
+        {guide.hrLink.label}
+      </a>
     </section>
   )
 }

@@ -37,6 +37,109 @@ export function overallStatus(analytes: AnalytePack[]): OverallTone {
   return 'calm'
 }
 
+export type MeasureSummary = { safe: number; moderate: number; above: number }
+
+export function measureSummaryCounts(analytes: AnalytePack[]): MeasureSummary {
+  const counts = { safe: 0, moderate: 0, above: 0 }
+  for (const a of analytes) {
+    const row = latestRowForAnalyte(a)
+    if (!row) {
+      counts.safe++
+      continue
+    }
+    if (row.over_limit || row.category === 'Above Limit') counts.above++
+    else if (
+      row.category === 'Approaching Limit' ||
+      row.category === 'Moderate'
+    )
+      counts.moderate++
+    else counts.safe++
+  }
+  return counts
+}
+
+/** Names of measures flagged in the latest reporting year. */
+export function flaggedMeasureNames(analytes: AnalytePack[]): {
+  moderate: string[]
+  approaching: string[]
+} {
+  const moderate: string[] = []
+  const approaching: string[] = []
+  for (const a of analytes) {
+    const row = latestRowForAnalyte(a)
+    if (!row) continue
+    if (row.category === 'Approaching Limit') approaching.push(a.analyte_name)
+    else if (row.category === 'Moderate') moderate.push(a.analyte_name)
+  }
+  return { moderate, approaching }
+}
+
+function joinNames(names: string[]): string {
+  if (names.length === 0) return ''
+  if (names.length === 1) return names[0]
+  if (names.length === 2) return `${names[0]} and ${names[1]}`
+  return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`
+}
+
+export function watchAlertCopy(analytes: AnalytePack[]): {
+  title: string
+  desc: string
+  action: string
+  targetName: string | null
+} {
+  const { moderate, approaching } = flaggedMeasureNames(analytes)
+  const allFlagged = [...approaching, ...moderate]
+
+  if (allFlagged.length === 0) {
+    return {
+      title: 'Worth a closer look',
+      desc: 'Review the measures below for context.',
+      action: '👉 View measures',
+      targetName: null,
+    }
+  }
+
+  let desc: string
+  if (allFlagged.length === 1) {
+    const name = allFlagged[0]
+    if (approaching.includes(name)) {
+      desc = `${name} is approaching its limit in recent data—not above the limit yet.`
+    } else {
+      desc = `${name} is in a moderate range in recent data—not above the limit.`
+    }
+  } else {
+    desc = `${joinNames(allFlagged)} are worth a closer look in recent data.`
+  }
+
+  return {
+    title: 'Worth a closer look',
+    desc,
+    action: `👉 View ${allFlagged.length === 1 ? allFlagged[0] : 'affected measures'}`,
+    targetName: allFlagged[0],
+  }
+}
+
+export function snapshotSummaryLine(summary: MeasureSummary): string {
+  if (summary.above > 0) {
+    return `${summary.above} measure${summary.above === 1 ? '' : 's'} exceed${summary.above === 1 ? 's' : ''} the limit in recent data.`
+  }
+  if (summary.moderate > 0) {
+    return 'No current exceedances. Some values are worth a closer look in recent data.'
+  }
+  return 'No current exceedances in recent data.'
+}
+
+/** Hero status line: green unless something is above limit or approaching limit. */
+export function heroSafetyStatus(analytes: AnalytePack[]): OverallTone {
+  const summary = measureSummaryCounts(analytes)
+  if (summary.above > 0) return 'act'
+  for (const a of analytes) {
+    const row = latestRowForAnalyte(a)
+    if (row?.category === 'Approaching Limit') return 'watch'
+  }
+  return 'calm'
+}
+
 export function categoryTone(
   cat?: string,
 ): 'good' | 'caution' | 'warning' | 'critical' {

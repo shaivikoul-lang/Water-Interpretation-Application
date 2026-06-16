@@ -3,6 +3,9 @@ email/
 
 .DS_Store
 
+# Local-only Python deps used to generate booth QR (see booth/)
+.qrtmp/
+
 # Large CDPHE “all sample results” pulls from dwinfo Google Drive (see Data/README_CDPHE_dwinfo_downloads.md)
 Data/CDPHE_all_sample_results_*_dwinfo.csv
 

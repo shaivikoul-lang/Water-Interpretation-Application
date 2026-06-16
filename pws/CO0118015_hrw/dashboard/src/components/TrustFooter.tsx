@@ -42,6 +42,10 @@ export function TrustFooter() {
           </ul>
         </div>
       </div>
+      <p className="mx-auto mt-8 max-w-2xl text-center text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+        This application is an independent, student-built tool and is not developed,
+        endorsed, or maintained by Highlands Ranch Water.
+      </p>
     </footer>
   )
 }
