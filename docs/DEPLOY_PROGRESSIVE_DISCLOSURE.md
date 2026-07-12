@@ -23,8 +23,10 @@ Use a **new repository** so both sites can run at the same time.
 cd /path/to/CAC_WaterInterpretation
 git checkout feature/progressive-disclosure-ui
 chmod +x scripts/build-github-pages-site.sh scripts/publish-waterlens-guided.sh
-./scripts/publish-waterlens-guided.sh WaterLens-Guided
+  ./scripts/publish-waterlens-guided.sh WaterLens-Guided
 ```
+
+Uses account **`shaivikoul-lang`** (same as the existing Pages site). Requires `gh auth login` once if the repo does not exist yet.
 
 Then in GitHub:
 
