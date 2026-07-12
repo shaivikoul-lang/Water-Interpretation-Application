@@ -15,6 +15,9 @@ Data/CDPHE_all_sample_results_*_dwinfo.csv
 # Demo video tooling (local only)
 docs/demo-video/node_modules/
 
+# Assembled GitHub Pages output (scripts/build-github-pages-site.sh)
+_site/
+
 # Project engineering docs (temporary — remove these lines when ready to commit)
 PROJECT_DOCUMENTATION.md
 PROJECT_DOCUMENTATION.html
