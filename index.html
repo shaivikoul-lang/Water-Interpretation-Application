@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WaterLens — Highlands Ranch Water</title>
+  <meta
+    name="description"
+    content="Understand your drinking water with guided answers from public Highlands Ranch Water monitoring data — not a test of water at your tap."
+  />
+  <style>
+    :root {
+      --canvas: #f5f7fa;
+      --surface: #ffffff;
+      --ink-primary: #0f172a;
+      --ink-secondary: #64748b;
+      --ink-tertiary: #94a3b8;
+      --brand-navy: #102a4c;
+      --brand-blue: #005ea2;
+      --brand-blue-hover: #004880;
+      --divider: #e2e8f0;
+      --focus: rgba(0, 94, 162, 0.35);
+      --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 24px rgba(15, 23, 42, 0.06);
+      --radius-md: 16px;
+      --maxw: 45rem;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.55;
+      color: var(--ink-primary);
+      background: var(--canvas);
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 4rem 1.25rem 3.5rem;
+      text-align: center;
+    }
+    @media (min-width: 40rem) {
+      .wrap { padding: 4rem 2rem 3.5rem; }
+    }
+    .wordmark {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--brand-navy);
+    }
+    .tagline {
+      margin: 0.5rem 0 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink-secondary);
+    }
+    .utility-label {
+      margin: 0.75rem 0 0;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-tertiary);
+    }
+    .entry-heading {
+      margin: 3rem 0 0.75rem;
+      font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .entry-subcopy {
+      margin: 0 auto 2rem;
+      max-width: 34rem;
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
+    }
+    .concerns {
+      display: grid;
+      gap: 0.75rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: left;
+    }
+    .concern-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-height: 3.5rem;
+      padding: 1rem 1.1rem;
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+    .concern-row:hover {
+      border-color: rgba(0, 94, 162, 0.4);
+      background: #f8fafc;
+      transform: translateY(-1px);
+    }
+    .concern-row:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+    .concern-icon {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      color: var(--brand-blue);
+    }
+    .concern-label {
+      flex: 1 1 auto;
+      font-size: 1.0625rem;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+    .concern-chevron {
+      flex: 0 0 auto;
+      color: var(--ink-secondary);
+    }
+    .secondary-links {
+      margin-top: 2rem;
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
+    }
+    .secondary-links a {
+      color: var(--ink-secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .secondary-links a:hover {
+      color: var(--brand-blue);
+      text-decoration: underline;
+    }
+    .dot { margin: 0 0.35rem; }
+
+    .qr-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      margin-top: 3rem;
+      box-shadow: var(--shadow-card);
+    }
+    .qr-card img {
+      width: 150px;
+      height: 150px;
+      border: 1px solid var(--divider);
+      border-radius: 10px;
+      background: #fff;
+      padding: 0.5rem;
+    }
+    .qr-text h3 {
+      margin: 0 0 0.35rem;
+      color: var(--brand-navy);
+      font-family: Georgia, serif;
+      font-size: 1.25rem;
+    }
+    .qr-text p {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--divider);
+    }
+    .foot-meta {
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
+    }
+    .foot-disclaimer {
+      max-width: 36rem;
+      margin: 0.85rem auto 0;
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      color: var(--ink-secondary);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .concern-row { transition: none; }
+      .concern-row:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="wordmark">WaterLens</h1>
+      <p class="tagline">Understand your drinking water</p>
+      <p class="utility-label">Highlands Ranch Water</p>
+    </header>
+
+    <main aria-labelledby="entry-heading">
+      <h2 id="entry-heading" class="entry-heading">What brought you here today?</h2>
+      <p class="entry-subcopy">
+        Public Highlands Ranch Water monitoring data &mdash; not a test of water at your tap.
+      </p>
+
+      <ul class="concerns" role="list">
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=taste">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+              </svg>
+            </span>
+            <span class="concern-label">My water tastes or smells different</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=pfas">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6l3 7v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V10l3-7z" />
+                <path d="M9 3h6" /><path d="M10 14h4" />
+              </svg>
+            </span>
+            <span class="concern-label">I heard about PFAS</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=lead">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.5c3.5 4 6 7 6 10.5a6 6 0 0 1-12 0c0-3.5 2.5-6.5 6-10.5z" />
+              </svg>
+            </span>
+            <span class="concern-label">I'm worried about lead</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=report">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" /><path d="M16 13H8" /><path d="M16 17H8" /><path d="M10 9H8" />
+              </svg>
+            </span>
+            <span class="concern-label">I don't understand my water report</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=changes">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18" /><path d="M7 15l4-4 3 3 5-6" />
+              </svg>
+            </span>
+            <span class="concern-label">Has anything changed over the years?</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
+        </li>
+      </ul>
+
+      <p class="secondary-links">
+        <a href="pws/CO0118015_hrw/dashboard/dist/index.html">Explore full water data</a>
+        <span class="dot" aria-hidden="true">&middot;</span>
+        <a href="pws/CO0118015_hrw/index.html">Year-by-year tables</a>
+      </p>
+    </main>
+
+    <section class="qr-card" aria-label="Open on your phone">
+      <img src="booth/qr-code.png" alt="QR code that opens this website" />
+      <div class="qr-text">
+        <h3>Open on your phone</h3>
+        <p>
+          Point your camera at the code to open this page, pick a concern, or explore the full
+          dashboard. Feel free to share it with a neighbor.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p class="foot-meta">Independent student tool &middot; CDPHE &middot; EPA</p>
+      <p class="foot-disclaimer">
+        This application is an independent, student-built tool and is not affiliated with,
+        endorsed by, or maintained by Highlands Ranch Water.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
