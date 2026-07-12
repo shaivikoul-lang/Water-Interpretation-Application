@@ -22,13 +22,18 @@ git init -b main
 git add .
 git commit -m "WaterLens progressive disclosure UI — static site"
 
-if gh repo view "Shaivikoul/$REPO_NAME" &>/dev/null; then
+if command -v gh >/dev/null 2>&1 && gh repo view "Shaivikoul/$REPO_NAME" &>/dev/null; then
   echo "Repo Shaivikoul/$REPO_NAME exists — pushing to main ..."
   git remote add origin "git@github-shaivi:Shaivikoul/${REPO_NAME}.git"
   git push -u origin main --force
-else
+elif command -v gh >/dev/null 2>&1; then
   echo "Creating repo Shaivikoul/$REPO_NAME ..."
   gh repo create "Shaivikoul/$REPO_NAME" --public --source=. --remote=origin --push
+else
+  echo "gh CLI not found. Create the repo manually, then:"
+  echo "  git remote add origin git@github-shaivi:Shaivikoul/${REPO_NAME}.git"
+  echo "  git push -u origin main"
+  exit 1
 fi
 
 echo ""
