@@ -3,307 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Highlands Ranch Water — Know Your Water</title>
+  <title>WaterLens — Highlands Ranch Water</title>
   <meta
     name="description"
-    content="Explore public drinking water monitoring data for Highlands Ranch Water in plain language. Choose a simple table view or an interactive dashboard."
+    content="Understand your drinking water with guided answers from public Highlands Ranch Water monitoring data — not a test of water at your tap."
   />
   <style>
     :root {
-      --navy: #102a4c;
-      --hero-1: #1e3a5f;
-      --hero-2: #16304d;
-      --link: #005ea2;
-      --link-hover: #004880;
-      --teal: #15b8a6;
-      --teal-2: #0e8f9b;
-      --teal-dark: #0c7d8a;
-      --text: #1a1a1a;
-      --muted: #6b7280;
-      --line: #d8dee6;
-      --page-bg: #eef1f5;
-      --card-bg: #ffffff;
-      --good-bg: #e6f4ea;
-      --good-border: #aedcbb;
-      --good-text: #1b5e20;
+      --canvas: #f5f7fa;
+      --surface: #ffffff;
+      --ink-primary: #0f172a;
+      --ink-secondary: #64748b;
+      --ink-tertiary: #94a3b8;
+      --brand-navy: #102a4c;
+      --brand-blue: #005ea2;
+      --brand-blue-hover: #004880;
+      --divider: #e2e8f0;
       --focus: rgba(0, 94, 162, 0.35);
-      --shadow-sm: 0 1px 2px rgba(16, 42, 76, 0.06);
-      --shadow-md: 0 6px 24px rgba(16, 42, 76, 0.1);
-      --shadow-lg: 0 12px 34px rgba(16, 42, 76, 0.14);
-      --radius: 16px;
-      --radius-sm: 10px;
-      --maxw: 69rem;
+      --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 24px rgba(15, 23, 42, 0.06);
+      --radius-md: 16px;
+      --maxw: 45rem;
     }
     * { box-sizing: border-box; }
     html { font-size: 16px; scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--page-bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.55;
+      color: var(--ink-primary);
+      background: var(--canvas);
     }
     .wrap {
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 1.5rem 1.25rem 3.5rem;
-    }
-
-    /* ---------- Hero ---------- */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, var(--hero-1) 0%, var(--hero-2) 100%);
-      color: #fff;
-      border-radius: 20px;
-      padding: 2rem 1.5rem;
-      box-shadow: var(--shadow-md);
-      margin-top: 1.5rem;
+      padding: 4rem 1.25rem 3.5rem;
+      text-align: center;
     }
     @media (min-width: 40rem) {
-      .hero { padding: 3rem; }
+      .wrap { padding: 4rem 2rem 3.5rem; }
     }
-    .hero-drop {
-      position: absolute;
-      top: 1.75rem;
-      right: 1.75rem;
-      opacity: 0.5;
-      color: #6fc7e8;
-      pointer-events: none;
-    }
-    @media (max-width: 30rem) { .hero-drop { display: none; } }
-    .hero-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #8fc4ec;
-      margin: 0 0 0.5rem;
-    }
-    .hero-title {
+    .wordmark {
+      margin: 0;
       font-family: Georgia, "Times New Roman", Times, serif;
-      font-size: clamp(2rem, 3vw + 1rem, 3rem);
-      font-weight: 700;
-      line-height: 1.12;
-      letter-spacing: -0.015em;
-      margin: 0 0 1.5rem;
-      color: #fff;
-      max-width: 22ch;
+      font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--brand-navy);
     }
-    .info-grid {
+    .tagline {
+      margin: 0.5rem 0 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink-secondary);
+    }
+    .utility-label {
+      margin: 0.75rem 0 0;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-tertiary);
+    }
+    .entry-heading {
+      margin: 3rem 0 0.75rem;
+      font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .entry-subcopy {
+      margin: 0 auto 2rem;
+      max-width: 34rem;
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
+    }
+    .concerns {
       display: grid;
-      gap: 1rem;
-      grid-template-columns: 1fr;
-      list-style: none;
+      gap: 0.75rem;
       margin: 0;
       padding: 0;
+      list-style: none;
+      text-align: left;
     }
-    @media (min-width: 46rem) {
-      .info-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    .info-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 16px;
-      padding: 1.25rem;
-      transition: background 0.18s ease, transform 0.18s ease;
-    }
-    .info-card:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); }
-    .info-card-title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #dcecfa;
-      margin: 0 0 0.5rem;
-    }
-    .info-card-title .ico {
-      display: grid;
-      place-items: center;
-      width: 1.9rem;
-      height: 1.9rem;
-      border-radius: 50%;
-      background: rgba(111, 199, 232, 0.18);
-      color: #9fd6f0;
-    }
-    .info-card p {
-      margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.55;
-      color: rgba(255, 255, 255, 0.9);
-    }
-    .hero-cta-row {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.75rem;
-    }
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      font-size: 1.0625rem;
-      font-weight: 700;
-      color: #fff;
-      text-decoration: none;
-      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-2) 100%);
-      padding: 0.85rem 1.75rem;
-      border-radius: 999px;
-      box-shadow: 0 6px 18px rgba(13, 148, 136, 0.35);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-    }
-    .cta-btn:hover {
-      filter: brightness(0.94);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(13, 148, 136, 0.42);
-    }
-    .cta-btn:focus-visible { outline: 3px solid rgba(255, 255, 255, 0.7); outline-offset: 2px; }
-    .cta-btn .arrow { transition: transform 0.15s ease; }
-    .cta-btn:hover .arrow { transform: translateX(3px); }
-
-    /* ---------- Trust banner ---------- */
-    .trust-banner {
-      display: flex;
-      gap: 0.85rem;
-      align-items: flex-start;
-      background: var(--good-bg);
-      border: 1px solid var(--good-border);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      margin-top: 1.5rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .trust-banner svg { flex: 0 0 auto; margin-top: 0.15rem; }
-    .trust-banner p { margin: 0; font-size: 0.9375rem; }
-    .trust-banner strong { color: var(--good-text); }
-
-    /* ---------- Explore section ---------- */
-    .explore-section { margin-top: 2.5rem; }
-    .section-label {
-      max-width: 28rem;
-      margin: 0 auto 1.25rem;
-      font-size: 1.0625rem;
-      font-weight: 600;
-      letter-spacing: normal;
-      text-transform: none;
-      color: var(--navy);
-      text-align: center;
-      line-height: 1.45;
-    }
-    .choices {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 34rem) {
-      .choices { grid-template-columns: 1fr 1fr; }
-    }
-    .choice {
+    .concern-row {
       display: flex;
       align-items: center;
       gap: 1rem;
-      min-height: 7.5rem;
-      padding: 1.5rem 1.35rem;
-      background: var(--card-bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+      min-height: 3.5rem;
+      padding: 1rem 1.1rem;
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius-md);
       text-decoration: none;
       color: inherit;
-      box-shadow: var(--shadow-sm);
-      opacity: 0;
-      transform: translateY(8px) scale(0.985);
-      transition: opacity 0.4s ease, transform 0.22s ease, border-color 0.15s ease,
-        box-shadow 0.22s ease;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
     }
-    .choice.is-in { opacity: 1; transform: none; }
-    .choice:hover {
-      transform: translateY(-3px);
-      border-color: var(--link);
-      box-shadow: var(--shadow-lg);
+    .concern-row:hover {
+      border-color: rgba(0, 94, 162, 0.4);
+      background: #f8fafc;
+      transform: translateY(-1px);
     }
-    .choice.is-in:hover {
-      transform: translateY(-3px);
+    .concern-row:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
     }
-    .choice:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-    .choice-icon {
+    .concern-icon {
       flex: 0 0 auto;
       display: grid;
       place-items: center;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      background: rgba(0, 94, 162, 0.09);
-      color: var(--link);
+      width: 2.5rem;
+      height: 2.5rem;
+      color: var(--brand-blue);
     }
-    .choice-body {
+    .concern-label {
       flex: 1 1 auto;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
+      font-size: 1.0625rem;
+      font-weight: 500;
+      line-height: 1.35;
     }
-    .choice-title {
-      display: block;
-      font-size: 1.125rem;
-      font-weight: 700;
-      line-height: 1.25;
-      color: var(--navy);
-    }
-    .choice-hint {
-      display: block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      line-height: 1.3;
-      color: #8b929a;
-    }
-    .choice-desc {
-      display: block;
-      margin-top: 0.35rem;
-      font-size: 0.9375rem;
-      line-height: 1.45;
-      color: var(--muted);
-    }
-    .choice-arrow {
+    .concern-chevron {
       flex: 0 0 auto;
-      align-self: center;
-      color: var(--link);
-      transition: transform 0.15s ease;
+      color: var(--ink-secondary);
     }
-    .choice:hover .choice-arrow {
-      transform: translateX(3px);
+    .secondary-links {
+      margin-top: 2rem;
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
     }
-    .choice.primary {
-      background: var(--link);
-      border-color: var(--link);
-    }
-    .choice.primary .choice-title { color: #fff; }
-    .choice.primary .choice-hint { color: rgba(255, 255, 255, 0.78); }
-    .choice.primary .choice-desc { color: rgba(255, 255, 255, 0.88); }
-    .choice.primary .choice-icon { background: rgba(255, 255, 255, 0.18); color: #fff; }
-    .choice.primary .choice-arrow { color: #fff; }
-    .choice.primary:hover { background: var(--link-hover); border-color: var(--link-hover); }
-
-    /* ---------- Inline feedback ---------- */
-    .feedback-inline {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-    .feedback-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.9375rem;
-      font-weight: 600;
-      color: var(--muted);
+    .secondary-links a {
+      color: var(--ink-secondary);
       text-decoration: none;
-      transition: color 0.15s ease;
+      font-weight: 500;
     }
-    .feedback-link:hover { color: var(--link); text-decoration: underline; }
-    .feedback-link .arrow { transition: transform 0.15s ease; }
-    .feedback-link:hover .arrow { transform: translateX(3px); }
+    .secondary-links a:hover {
+      color: var(--brand-blue);
+      text-decoration: underline;
+    }
+    .dot { margin: 0 0.35rem; }
 
-    /* ---------- QR card ---------- */
     .qr-card {
       position: relative;
       overflow: hidden;
@@ -313,224 +151,158 @@
       flex-wrap: wrap;
       justify-content: center;
       text-align: left;
-      background: var(--card-bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius-md);
       padding: 1.75rem;
-      margin-top: 2.5rem;
-      box-shadow: var(--shadow-md);
-    }
-    .qr-mountains {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      opacity: 0.08;
-      color: var(--navy);
-      pointer-events: none;
-    }
-    @media (max-width: 34rem) { .qr-mountains { display: none; } }
-    .qr-phone {
-      flex: 0 0 auto;
-      display: grid;
-      place-items: center;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      background: rgba(0, 94, 162, 0.09);
-      color: var(--link);
+      margin-top: 3rem;
+      box-shadow: var(--shadow-card);
     }
     .qr-card img {
       width: 150px;
       height: 150px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-sm);
+      border: 1px solid var(--divider);
+      border-radius: 10px;
       background: #fff;
       padding: 0.5rem;
     }
-    .qr-text { position: relative; max-width: 24rem; }
-    .qr-text h3 { margin: 0 0 0.35rem; color: var(--navy); font-family: Georgia, serif; font-size: 1.25rem; }
-    .qr-text p { margin: 0; font-size: 0.9375rem; color: var(--muted); }
+    .qr-text h3 {
+      margin: 0 0 0.35rem;
+      color: var(--brand-navy);
+      font-family: Georgia, serif;
+      font-size: 1.25rem;
+    }
+    .qr-text p {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+    }
 
-    /* ---------- Footer ---------- */
     footer {
       margin-top: 2.5rem;
       padding-top: 1.5rem;
-      border-top: 1px solid var(--line);
-      text-align: center;
+      border-top: 1px solid var(--divider);
     }
     .foot-meta {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem 2rem;
-      font-size: 0.875rem;
-      color: var(--muted);
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
     }
-    .foot-item { display: inline-flex; align-items: center; gap: 0.4rem; }
-    .foot-item svg { color: var(--link); }
     .foot-disclaimer {
-      max-width: 46rem;
+      max-width: 36rem;
       margin: 0.85rem auto 0;
       font-size: 0.8125rem;
       line-height: 1.5;
-      color: var(--muted);
+      color: var(--ink-secondary);
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .choice { opacity: 1; transform: none; transition: none; }
-      .choice:hover .choice-arrow { transform: none; }
+      .concern-row { transition: none; }
+      .concern-row:hover { transform: none; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- 1. HERO -->
-    <section class="hero" aria-labelledby="welcome-heading">
-      <svg class="hero-drop" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 2.5c3.5 4 6 7 6 10.5a6 6 0 0 1-12 0c0-3.5 2.5-6.5 6-10.5z" />
-      </svg>
-      <p class="hero-eyebrow">Community water data viewer</p>
-      <h1 id="welcome-heading" class="hero-title">Understand Highlands Ranch water-quality data</h1>
+    <header>
+      <h1 class="wordmark">WaterLens</h1>
+      <p class="tagline">Understand your drinking water</p>
+      <p class="utility-label">Highlands Ranch Water</p>
+    </header>
 
-      <ul class="info-grid">
-        <li class="info-card">
-          <p class="info-card-title">
-            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
-            What is this?
-          </p>
-          <p>A community tool that turns Colorado&rsquo;s public monitoring data for Highlands Ranch Water into plain-language charts and short explanations&mdash;not a lab test of water at your tap.</p>
+    <main aria-labelledby="entry-heading">
+      <h2 id="entry-heading" class="entry-heading">What brought you here today?</h2>
+      <p class="entry-subcopy">
+        Public Highlands Ranch Water monitoring data &mdash; not a test of water at your tap.
+      </p>
+
+      <ul class="concerns" role="list">
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=taste">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+              </svg>
+            </span>
+            <span class="concern-label">My water tastes or smells different</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
         </li>
-        <li class="info-card">
-          <p class="info-card-title">
-            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-            Who is it for?
-          </p>
-          <p>Highlands Ranch residents who want context on reported water quality, trends over time, and links to official guidance from regulators and your utility.</p>
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=pfas">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6l3 7v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V10l3-7z" />
+                <path d="M9 3h6" /><path d="M10 14h4" />
+              </svg>
+            </span>
+            <span class="concern-label">I heard about PFAS</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
         </li>
-        <li class="info-card">
-          <p class="info-card-title">
-            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
-            How to use it
-          </p>
-          <p>Pick <strong>Dashboard view</strong> for charts and common topics (PFAS, lead, hardness, taste &amp; odor), or <strong>Classic view</strong> for simple year-by-year tables.</p>
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=lead">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.5c3.5 4 6 7 6 10.5a6 6 0 0 1-12 0c0-3.5 2.5-6.5 6-10.5z" />
+              </svg>
+            </span>
+            <span class="concern-label">I'm worried about lead</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=report">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" /><path d="M16 13H8" /><path d="M16 17H8" /><path d="M10 9H8" />
+              </svg>
+            </span>
+            <span class="concern-label">I don't understand my water report</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="concern-row" href="pws/CO0118015_hrw/dashboard/dist/index.html?concern=changes">
+            <span class="concern-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18" /><path d="M7 15l4-4 3 3 5-6" />
+              </svg>
+            </span>
+            <span class="concern-label">Has anything changed over the years?</span>
+            <svg class="concern-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+          </a>
         </li>
       </ul>
 
-      <div class="hero-cta-row">
-        <a id="exploreCta" class="cta-btn" href="#explore-section">
-          Explore your water
-          <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </section>
-
-    <!-- 3. TRUST BANNER -->
-    <div class="trust-banner" role="note">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1b5e20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        <path d="M9 12l2 2 4-4" />
-      </svg>
-      <p>
-        <strong>Your water is monitored to keep it safe.</strong> Highlands Ranch Water
-        regularly tests its supply and works to meet state and federal drinking water
-        standards. This tool simply lets you explore that same public data for yourself.
+      <p class="secondary-links">
+        <a href="pws/CO0118015_hrw/dashboard/dist/index.html">Explore full water data</a>
+        <span class="dot" aria-hidden="true">&middot;</span>
+        <a href="pws/CO0118015_hrw/index.html">Year-by-year tables</a>
       </p>
-    </div>
+    </main>
 
-    <!-- 4 + 5. EXPLORE SECTION + VIEW SELECTOR -->
-    <section id="explore-section" class="explore-section" aria-labelledby="explore-heading">
-      <p id="explore-heading" class="section-label">Choose how you&rsquo;d like to explore your water data</p>
-      <div class="choices">
-        <a class="choice" href="pws/CO0118015_hrw/index.html">
-          <span class="choice-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/></svg></span>
-          <span class="choice-body">
-            <span class="choice-title">Classic View</span>
-            <span class="choice-hint">Best for detailed data</span>
-            <span class="choice-desc">Detailed tables with full history.</span>
-          </span>
-          <svg class="choice-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="choice primary" href="pws/CO0118015_hrw/dashboard/dist/index.html">
-          <span class="choice-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg></span>
-          <span class="choice-body">
-            <span class="choice-title">Dashboard View</span>
-            <span class="choice-hint">Recommended</span>
-            <span class="choice-desc">Visual summaries, charts, and trends. Designed for quick insights.</span>
-          </span>
-          <svg class="choice-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-
-      <!-- 7. INLINE FEEDBACK -->
-      <div class="feedback-inline">
-        <a class="feedback-link" href="https://forms.gle/2s4VAYnTX4EzFsvy5" target="_blank" rel="noopener noreferrer">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Have feedback? Share it
-          <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </section>
-
-    <!-- 8. QR CODE -->
     <section class="qr-card" aria-label="Open on your phone">
-      <svg class="qr-mountains" width="180" height="90" viewBox="0 0 180 90" fill="currentColor" aria-hidden="true">
-        <path d="M0 90 L45 30 L75 70 L110 20 L150 75 L180 45 L180 90 Z" />
-      </svg>
-      <span class="qr-phone">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-      </span>
       <img src="booth/qr-code.png" alt="QR code that opens this website" />
       <div class="qr-text">
-        <h3>Open on your phone in seconds</h3>
+        <h3>Open on your phone</h3>
         <p>
-          Point your camera at the code to open this page, then choose the Dashboard or
-          Classic view. Feel free to share it with a neighbor.
+          Point your camera at the code to open this page, pick a concern, or explore the full
+          dashboard. Feel free to share it with a neighbor.
         </p>
       </div>
     </section>
 
-    <!-- 9. FOOTER -->
     <footer>
-      <div class="foot-meta">
-        <span class="foot-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5c3.5 4 6 7 6 10.5a6 6 0 0 1-12 0c0-3.5 2.5-6.5 6-10.5z"/></svg>
-          Data sources: CDPHE &middot; EPA
-        </span>
-      </div>
+      <p class="foot-meta">Independent student tool &middot; CDPHE &middot; EPA</p>
       <p class="foot-disclaimer">
         This application is an independent, student-built tool and is not affiliated with,
         endorsed by, or maintained by Highlands Ranch Water.
       </p>
     </footer>
   </div>
-
-  <script>
-    (function () {
-      var cta = document.getElementById('exploreCta');
-      var target = document.getElementById('explore-section');
-      if (cta && target) {
-        cta.addEventListener('click', function (e) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      }
-      var choices = document.querySelectorAll('.choice');
-      if ('IntersectionObserver' in window) {
-        var obs = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-in');
-              obs.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.2 });
-        choices.forEach(function (el) { obs.observe(el); });
-      } else {
-        choices.forEach(function (el) { el.classList.add('is-in'); });
-      }
-    })();
-  </script>
 </body>
 </html>

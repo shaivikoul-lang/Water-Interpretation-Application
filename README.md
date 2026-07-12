@@ -9,7 +9,7 @@ This repo helps residents browse **public** drinking water data for **Colorado c
 | **Global Colorado** (county-level) | [`build_output.py`](build_output.py) | [`output.json`](output.json) at repo root | [`lookup.html`](lookup.html) |
 | **Highlands Ranch Water only** (PWS `CO0118015`, multi-year) | [`pws/CO0118015_hrw/build_pws_output.py`](pws/CO0118015_hrw/build_pws_output.py) | [`pws/CO0118015_hrw/output.json`](pws/CO0118015_hrw/output.json) | [`pws/CO0118015_hrw/index.html`](pws/CO0118015_hrw/index.html) (classic) and [`pws/CO0118015_hrw/dashboard/dist/index.html`](pws/CO0118015_hrw/dashboard/dist/index.html) (dashboard) |
 
-The site front door is the booth-friendly landing page at root [`index.html`](index.html): a plain-language intro plus buttons to the Classic and Dashboard HRW views and a feedback link. A printable QR code for the live site lives in [`booth/qr-code.png`](booth/qr-code.png) (regenerate it if the site URL changes).
+The site front door is the booth-friendly landing page at root [`index.html`](index.html): **WaterLens** concern picker (taste, PFAS, lead, water report, changes) plus links to explore the full dashboard or year-by-year classic tables. A printable QR code for the live site lives in [`booth/qr-code.png`](booth/qr-code.png) (regenerate it if the site URL changes).
 
 The root pipeline **aggregates by county** across systems in that county. The **`pws/CO0118015_hrw/`** folder is **one public water system** only — not “all of Douglas County.” See [`pws/CO0118015_hrw/README.md`](pws/CO0118015_hrw/README.md). Adding another district later: copy the `pws/<PWS_ID>_<slug>/` pattern.
 

@@ -11,8 +11,17 @@ import {
   YAxis,
 } from 'recharts'
 import type { AnalytePack } from '../types/water'
+import { cn } from '../lib/cn'
 
-export function TrendPanel({ analyte }: { analyte: AnalytePack }) {
+export function TrendPanel({
+  analyte,
+  headingLevel = 'h2',
+  chartHeightClass = 'h-72',
+}: {
+  analyte: AnalytePack
+  headingLevel?: 'h2' | 'h3'
+  chartHeightClass?: string
+}) {
   const limit = analyte.by_year.find((r) => r.sdwa_limit != null)?.sdwa_limit ?? null
   const data = analyte.by_year
     .filter((r) => r.max_concentration != null)
@@ -23,6 +32,8 @@ export function TrendPanel({ analyte }: { analyte: AnalytePack }) {
       category: r.category,
     }))
 
+  const Heading = headingLevel
+
   return (
     <motion.section
       layout
@@ -31,14 +42,14 @@ export function TrendPanel({ analyte }: { analyte: AnalytePack }) {
       className="rounded-2xl bg-white/90 p-4 shadow-sm ring-1 ring-slate-200/80 dark:bg-slate-900/70 dark:ring-slate-700/80 sm:p-6"
     >
       <div className="mb-4 text-left">
-        <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+        <Heading className="text-lg font-semibold text-slate-900 dark:text-white">
           Trend vs limit
-        </h2>
+        </Heading>
         <p className="text-sm text-slate-500 dark:text-slate-400">
           {analyte.analyte_name} — highest reported level each year (public data).
         </p>
       </div>
-      <div className="h-72 w-full">
+      <div className={cn('w-full', chartHeightClass)}>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" className="stroke-slate-200 dark:stroke-slate-700" />

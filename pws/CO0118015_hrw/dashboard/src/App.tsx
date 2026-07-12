@@ -1,22 +1,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
-import {
-  Home,
-  LayoutGrid,
-  LineChart as LineChartIcon,
-  Moon,
-  Sun,
-  Table2,
-} from 'lucide-react'
-import { ContaminantCard } from './components/ContaminantCard'
-import { EducationAside } from './components/EducationAside'
-import { HeroSnapshot } from './components/HeroSnapshot'
-import { TopicGuide } from './components/TopicGuide'
-import { TrendPanel } from './components/TrendPanel'
+import { Home, Moon, Sun, Table2 } from 'lucide-react'
+import { ExploreDashboard } from './components/ExploreDashboard'
+import { GuidedView } from './components/GuidedView'
 import { TrustFooter } from './components/TrustFooter'
-import { TopicsHub, type TopicId } from './components/TopicsHub'
-import { cn } from './lib/cn'
-import { heroSafetyStatus, measureSummaryCounts, overallStatus, watchAlertCopy } from './lib/derive'
+import { type TopicId } from './components/TopicsHub'
+import {
+  getConcernById,
+  isGuidedConcern,
+  parseConcernFromSearch,
+  PFAS_PRIMARY_ANALYTE,
+  TASTE_PRIMARY_ANALYTE,
+  LEAD_PRIMARY_ANALYTE,
+} from './lib/concerns'
 import type { EducationPayload, PwsPayload } from './types/water'
 
 function dataUrl(path: string) {
@@ -34,10 +29,17 @@ function classicLayoutHref(): string {
 }
 
 export default function App() {
+  const concernId = useMemo(
+    () => parseConcernFromSearch(window.location.search),
+    [],
+  )
+  const guidedConcern = isGuidedConcern(concernId) ? getConcernById(concernId!) : null
+
   const [water, setWater] = useState<PwsPayload | null>(null)
   const [education, setEducation] = useState<EducationPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [dark, setDark] = useState(false)
+  const [exploreMode, setExploreMode] = useState(!guidedConcern)
   const [selected, setSelected] = useState<string | null>(null)
   const [mobileTab, setMobileTab] = useState<'overview' | 'detail'>('overview')
   const [activeTopic, setActiveTopic] = useState<TopicId | null>(null)
@@ -111,15 +113,6 @@ export default function App() {
     return water.analytes.find((a) => a.analyte_name === selected) ?? null
   }, [water, selected])
 
-  const tone = water ? overallStatus(water.analytes) : 'calm'
-  const safetyTone = water ? heroSafetyStatus(water.analytes) : 'calm'
-  const measureSummary = water ? measureSummaryCounts(water.analytes) : { safe: 0, moderate: 0, above: 0 }
-
-  const yearSpan =
-    water?.years_present?.length && water.years_present.length >= 2
-      ? `${water.years_present[0]}–${water.years_present[water.years_present.length - 1]}`
-      : water?.years_present?.[0]?.toString() ?? '—'
-
   const classicHref = useMemo(() => classicLayoutHref(), [])
 
   const scrollToMeasure = useCallback((name: string) => {
@@ -164,7 +157,60 @@ export default function App() {
     [water?.analytes],
   )
 
-  const topBar = (
+  const handleExploreHandoff = useCallback(
+    (clarifyId: string) => {
+      const concern = guidedConcern?.id
+      setExploreMode(true)
+      setGuideTopic(null)
+
+      if (concern === 'taste') {
+        setSelected(TASTE_PRIMARY_ANALYTE)
+        setActiveTopic('taste-odor')
+        setTopicNotice('Showing taste & odor–related measures')
+        setHighlightName(TASTE_PRIMARY_ANALYTE)
+        pendingScrollName.current = TASTE_PRIMARY_ANALYTE
+        setMobileTab('detail')
+      } else if (concern === 'pfas') {
+        setSelected(PFAS_PRIMARY_ANALYTE)
+        setActiveTopic('pfas')
+        setTopicNotice('Showing PFAS-related measures')
+        setHighlightName(PFAS_PRIMARY_ANALYTE)
+        pendingScrollName.current = PFAS_PRIMARY_ANALYTE
+        setMobileTab('detail')
+      } else if (concern === 'lead') {
+        setSelected(LEAD_PRIMARY_ANALYTE)
+        setActiveTopic('lead-copper')
+        setTopicNotice('Showing Lead & Copper-related measures')
+        setHighlightName(LEAD_PRIMARY_ANALYTE)
+        pendingScrollName.current = LEAD_PRIMARY_ANALYTE
+        setMobileTab('detail')
+      } else if (concern === 'changes' && clarifyId === 'specific') {
+        setSelected(PFAS_PRIMARY_ANALYTE)
+        setActiveTopic('pfas')
+        setTopicNotice('Showing PFAS-related measures')
+        setHighlightName(PFAS_PRIMARY_ANALYTE)
+        pendingScrollName.current = PFAS_PRIMARY_ANALYTE
+        setMobileTab('detail')
+      } else if (concern === 'changes' && clarifyId === 'taste-changes') {
+        setSelected(TASTE_PRIMARY_ANALYTE)
+        setActiveTopic('taste-odor')
+        setTopicNotice('Showing taste & odor–related measures')
+        setHighlightName(TASTE_PRIMARY_ANALYTE)
+        pendingScrollName.current = TASTE_PRIMARY_ANALYTE
+        setMobileTab('detail')
+      } else {
+        setTopicNotice(null)
+        setHighlightName(null)
+        setActiveTopic(null)
+        setMobileTab('overview')
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
+    [guidedConcern?.id],
+  )
+
+  const exploreTopBar = (
     <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
       <div className="flex flex-wrap items-center gap-2">
         <a
@@ -211,7 +257,7 @@ export default function App() {
     return (
       <div className="min-h-svh font-sans text-[15px] leading-relaxed">
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
-          {topBar}
+          {exploreMode && exploreTopBar}
           <div className="flex min-h-[50vh] items-center justify-center p-6">
             <p className="max-w-md text-center text-red-600 dark:text-red-400">{error}</p>
           </div>
@@ -220,11 +266,42 @@ export default function App() {
     )
   }
 
-  if (!water || !selectedAnalyte) {
+  if (!water) {
     return (
       <div className="min-h-svh font-sans text-[15px] leading-relaxed">
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
-          {topBar}
+          {exploreMode && exploreTopBar}
+          <div className="flex min-h-[50vh] items-center justify-center p-6">
+            <p className="animate-pulse text-slate-500">Loading snapshot…</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (!exploreMode && guidedConcern) {
+    return (
+      <>
+        <GuidedView
+          concern={guidedConcern}
+          water={water}
+          education={education}
+          onExplore={handleExploreHandoff}
+        />
+        <div className="guided-canvas bg-[var(--canvas)]">
+          <div className="mx-auto max-w-2xl px-5 pb-16 sm:px-8">
+            <TrustFooter />
+          </div>
+        </div>
+      </>
+    )
+  }
+
+  if (!selectedAnalyte) {
+    return (
+      <div className="min-h-svh font-sans text-[15px] leading-relaxed">
+        <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
+          {exploreTopBar}
           <div className="flex min-h-[50vh] items-center justify-center p-6">
             <p className="animate-pulse text-slate-500">Loading snapshot…</p>
           </div>
@@ -236,142 +313,30 @@ export default function App() {
   return (
     <div className="min-h-svh font-sans text-[15px] leading-relaxed">
       <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
-        {topBar}
+        {exploreTopBar}
 
-        <HeroSnapshot
-          utilityLabel={water.pws_label}
-          yearSpan={yearSpan}
-          tone={tone}
-          safetyTone={safetyTone}
-          summary={measureSummary}
-          watchCopy={tone === 'watch' ? watchAlertCopy(water.analytes) : undefined}
-          onViewAffected={scrollToMeasure}
+        <ExploreDashboard
+          water={water}
+          education={education}
+          selected={selected!}
+          setSelected={setSelected}
+          mobileTab={mobileTab}
+          setMobileTab={setMobileTab}
+          activeTopic={activeTopic}
+          guideTopic={guideTopic}
+          setGuideTopic={setGuideTopic}
+          setActiveTopic={setActiveTopic}
+          highlightName={highlightName}
+          setHighlightName={setHighlightName}
+          topicNotice={topicNotice}
+          setTopicNotice={setTopicNotice}
+          handleTopicSelect={handleTopicSelect}
+          scrollToMeasure={scrollToMeasure}
+          selectedAnalyte={selectedAnalyte}
+          dataSectionRef={dataSectionRef}
+          guideRef={guideRef}
+          cardRefs={cardRefs}
         />
-
-        <TopicsHub activeTopic={activeTopic} onSelectTopic={handleTopicSelect} />
-
-        {guideTopic ? (
-          <motion.div
-            key={`guide-${guideTopic}`}
-            ref={guideRef}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="mt-8 scroll-mt-6"
-          >
-            <TopicGuide
-              topic={guideTopic}
-              onClose={() => {
-                setGuideTopic(null)
-                setActiveTopic(null)
-              }}
-            />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="data-mode"
-            ref={dataSectionRef}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
-            className="mt-8 space-y-8 scroll-mt-6"
-          >
-            <div className="flex gap-2 rounded-2xl bg-slate-200/60 p-1 dark:bg-slate-800/80 lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileTab('overview')}
-              className={cn(
-                'flex flex-1 items-center justify-center gap-2 rounded-xl py-2 text-sm font-semibold transition',
-                mobileTab === 'overview'
-                  ? 'bg-white text-slate-900 shadow dark:bg-slate-900 dark:text-white'
-                  : 'text-slate-600 dark:text-slate-400',
-              )}
-            >
-              <LayoutGrid className="h-4 w-4" />
-              Overview
-            </button>
-            <button
-              type="button"
-              onClick={() => setMobileTab('detail')}
-              className={cn(
-                'flex flex-1 items-center justify-center gap-2 rounded-xl py-2 text-sm font-semibold transition',
-                mobileTab === 'detail'
-                  ? 'bg-white text-slate-900 shadow dark:bg-slate-900 dark:text-white'
-                  : 'text-slate-600 dark:text-slate-400',
-              )}
-            >
-              <LineChartIcon className="h-4 w-4" />
-              Chart & learn
-            </button>
-          </div>
-
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_min(20rem,32%)] lg:items-start">
-            <div className="min-w-0 space-y-8">
-              <div
-                className={cn(
-                  mobileTab !== 'overview' && 'hidden',
-                  'space-y-6 lg:block',
-                )}
-              >
-                <div>
-                  <h2 className="text-left text-lg font-semibold text-slate-900 dark:text-white">
-                    Recent monitoring results
-                  </h2>
-                  <p className="mt-0.5 text-left text-sm text-slate-500 dark:text-slate-400">
-                    Latest reported values across regulated contaminants.
-                  </p>
-                  {topicNotice && (
-                    <motion.p
-                      key={topicNotice}
-                      initial={{ opacity: 0, y: -4 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="mt-3 rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 text-left text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/40 dark:text-teal-200"
-                      role="status"
-                    >
-                      {topicNotice}
-                    </motion.p>
-                  )}
-                  <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-                    {water.analytes.map((a, i) => (
-                      <ContaminantCard
-                        key={a.analyte_name}
-                        ref={(el) => {
-                          cardRefs.current[a.analyte_name] = el
-                        }}
-                        analyte={a}
-                        selected={selected === a.analyte_name}
-                        highlighted={highlightName === a.analyte_name}
-                        onSelect={() => {
-                          setSelected(a.analyte_name)
-                          setMobileTab('detail')
-                          setTopicNotice(null)
-                        }}
-                        index={i}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className={cn(
-                  mobileTab !== 'detail' && 'hidden',
-                  'space-y-6 lg:block',
-                )}
-              >
-                <TrendPanel analyte={selectedAnalyte} />
-                <div className="lg:hidden">
-                  <EducationAside analyte={selectedAnalyte} education={education} />
-                </div>
-              </div>
-            </div>
-
-            <aside className="hidden lg:block lg:sticky lg:top-6 lg:self-start">
-              <EducationAside analyte={selectedAnalyte} education={education} sticky={false} />
-            </aside>
-          </div>
-        </motion.div>
-        )}
 
         <TrustFooter />
       </div>
