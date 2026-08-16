@@ -161,6 +161,29 @@
     .cta-btn .arrow { transition: transform 0.15s ease; }
     .cta-btn:hover .arrow { transform: translateX(3px); }
 
+
+    /* ---------- Context note (PFAS bigger picture) ---------- */
+    .context-note {
+      background: #f7fafc;
+      border: 1px solid #d0d7de;
+      border-radius: var(--radius);
+      padding: 1.15rem 1.25rem;
+      margin-top: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .context-note h2 {
+      margin: 0 0 0.45rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .context-note p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: #334155;
+    }
+
     /* ---------- Trust banner ---------- */
     .trust-banner {
       display: flex;
@@ -425,6 +448,19 @@
         </a>
       </div>
     </section>
+
+
+    <!-- PFAS context -->
+    <aside class="context-note" aria-label="About PFAS">
+      <h2>About PFAS</h2>
+      <p>
+        People often first hear about PFAS through drinking water. PFAS is a larger group of
+        persistent chemicals connected to environmental chemistry, industry, and cleanup
+        research&mdash;not only the tap. This tool focuses on Highlands Ranch public monitoring
+        data and explains what&rsquo;s reported in plain language. It is not a test of water at
+        your faucet.
+      </p>
+    </aside>
 
     <!-- 3. TRUST BANNER -->
     <div class="trust-banner" role="note">
