@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highlands Ranch Water — snapshot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/index-DnoewYZB.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C86qaHmY.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      ;(function () {
+        var path = location.pathname || ''
+        var port = location.port
+        var dev = port === '5173' || port === '5174'
+        var preview = port === '4173'
+        var isBuiltEntry = /\/dashboard\/dist\/index\.html$/i.test(path)
+        var isSourceEntry = /\/dashboard\/index\.html$/i.test(path)
+        if (isBuiltEntry || dev || preview) return
+        if (isSourceEntry) {
+          location.replace(new URL('dist/index.html', location.href).href)
+        }
+      })()
+    </script>
+  </body>
+</html>
