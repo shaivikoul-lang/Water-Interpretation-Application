@@ -14,6 +14,7 @@ import {
   overallStatus,
   watchAlertCopy,
 } from '../lib/derive'
+import { isPfasAnalyteName } from '../lib/contaminantChoices'
 import type { AnalytePack, EducationPayload, PwsPayload } from '../types/water'
 
 export type ExploreDashboardProps = {
@@ -51,6 +52,7 @@ export function ExploreDashboard({
   setGuideTopic,
   setActiveTopic,
   highlightName,
+  setHighlightName,
   topicNotice,
   setTopicNotice,
   handleTopicSelect,
@@ -64,6 +66,10 @@ export function ExploreDashboard({
   const safetyTone = heroSafetyStatus(water.analytes)
   const measureSummary = measureSummaryCounts(water.analytes)
 
+  const shownAnalytes =
+    activeTopic === 'pfas' ? water.analytes.filter((a) => isPfasAnalyteName(a.analyte_name)) : water.analytes
+  const pfasFocus = activeTopic === 'pfas'
+
   const yearSpan =
     water.years_present?.length && water.years_present.length >= 2
       ? `${water.years_present[0]}–${water.years_present[water.years_present.length - 1]}`
@@ -71,17 +77,37 @@ export function ExploreDashboard({
 
   return (
     <>
-      <HeroSnapshot
-        utilityLabel={water.pws_label}
-        yearSpan={yearSpan}
-        tone={tone}
-        safetyTone={safetyTone}
-        summary={measureSummary}
-        watchCopy={tone === 'watch' ? watchAlertCopy(water.analytes) : undefined}
-        onViewAffected={scrollToMeasure}
-      />
-
-      <TopicsHub activeTopic={activeTopic} onSelectTopic={handleTopicSelect} />
+      {!pfasFocus ? (
+        <>
+          <HeroSnapshot
+            utilityLabel={water.pws_label}
+            yearSpan={yearSpan}
+            tone={tone}
+            safetyTone={safetyTone}
+            summary={measureSummary}
+            watchCopy={tone === 'watch' ? watchAlertCopy(water.analytes) : undefined}
+            onViewAffected={scrollToMeasure}
+          />
+          <TopicsHub activeTopic={activeTopic} onSelectTopic={handleTopicSelect} />
+        </>
+      ) : (
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">
+            Explore Data · PFAS
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              setActiveTopic(null)
+              setTopicNotice(null)
+              setHighlightName(null)
+            }}
+            className="inline-flex min-h-11 items-center rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+          >
+            Show all results
+          </button>
+        </div>
+      )}
 
       {guideTopic ? (
         <motion.div
@@ -107,7 +133,9 @@ export function ExploreDashboard({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
-          className="mt-8 space-y-8 scroll-mt-6"
+          id="explore-data"
+          tabIndex={-1}
+          className="mt-8 space-y-8 scroll-mt-6 outline-none"
         >
           <div className="flex gap-2 rounded-2xl bg-slate-200/60 p-1 dark:bg-slate-800/80 lg:hidden">
             <button
@@ -148,10 +176,12 @@ export function ExploreDashboard({
               >
                 <div>
                   <h2 className="text-left text-lg font-semibold text-slate-900 dark:text-white">
-                    Recent monitoring results
+                    {activeTopic === 'pfas' ? 'PFAS monitoring results' : 'Recent monitoring results'}
                   </h2>
                   <p className="mt-0.5 text-left text-sm text-slate-500 dark:text-slate-400">
-                    Latest reported values across regulated contaminants.
+                    {activeTopic === 'pfas'
+                      ? 'Public yearly summaries for PFAS compounds. These are a separate program from the official Highlands Ranch Water monitoring shown on the PFAS page.'
+                      : 'Latest reported values across regulated contaminants.'}
                   </p>
                   {topicNotice && (
                     <motion.p
@@ -165,7 +195,7 @@ export function ExploreDashboard({
                     </motion.p>
                   )}
                   <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-                    {water.analytes.map((a, i) => (
+                    {shownAnalytes.map((a, i) => (
                       <ContaminantCard
                         key={a.analyte_name}
                         ref={(el) => {

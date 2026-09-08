@@ -2,6 +2,25 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Home, Moon, Sun, Table2 } from 'lucide-react'
 import { ExploreDashboard } from './components/ExploreDashboard'
 import { GuidedView } from './components/GuidedView'
+import { ChlorineSmellResult } from './components/guided/ChlorineSmellResult'
+import { CloudyAppearanceResult } from './components/guided/CloudyAppearanceResult'
+import { DiscolorationResult } from './components/guided/DiscolorationResult'
+import { EarthyMustyResult } from './components/guided/EarthyMustyResult'
+import { HardWaterScaleResult } from './components/guided/HardWaterScaleResult'
+import { MetallicTasteResult } from './components/guided/MetallicTasteResult'
+import { TdsReadingResult } from './components/guided/TdsReadingResult'
+import { ArsenicResult } from './components/guided/ArsenicResult'
+import { CopperResult } from './components/guided/CopperResult'
+import { LeadResult } from './components/guided/LeadResult'
+import { LithiumResult } from './components/guided/LithiumResult'
+import { PfasEvidenceView } from './components/pfas/PfasEvidenceView'
+import { PfasShowcaseResult, type PfasExploreMode } from './components/pfas/PfasShowcaseResult'
+import { ContaminantPicker } from './components/guided/ContaminantPicker'
+import { ObservationPicker } from './components/guided/ObservationPicker'
+import { HasWaterChangedView } from './components/changed/HasWaterChangedView'
+import { LandingPage } from './components/landing/LandingPage'
+import { AboutPage } from './components/landing/AboutPage'
+import type { ContaminantRoute } from './lib/contaminantChoices'
 import { TrustFooter } from './components/TrustFooter'
 import { type TopicId } from './components/TopicsHub'
 import {
@@ -11,8 +30,38 @@ import {
   PFAS_PRIMARY_ANALYTE,
   TASTE_PRIMARY_ANALYTE,
   LEAD_PRIMARY_ANALYTE,
+  type ConcernDef,
+  type ConcernId,
 } from './lib/concerns'
 import type { EducationPayload, PwsPayload } from './types/water'
+
+/** Fixed for this single-system build, so the landing page renders before data loads. */
+const UTILITY_LABEL = 'Highlands Ranch Water'
+const PWS_ID = 'CO0118015'
+
+type View = 'landing' | 'about' | 'observation' | 'contaminant' | 'guided' | 'explore' | 'tds-reading' | 'changed'
+
+function parseExploreFromSearch(search: string): boolean {
+  const params = new URLSearchParams(search.startsWith('?') ? search : `?${search}`)
+  return params.get('explore') === '1'
+}
+
+function parseAboutFromSearch(search: string): boolean {
+  const params = new URLSearchParams(search.startsWith('?') ? search : `?${search}`)
+  return params.get('about') === '1'
+}
+
+function parseFlagFromSearch(search: string, key: string): boolean {
+  const params = new URLSearchParams(search.startsWith('?') ? search : `?${search}`)
+  return params.get(key) === '1'
+}
+
+function setPageSearch(search: string) {
+  const url = new URL(window.location.href)
+  url.search = search
+  url.hash = ''
+  window.history.pushState({}, '', `${url.pathname}${url.search}`)
+}
 
 function dataUrl(path: string) {
   const base = import.meta.env.BASE_URL
@@ -23,9 +72,9 @@ function dataUrl(path: string) {
 /** Classic PWS page; avoids `../index.html` from `.../dashboard/dist/` resolving to `dashboard/index.html` (redirect loop). */
 function classicLayoutHref(): string {
   if (typeof window === 'undefined') return '../index.html'
-  const { pathname, search, hash } = window.location
+  const { pathname } = window.location
   const next = pathname.replace(/\/dashboard\/dist\/?(?:index\.html)?\/?$/i, '/index.html')
-  return next !== pathname ? `${next}${search}${hash}` : `../index.html${search}${hash}`
+  return next !== pathname ? next : '../index.html'
 }
 
 export default function App() {
@@ -33,13 +82,51 @@ export default function App() {
     () => parseConcernFromSearch(window.location.search),
     [],
   )
-  const guidedConcern = isGuidedConcern(concernId) ? getConcernById(concernId!) : null
+  const exploreFromUrl = useMemo(
+    () => parseExploreFromSearch(window.location.search),
+    [],
+  )
+  const aboutFromUrl = useMemo(
+    () => parseAboutFromSearch(window.location.search),
+    [],
+  )
+  const tdsFromUrl = useMemo(
+    () => parseFlagFromSearch(window.location.search, 'tds'),
+    [],
+  )
+  const contaminantFromUrl = useMemo(
+    () => parseFlagFromSearch(window.location.search, 'contaminant'),
+    [],
+  )
+  const guidedConcernFromUrl = isGuidedConcern(concernId)
+    ? (getConcernById(concernId!) ?? null)
+    : null
 
   const [water, setWater] = useState<PwsPayload | null>(null)
   const [education, setEducation] = useState<EducationPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [dark, setDark] = useState(false)
-  const [exploreMode, setExploreMode] = useState(!guidedConcern)
+  const [activeConcern, setActiveConcern] = useState<ConcernDef | null>(
+    guidedConcernFromUrl,
+  )
+  const [view, setView] = useState<View>(
+    guidedConcernFromUrl
+      ? guidedConcernFromUrl.id === 'taste'
+        ? 'observation'
+        : guidedConcernFromUrl.id === 'changes'
+          ? 'changed'
+          : 'guided'
+      : exploreFromUrl
+        ? 'explore'
+        : tdsFromUrl
+          ? 'tds-reading'
+          : contaminantFromUrl
+            ? 'contaminant'
+            : aboutFromUrl
+              ? 'about'
+              : 'landing',
+  )
+  const [guidedClarify, setGuidedClarify] = useState<string | null>(null)
   const [selected, setSelected] = useState<string | null>(null)
   const [mobileTab, setMobileTab] = useState<'overview' | 'detail'>('overview')
   const [activeTopic, setActiveTopic] = useState<TopicId | null>(null)
@@ -48,6 +135,7 @@ export default function App() {
   >(null)
   const [highlightName, setHighlightName] = useState<string | null>(null)
   const [topicNotice, setTopicNotice] = useState<string | null>(null)
+  const [pfasExploreMode, setPfasExploreMode] = useState<PfasExploreMode>('results')
   const dataSectionRef = useRef<HTMLDivElement>(null)
   const guideRef = useRef<HTMLDivElement>(null)
   const cardRefs = useRef<Record<string, HTMLButtonElement | null>>({})
@@ -56,6 +144,16 @@ export default function App() {
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
   }, [dark])
+
+  useEffect(() => {
+    function onPopState() {
+      if (parseAboutFromSearch(window.location.search)) setView('about')
+      else if (parseExploreFromSearch(window.location.search)) setView('explore')
+      else setView('landing')
+    }
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
+  }, [])
 
   useEffect(() => {
     if (guideTopic) {
@@ -157,10 +255,82 @@ export default function App() {
     [water?.analytes],
   )
 
+  const handleLandingGuided = useCallback((id: ConcernId) => {
+    setActiveConcern(id === 'changes' ? null : (getConcernById(id) ?? null))
+    setGuidedClarify(null)
+    setView(id === 'taste' ? 'observation' : id === 'changes' ? 'changed' : 'guided')
+    window.scrollTo({ top: 0 })
+  }, [])
+
+  const handleObservationClarify = useCallback((clarifyId: string) => {
+    setGuidedClarify(clarifyId)
+    setView('guided')
+    window.scrollTo({ top: 0 })
+  }, [])
+
+  const handleBackHome = useCallback(() => {
+    setPageSearch('')
+    setView('landing')
+    setActiveConcern(null)
+    setGuidedClarify(null)
+    window.scrollTo({ top: 0 })
+  }, [])
+
+  const handleAbout = useCallback(() => {
+    setPageSearch('about=1')
+    setView('about')
+    window.scrollTo({ top: 0 })
+  }, [])
+
+  const handleLandingTdsReading = useCallback(() => {
+    setView('tds-reading')
+    window.scrollTo({ top: 0 })
+  }, [])
+
+  const handleLandingContaminant = useCallback(() => {
+    setView('contaminant')
+    window.scrollTo({ top: 0 })
+  }, [])
+
+  const handleContaminantSelect = useCallback((route: ContaminantRoute) => {
+    if (route.kind === 'guided') {
+      setActiveConcern(getConcernById(route.concernId) ?? null)
+      setGuidedClarify(null)
+      setView('guided')
+      window.scrollTo({ top: 0 })
+      return
+    }
+    setView('explore')
+    setGuideTopic(null)
+    if (route.kind === 'explore-analyte') {
+      setSelected(route.analyteName)
+      setActiveTopic(route.topic ?? null)
+      setTopicNotice(`Showing ${route.analyteName}`)
+      setHighlightName(route.analyteName)
+      pendingScrollName.current = route.analyteName
+      setMobileTab(window.matchMedia('(max-width: 1023px)').matches ? 'detail' : 'overview')
+    } else {
+      setActiveTopic(null)
+      setTopicNotice(null)
+      setHighlightName(null)
+      setMobileTab('overview')
+    }
+    window.scrollTo({ top: 0 })
+  }, [])
+
+  const handleLandingExplore = useCallback(
+    (topic?: TopicId) => {
+      setView('explore')
+      window.scrollTo({ top: 0 })
+      if (topic) handleTopicSelect(topic)
+    },
+    [handleTopicSelect],
+  )
+
   const handleExploreHandoff = useCallback(
     (clarifyId: string) => {
-      const concern = guidedConcern?.id
-      setExploreMode(true)
+      const concern = activeConcern?.id
+      setView('explore')
       setGuideTopic(null)
 
       if (concern === 'taste') {
@@ -207,7 +377,7 @@ export default function App() {
 
       window.scrollTo({ top: 0, behavior: 'smooth' })
     },
-    [guidedConcern?.id],
+    [activeConcern?.id],
   )
 
   const exploreTopBar = (
@@ -253,11 +423,83 @@ export default function App() {
     </div>
   )
 
+  if (view === 'observation') {
+    return (
+      <ObservationPicker
+        utilityLabel={UTILITY_LABEL}
+        pwsId={water?.pws_id_number ?? PWS_ID}
+        onBack={handleBackHome}
+        onClarify={handleObservationClarify}
+      />
+    )
+  }
+
+  if (view === 'contaminant') {
+    return (
+      <ContaminantPicker
+        utilityLabel={UTILITY_LABEL}
+        pwsId={water?.pws_id_number ?? PWS_ID}
+        water={water}
+        classicHref={classicHref}
+        onBack={handleBackHome}
+        onSelect={handleContaminantSelect}
+      />
+    )
+  }
+
+  if (view === 'tds-reading') {
+    return (
+      <TdsReadingResult
+        utilityLabel={UTILITY_LABEL}
+        pwsId={water?.pws_id_number ?? PWS_ID}
+        onBack={handleBackHome}
+        onExplore={handleLandingExplore}
+      />
+    )
+  }
+
+  if (view === 'changed' && water) {
+    return (
+      <HasWaterChangedView
+        utilityLabel={UTILITY_LABEL}
+        pwsId={water.pws_id_number ?? PWS_ID}
+        water={water}
+        education={education}
+        onBack={handleBackHome}
+      />
+    )
+  }
+
+  if (view === 'landing') {
+    return (
+      <LandingPage
+        utilityLabel={UTILITY_LABEL}
+        pwsId={water?.pws_id_number ?? PWS_ID}
+        onGuided={handleLandingGuided}
+        onExplore={handleLandingExplore}
+        onContaminant={handleLandingContaminant}
+        onTdsReading={handleLandingTdsReading}
+        onHome={handleBackHome}
+        onAbout={handleAbout}
+      />
+    )
+  }
+
+  if (view === 'about') {
+    return (
+      <AboutPage
+        utilityLabel={UTILITY_LABEL}
+        onHome={handleBackHome}
+        onAbout={handleAbout}
+      />
+    )
+  }
+
   if (error) {
     return (
       <div className="min-h-svh font-sans text-[15px] leading-relaxed">
-        <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
-          {exploreMode && exploreTopBar}
+        <div className="mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-6 lg:px-8">
+          {view === 'explore' && exploreTopBar}
           <div className="flex min-h-[50vh] items-center justify-center p-6">
             <p className="max-w-md text-center text-red-600 dark:text-red-400">{error}</p>
           </div>
@@ -269,8 +511,8 @@ export default function App() {
   if (!water) {
     return (
       <div className="min-h-svh font-sans text-[15px] leading-relaxed">
-        <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
-          {exploreMode && exploreTopBar}
+        <div className="mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-6 lg:px-8">
+          {view === 'explore' && exploreTopBar}
           <div className="flex min-h-[50vh] items-center justify-center p-6">
             <p className="animate-pulse text-slate-500">Loading snapshot…</p>
           </div>
@@ -279,13 +521,201 @@ export default function App() {
     )
   }
 
-  if (!exploreMode && guidedConcern) {
+  if (view === 'guided' && activeConcern?.id === 'taste' && guidedClarify === 'metallic') {
+    return (
+      <MetallicTasteResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setGuidedClarify(null)
+          setView('observation')
+          window.scrollTo({ top: 0 })
+        }}
+        onExplore={handleLandingExplore}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'taste' && guidedClarify === 'chlorine') {
+    return (
+      <ChlorineSmellResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setGuidedClarify(null)
+          setView('observation')
+          window.scrollTo({ top: 0 })
+        }}
+        onExplore={handleLandingExplore}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'taste' && guidedClarify === 'cloudy') {
+    return (
+      <CloudyAppearanceResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setGuidedClarify(null)
+          setView('observation')
+          window.scrollTo({ top: 0 })
+        }}
+        onExplore={handleLandingExplore}
+        onExploreAnalyte={(name) => {
+          setView('explore')
+          setSelected(name)
+          setGuideTopic(null)
+          setActiveTopic(null)
+          setTopicNotice(`Showing ${name}`)
+          setHighlightName(name)
+          pendingScrollName.current = name
+          setMobileTab(window.matchMedia('(max-width: 1023px)').matches ? 'detail' : 'overview')
+          window.scrollTo({ top: 0 })
+        }}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'taste' && guidedClarify === 'musty') {
+    return (
+      <EarthyMustyResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setGuidedClarify(null)
+          setView('observation')
+          window.scrollTo({ top: 0 })
+        }}
+        onExplore={handleLandingExplore}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'taste' && guidedClarify === 'discoloration') {
+    return (
+      <DiscolorationResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setGuidedClarify(null)
+          setView('observation')
+          window.scrollTo({ top: 0 })
+        }}
+        onExplore={handleLandingExplore}
+        onExploreAnalyte={(name) => {
+          setView('explore')
+          setSelected(name)
+          setGuideTopic(null)
+          setActiveTopic(null)
+          setTopicNotice(`Showing ${name}`)
+          setHighlightName(name)
+          pendingScrollName.current = name
+          setMobileTab(window.matchMedia('(max-width: 1023px)').matches ? 'detail' : 'overview')
+          window.scrollTo({ top: 0 })
+        }}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'pfas' && water) {
+    return (
+      <PfasShowcaseResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setActiveConcern(null)
+          setView('contaminant')
+          window.scrollTo({ top: 0 })
+        }}
+        onExplore={(topic: TopicId, mode: PfasExploreMode) => {
+          setPfasExploreMode(mode)
+          handleLandingExplore(topic)
+        }}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'lead' && water) {
+    return (
+      <LeadResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setActiveConcern(null)
+          setView('contaminant')
+          window.scrollTo({ top: 0 })
+        }}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'copper' && water) {
+    return (
+      <CopperResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setActiveConcern(null)
+          setView('contaminant')
+          window.scrollTo({ top: 0 })
+        }}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'lithium' && water) {
+    return (
+      <LithiumResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setActiveConcern(null)
+          setView('contaminant')
+          window.scrollTo({ top: 0 })
+        }}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'arsenic' && water) {
+    return (
+      <ArsenicResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setActiveConcern(null)
+          setView('contaminant')
+          window.scrollTo({ top: 0 })
+        }}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern?.id === 'taste' && guidedClarify === 'scale') {
+    return (
+      <HardWaterScaleResult
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        onBack={() => {
+          setGuidedClarify(null)
+          setView('observation')
+          window.scrollTo({ top: 0 })
+        }}
+        onExplore={handleLandingExplore}
+      />
+    )
+  }
+
+  if (view === 'guided' && activeConcern) {
     return (
       <>
         <GuidedView
-          concern={guidedConcern}
+          concern={activeConcern}
           water={water}
           education={education}
+          initialClarify={guidedClarify}
+          onHome={handleBackHome}
           onExplore={handleExploreHandoff}
         />
         <div className="guided-canvas bg-[var(--canvas)]">
@@ -297,10 +727,30 @@ export default function App() {
     )
   }
 
+  if (view === 'explore' && activeTopic === 'pfas' && water) {
+    return (
+      <PfasEvidenceView
+        utilityLabel={UTILITY_LABEL}
+        water={water}
+        mode={pfasExploreMode}
+        onBackToPfas={() => {
+          setActiveConcern(getConcernById('pfas') ?? null)
+          setView('guided')
+          setActiveTopic(null)
+          window.scrollTo({ top: 0 })
+        }}
+        onSwitchMode={(next) => {
+          setPfasExploreMode(next)
+          window.scrollTo({ top: 0 })
+        }}
+      />
+    )
+  }
+
   if (!selectedAnalyte) {
     return (
       <div className="min-h-svh font-sans text-[15px] leading-relaxed">
-        <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-6 lg:px-8">
           {exploreTopBar}
           <div className="flex min-h-[50vh] items-center justify-center p-6">
             <p className="animate-pulse text-slate-500">Loading snapshot…</p>
@@ -312,7 +762,7 @@ export default function App() {
 
   return (
     <div className="min-h-svh font-sans text-[15px] leading-relaxed">
-      <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-6 lg:px-8">
         {exploreTopBar}
 
         <ExploreDashboard

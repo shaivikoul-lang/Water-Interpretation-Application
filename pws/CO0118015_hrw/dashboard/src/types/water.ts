@@ -8,6 +8,8 @@ export interface YearRow {
   over_limit?: boolean
   risk_score?: number
   score_available?: boolean
+  /** Present on lead/copper rows in the current extract. */
+  score_reason?: string | null
 }
 
 export interface AnalytePack {
@@ -28,6 +30,9 @@ export interface PwsPayload {
   pws_id_number: string
   county?: string
   generated_at: string
+  /** Official origin label from the extract, when present. */
+  source?: string
+  dataset?: string
   years_present: number[]
   analytes: AnalytePack[]
   exceedances_all_years: ExceedRow[]

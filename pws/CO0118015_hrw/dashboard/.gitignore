@@ -11,6 +11,9 @@ node_modules
 # dist/ is committed so GitHub Pages can load the built dashboard without a CI build step.
 dist-ssr
 *.local
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*

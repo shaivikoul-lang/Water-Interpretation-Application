@@ -188,6 +188,13 @@
     .card.card-primary h2 {
       margin-top: 0;
     }
+    .lookup-lede {
+      margin: 0.35rem 0 1rem;
+      max-width: 42rem;
+      font-size: 1.02rem;
+      line-height: 1.5;
+      color: var(--text);
+    }
     .card.card-primary select {
       max-width: none;
       width: 100%;
@@ -871,11 +878,10 @@
         <p class="crumb"><a href="../../index.html">Home</a></p>
         <p class="hero-label">Highlands Ranch Water</p>
         <h1 class="page-title">Drinking water quality</h1>
-        <p class="hero-subhead">Clear, plain-language view of your system&rsquo;s data</p>
-        <p class="hero-location">📍 Douglas County, Colorado</p>
+        <p class="hero-subhead">Choose a contaminant and read the official monitoring in plain language.</p>
         <div class="masthead-actions">
-          <a class="btn-primary" href="#insightsPanel" id="exploreCta">Explore your water →</a>
-          <a class="btn-secondary" href="./dashboard/dist/index.html">Dashboard view</a>
+          <a class="btn-primary" href="#measureLookup">Choose a measure →</a>
+          <a class="btn-secondary" href="./dashboard/dist/index.html">WaterLens home</a>
         </div>
         <p class="hero-source" id="heroSource">Source: Colorado public monitoring data</p>
       </div>
@@ -887,66 +893,12 @@
       <div id="status" role="status" aria-live="polite"></div>
 
       <div id="content" hidden>
-        <div class="card card-insights" id="insightsPanel">
-          <h2>Key water quality insights</h2>
-          <p class="insights-lede">How disinfection byproducts have changed over time in this dataset.</p>
-          <div class="insight-grid">
-            <article class="insight-card">
-              <h3 class="insight-title">TTHM (disinfection byproducts)</h3>
-              <ul class="insight-steps">
-                <li class="insight-step insight-step--past">
-                  <span class="insight-icon" aria-hidden="true">⚠️</span>
-                  Exceeded limits in early data (1999–2000)
-                </li>
-                <li class="insight-step insight-step--trend">
-                  <span class="insight-icon" aria-hidden="true">↓</span>
-                  Improved over time
-                </li>
-                <li class="insight-step insight-step--safe">
-                  <span class="insight-icon" aria-hidden="true">✅</span>
-                  No recent exceedances
-                </li>
-              </ul>
-              <button
-                type="button"
-                class="insight-cta"
-                data-measure="TTHM (total trihalomethanes)"
-              >
-                Explore this trend →
-              </button>
-            </article>
-            <article class="insight-card">
-              <h3 class="insight-title">HAA5 (disinfection byproducts)</h3>
-              <ul class="insight-steps">
-                <li class="insight-step insight-step--trend">
-                  <span class="insight-icon" aria-hidden="true">📈</span>
-                  Peaked in mid-2010s
-                </li>
-                <li class="insight-step insight-step--trend">
-                  <span class="insight-icon" aria-hidden="true">↓</span>
-                  Declined since
-                </li>
-                <li class="insight-step insight-step--safe">
-                  <span class="insight-icon" aria-hidden="true">✅</span>
-                  Now well below limits
-                </li>
-              </ul>
-              <button
-                type="button"
-                class="insight-cta"
-                data-measure="HAA5 (haloacetic acids)"
-              >
-                Explore this trend →
-              </button>
-            </article>
-          </div>
-        </div>
-
-        <div class="card card-primary">
+        <div class="card card-primary" id="measureLookup">
           <span class="card-primary-badge">Start here</span>
-          <h2>Look up a water quality measure</h2>
-          <label for="analyteSelect">Choose a measure</label>
-          <select id="analyteSelect" aria-label="Choose water quality measure"></select>
+          <h2>Look up any published measure</h2>
+          <p class="lookup-lede">Every contaminant in the official Highlands Ranch Water extract is in this list. Pick one to see the numbers, the comparison, and what they mean.</p>
+          <label for="analyteSelect">Choose a contaminant</label>
+          <select id="analyteSelect" aria-label="Choose a contaminant"></select>
           <div id="detailPanel"></div>
         </div>
 
@@ -976,20 +928,10 @@
       var statusEl = document.getElementById("status");
       var contentEl = document.getElementById("content");
       var heroSourceEl = document.getElementById("heroSource");
-      var exploreCta = document.getElementById("exploreCta");
       var plainDisclaimerEl = document.getElementById("plainDisclaimer");
-      var insightsPanel = document.getElementById("insightsPanel");
       var analyteSelect = document.getElementById("analyteSelect");
       var detailPanel = document.getElementById("detailPanel");
       var educationPayload = null;
-
-      if (exploreCta) {
-        exploreCta.addEventListener("click", function (e) {
-          e.preventDefault();
-          if (contentEl.hidden) return;
-          insightsPanel.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-      }
 
       function safeHref(url) {
         var u = String(url || "").trim();
@@ -1534,11 +1476,6 @@
 
           analyteSelect.addEventListener("change", function () {
             renderDetail(data, educationPayload, analyteSelect.value);
-          });
-          insightsPanel.addEventListener("click", function (event) {
-            var action = event.target.closest ? event.target.closest(".insight-cta") : null;
-            if (!action) return;
-            selectMeasure(data, action.getAttribute("data-measure"), true);
           });
           var firstLive = analytes.find(function (x) {
             return x.by_year && x.by_year.length;

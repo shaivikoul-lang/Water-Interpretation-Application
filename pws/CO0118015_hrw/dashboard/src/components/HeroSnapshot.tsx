@@ -53,6 +53,8 @@ export function HeroSnapshot({
   summary,
   watchCopy,
   onViewAffected,
+  headingLevel = 'h2',
+  className,
 }: {
   utilityLabel: string
   yearSpan: string
@@ -61,10 +63,13 @@ export function HeroSnapshot({
   summary: MeasureSummary
   watchCopy?: { title: string; desc: string; action: string; targetName: string | null }
   onViewAffected?: (targetName: string) => void
+  headingLevel?: 'h1' | 'h2'
+  className?: string
 }) {
   const status = statusCopy[safetyTone]
   const alert = alertTone[tone]
   const showAlert = tone !== 'calm'
+  const Heading = headingLevel
   const alertTitle = watchCopy?.title ?? alert.title
   const alertDesc =
     watchCopy?.desc ??
@@ -79,7 +84,10 @@ export function HeroSnapshot({
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
-      className="relative overflow-hidden rounded-3xl bg-white/80 p-6 shadow-sm ring-1 ring-slate-200/80 backdrop-blur dark:bg-slate-900/70 dark:ring-slate-700/80 sm:p-8"
+      className={cn(
+        'relative overflow-hidden rounded-3xl bg-white/80 p-6 shadow-sm ring-1 ring-slate-200/80 backdrop-blur dark:bg-slate-900/70 dark:ring-slate-700/80 sm:p-8',
+        className,
+      )}
     >
       <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-sky-400/10 blur-3xl dark:bg-sky-500/10" />
 
@@ -90,9 +98,9 @@ export function HeroSnapshot({
         )}
       >
         <div className="space-y-3 text-left">
-          <h2 className="font-sans text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          <Heading className="font-sans text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Your water snapshot
-          </h2>
+          </Heading>
 
           <p className="text-lg font-semibold text-slate-900 dark:text-white">
             {utilityLabel}

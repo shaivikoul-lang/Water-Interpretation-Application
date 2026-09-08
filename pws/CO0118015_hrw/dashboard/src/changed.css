@@ -1,0 +1,156 @@
+.changed-page {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #fff7f0;
+  color: #334e68;
+}
+
+body:has(.changed-page) {
+  background: #fff7f0;
+}
+
+.changed-page__main {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 1.5rem 1.5rem 4rem;
+}
+
+.changed-page__main > .obs-back {
+  margin-bottom: 1.25rem;
+  border-color: #fdba74;
+}
+
+.changed-page .obs-back:hover {
+  background: #ffedd5;
+}
+
+.changed-page .obs-back:focus-visible {
+  outline-color: #c2410c;
+}
+
+.changed-page__results {
+  margin-top: 2rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.changed-page__heading {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0b2a4a;
+  text-align: left;
+}
+
+.changed-page__sub {
+  margin: 0.125rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #526d82;
+  text-align: left;
+}
+
+.changed-page .changed-snapshot {
+  background: linear-gradient(165deg, #fff4e8 0%, #ffffff 70%);
+  --tw-ring-color: rgba(251, 146, 60, 0.38);
+}
+
+.changed-page .changed-snapshot h1 {
+  color: #0b2a4a;
+}
+
+.changed-page .changed-snapshot [class*="bg-sky-400"] {
+  background: rgba(251, 146, 60, 0.16);
+}
+
+.changed-page .changed-snapshot .border-slate-200\/80 {
+  border-color: #fed7aa;
+}
+
+.changed-page .changed-page__results button.ring-2 {
+  --tw-ring-color: #c2410c;
+}
+
+.changed-detail {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.changed-trend__caption {
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: #526d82;
+  text-align: left;
+}
+
+.changed-note {
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: #0b2a4a;
+  color: #e8eef4;
+  text-align: left;
+}
+
+.changed-note__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+}
+
+.changed-note__kicker {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffedd5;
+}
+
+.changed-note__years {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffedd5;
+}
+
+.changed-note__hook {
+  margin: 0.4rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #e8eef4;
+}
+
+.changed-note__links {
+  margin: 0.45rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: #e8eef4;
+}
+
+.changed-note__links a {
+  color: #ffedd5;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.changed-note__links a:hover {
+  color: #ffffff;
+}
+
+.changed-note__links a:focus-visible {
+  outline: 3px solid #fdba74;
+  outline-offset: 2px;
+}
+
+.changed-note__ext {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.2rem;
+  vertical-align: -0.05rem;
+}

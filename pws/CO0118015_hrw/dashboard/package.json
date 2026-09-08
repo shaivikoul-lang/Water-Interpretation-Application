@@ -7,12 +7,14 @@
     "sync-data": "cp ../output.json public/data/output.json && cp ../education.json public/data/education.json",
     "predev": "npm run sync-data",
     "prebuild": "npm run sync-data",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --host --port 4173 --strictPort",
+    "test:tds": "node --experimental-strip-types --test tests/tdsReading.test.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.16.0",

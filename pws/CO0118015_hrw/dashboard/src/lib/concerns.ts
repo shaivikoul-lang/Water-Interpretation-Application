@@ -1,4 +1,4 @@
-export type ConcernId = 'taste' | 'pfas' | 'lead' | 'report' | 'changes'
+export type ConcernId = 'taste' | 'pfas' | 'lead' | 'arsenic' | 'copper' | 'lithium' | 'report' | 'changes'
 
 export type ClarifyOption = {
   id: string
@@ -21,6 +21,9 @@ export const TASTE_PRIMARY_ANALYTE = 'TTHM (total trihalomethanes)'
 export const TASTE_SECONDARY_ANALYTE = 'HAA5 (haloacetic acids)'
 export const PFAS_PRIMARY_ANALYTE = 'PFOA'
 export const LEAD_PRIMARY_ANALYTE = 'Lead'
+export const ARSENIC_PRIMARY_ANALYTE = 'Arsenic'
+export const COPPER_PRIMARY_ANALYTE = 'Copper'
+export const LITHIUM_PRIMARY_ANALYTE = 'Lithium'
 
 export const TASTE_CONCERN: ConcernDef = {
   id: 'taste',
@@ -70,6 +73,44 @@ export const LEAD_CONCERN: ConcernDef = {
   primaryAnalyteName: LEAD_PRIMARY_ANALYTE,
 }
 
+export const ARSENIC_CONCERN: ConcernDef = {
+  id: 'arsenic',
+  enabled: true,
+  landingLabel: "I'm worried about arsenic",
+  clarifyQuestion: 'What do you want to know?',
+  clarifyHint: 'Choose the closest match.',
+  clarifyOptions: [
+    { id: 'overview', label: 'A general overview' },
+    { id: 'levels', label: 'What arsenic levels look like here' },
+    { id: 'health', label: 'Health effects and safety' },
+    { id: 'read-report', label: 'How to read arsenic results in a report' },
+  ],
+  insightTitle: 'Should you worry?',
+  primaryAnalyteName: ARSENIC_PRIMARY_ANALYTE,
+}
+
+export const COPPER_CONCERN: ConcernDef = {
+  id: 'copper',
+  enabled: true,
+  landingLabel: "I'm worried about copper",
+  clarifyQuestion: 'What do you want to know?',
+  clarifyHint: 'Choose the closest match.',
+  clarifyOptions: [{ id: 'overview', label: 'A general overview' }],
+  insightTitle: 'Should you worry?',
+  primaryAnalyteName: COPPER_PRIMARY_ANALYTE,
+}
+
+export const LITHIUM_CONCERN: ConcernDef = {
+  id: 'lithium',
+  enabled: true,
+  landingLabel: "I'm worried about lithium",
+  clarifyQuestion: 'What do you want to know?',
+  clarifyHint: 'Choose the closest match.',
+  clarifyOptions: [{ id: 'overview', label: 'A general overview' }],
+  insightTitle: 'Should you worry?',
+  primaryAnalyteName: LITHIUM_PRIMARY_ANALYTE,
+}
+
 export const REPORT_CONCERN: ConcernDef = {
   id: 'report',
   enabled: true,
@@ -106,11 +147,16 @@ export const ALL_CONCERNS: ConcernDef[] = [
   TASTE_CONCERN,
   PFAS_CONCERN,
   LEAD_CONCERN,
+  ARSENIC_CONCERN,
+  COPPER_CONCERN,
+  LITHIUM_CONCERN,
   REPORT_CONCERN,
   CHANGES_CONCERN,
 ]
 
-export const LANDING_CONCERNS = ALL_CONCERNS.filter((c) => c.enabled)
+export const LANDING_CONCERNS = ALL_CONCERNS.filter(
+  (c) => c.enabled && c.id !== 'arsenic' && c.id !== 'copper' && c.id !== 'lithium',
+)
 
 export function getConcernById(id: ConcernId): ConcernDef | undefined {
   return ALL_CONCERNS.find((c) => c.id === id)

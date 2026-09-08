@@ -6,6 +6,7 @@ import {
   FileText,
   FlaskConical,
   Home,
+  Mountain,
   TrendingUp,
   Waves,
   type LucideIcon,
@@ -34,6 +35,9 @@ const CONCERN_ICONS: Record<ConcernId, LucideIcon> = {
   taste: Waves,
   pfas: FlaskConical,
   lead: Droplet,
+  arsenic: Mountain,
+  copper: Droplet,
+  lithium: Mountain,
   report: FileText,
   changes: TrendingUp,
 }
@@ -101,14 +105,18 @@ export function GuidedView({
   water,
   education,
   onExplore,
+  initialClarify = null,
+  onHome,
 }: {
   concern: ConcernDef
   water: PwsPayload
   education: EducationPayload | null
   onExplore: (clarifyId: string) => void
+  initialClarify?: string | null
+  onHome?: () => void
 }) {
   const reduceMotion = useReducedMotion()
-  const [clarifyChoice, setClarifyChoice] = useState<string | null>(null)
+  const [clarifyChoice, setClarifyChoice] = useState<string | null>(initialClarify)
   const [openPanel, setOpenPanel] = useState<OpenPanel>(null)
 
   const analyte = clarifyChoice ? resolveAnalyte(concern, clarifyChoice, water) : null
@@ -146,16 +154,27 @@ export function GuidedView({
 
   return (
     <div className="guided-canvas min-h-svh bg-[var(--canvas)] font-sans text-[17px] leading-relaxed text-[var(--ink-primary)]">
-      <div className="mx-auto max-w-2xl px-5 pb-16 pt-6 sm:px-8">
+      <div className="w-full max-w-none px-6 pb-16 pt-6">
         <header className="mb-8 flex flex-wrap items-center justify-between gap-3">
-          <a
-            href="../../../../index.html"
-            className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[var(--divider)] bg-white px-4 py-2 text-sm font-semibold text-[var(--ink-primary)] shadow-sm transition hover:bg-[#F8FAFC] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring)]"
-            aria-label="Home"
-          >
-            <Home className="h-4 w-4 shrink-0" aria-hidden />
-            Home
-          </a>
+          {onHome ? (
+            <button
+              type="button"
+              onClick={onHome}
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[var(--divider)] bg-white px-4 py-2 text-sm font-semibold text-[var(--ink-primary)] shadow-sm transition hover:bg-[#F8FAFC] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring)]"
+            >
+              <Home className="h-4 w-4 shrink-0" aria-hidden />
+              Home
+            </button>
+          ) : (
+            <a
+              href="../../../../index.html"
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[var(--divider)] bg-white px-4 py-2 text-sm font-semibold text-[var(--ink-primary)] shadow-sm transition hover:bg-[#F8FAFC] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring)]"
+              aria-label="Home"
+            >
+              <Home className="h-4 w-4 shrink-0" aria-hidden />
+              Home
+            </a>
+          )}
           {clarifyChoice && (
             <button
               type="button"

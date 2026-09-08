@@ -17,10 +17,12 @@ export function TrendPanel({
   analyte,
   headingLevel = 'h2',
   chartHeightClass = 'h-72',
+  compact = false,
 }: {
   analyte: AnalytePack
   headingLevel?: 'h2' | 'h3'
   chartHeightClass?: string
+  compact?: boolean
 }) {
   const limit = analyte.by_year.find((r) => r.sdwa_limit != null)?.sdwa_limit ?? null
   const data = analyte.by_year
@@ -39,16 +41,24 @@ export function TrendPanel({
       layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="rounded-2xl bg-white/90 p-4 shadow-sm ring-1 ring-slate-200/80 dark:bg-slate-900/70 dark:ring-slate-700/80 sm:p-6"
+      className={
+        compact
+          ? 'changed-trend'
+          : 'rounded-2xl bg-white/90 p-4 shadow-sm ring-1 ring-slate-200/80 dark:bg-slate-900/70 dark:ring-slate-700/80 sm:p-6'
+      }
     >
-      <div className="mb-4 text-left">
-        <Heading className="text-lg font-semibold text-slate-900 dark:text-white">
-          Trend vs limit
-        </Heading>
-        <p className="text-sm text-slate-500 dark:text-slate-400">
-          {analyte.analyte_name} — highest reported level each year (public data).
-        </p>
-      </div>
+      {compact ? (
+        <p className="changed-trend__caption">Highest reported level each year</p>
+      ) : (
+        <div className="mb-4 text-left">
+          <Heading className="text-lg font-semibold text-slate-900 dark:text-white">
+            Trend vs limit
+          </Heading>
+          <p className="text-sm text-slate-500 dark:text-slate-400">
+            {analyte.analyte_name} — highest reported level each year (public data).
+          </p>
+        </div>
+      )}
       <div className={cn('w-full', chartHeightClass)}>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
