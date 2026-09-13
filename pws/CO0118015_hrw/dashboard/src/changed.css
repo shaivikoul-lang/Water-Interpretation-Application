@@ -34,6 +34,12 @@ body:has(.changed-page) {
   scroll-margin-top: 1.5rem;
 }
 
+.changed-page__results--follow {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid #fed7aa;
+}
+
 .changed-page__heading {
   margin: 0;
   font-size: 1.125rem;

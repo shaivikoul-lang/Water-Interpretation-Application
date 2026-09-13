@@ -53,12 +53,82 @@ function zoneFor(value: number, official: number, mcl: number): Zone {
   }
 }
 
+export function PfasEpaHealthCard({ officialPpt }: { officialPpt: number }) {
+  const hrwPfas = getSource('hrw_pfas')
+  const epaHealth = getSource('epa_pfas_health')
+
+  return (
+    <section className="pfas-card pfas-epa" aria-labelledby="pfas-epa-heading">
+      <h2 id="pfas-epa-heading" className="pfas-sec-h">
+        What EPA says about PFAS and health
+      </h2>
+      <p className="pfas-copy">
+        EPA lists possible effects of PFAS exposure. It does not assign these to Highlands Ranch
+        Water’s {formatPpt(officialPpt)} ppt.
+      </p>
+      <HealthStakes hrwUrl={hrwPfas.url} epaUrl={epaHealth.url} />
+    </section>
+  )
+}
+
+function HealthStakes({ hrwUrl, epaUrl }: { hrwUrl: string; epaUrl: string }) {
+  return (
+    <>
+      <p className="pfas-stat-k pfas-health__stakes-k">EPA says PFAS exposure may lead to</p>
+      <ul className="pfas-health__stakes">
+        <li>
+          <Shield className="h-4 w-4" aria-hidden />
+          A weaker ability to fight infections
+        </li>
+        <li>
+          <Baby className="h-4 w-4" aria-hidden />
+          Developmental delays in children
+        </li>
+        <li>
+          <HeartPulse className="h-4 w-4" aria-hidden />
+          Higher risk of some cancers
+        </li>
+        <li>
+          <Heart className="h-4 w-4" aria-hidden />
+          Effects on fertility and pregnancy
+        </li>
+        <li>
+          <Activity className="h-4 w-4" aria-hidden />
+          Interference with hormones
+        </li>
+        <li>
+          <Droplets className="h-4 w-4" aria-hidden />
+          Higher cholesterol
+        </li>
+      </ul>
+      <p className="pfas-health__stakes-note">
+        That list is from EPA’s PFAS health-risks page. EPA does not assign these effects to one
+        part-per-trillion number.
+      </p>
+      <div className="pfas-health__links">
+        <a className="pfas-text-link" href={hrwUrl} target="_blank" rel="noreferrer">
+          Highlands Ranch Water PFAS page
+          <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a className="pfas-text-link" href={epaUrl} target="_blank" rel="noreferrer">
+          EPA: how PFAS can affect health
+          <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
+    </>
+  )
+}
+
 export function PfasHealthSlider({
   officialPpt,
   mclPpt,
+  compact = false,
 }: {
   officialPpt: number
   mclPpt: number
+  compact?: boolean
 }) {
   const sliderId = useId()
   const [value, setValue] = useState(officialPpt)
@@ -68,13 +138,17 @@ export function PfasHealthSlider({
   const fillPct = (value / mclPpt) * 100
 
   return (
-    <section className="pfas-health" aria-labelledby="pfas-health-heading">
+    <section
+      className={`pfas-health${compact ? ' pfas-health--stage' : ''}`}
+      aria-labelledby="pfas-health-heading"
+    >
       <h2 id="pfas-health-heading" className="pfas-health__h">
         What if PFOA were higher?
       </h2>
       <p className="pfas-health__intro">
-        Today’s official average is {formatPpt(officialPpt)} ppt. The most EPA allows is{' '}
-        {formatPpt(mclPpt)} ppt. Drag toward the limit to see what that means.
+        {compact
+          ? `Today’s official average is ${formatPpt(officialPpt)} ppt. This is not a new utility result. Drag toward the ${formatPpt(mclPpt)} ppt limit to see what that means.`
+          : `Today’s official average is ${formatPpt(officialPpt)} ppt. The most EPA allows is ${formatPpt(mclPpt)} ppt. Drag toward the limit to see what that means.`}
       </p>
 
       <dl className="pfas-health__pair">
@@ -141,49 +215,7 @@ export function PfasHealthSlider({
         </button>
       ) : null}
 
-      <p className="pfas-stat-k pfas-health__stakes-k">EPA says PFAS exposure may lead to</p>
-      <ul className="pfas-health__stakes">
-        <li>
-          <Shield className="h-4 w-4" aria-hidden />
-          A weaker ability to fight infections
-        </li>
-        <li>
-          <Baby className="h-4 w-4" aria-hidden />
-          Developmental delays in children
-        </li>
-        <li>
-          <HeartPulse className="h-4 w-4" aria-hidden />
-          Higher risk of some cancers
-        </li>
-        <li>
-          <Heart className="h-4 w-4" aria-hidden />
-          Effects on fertility and pregnancy
-        </li>
-        <li>
-          <Activity className="h-4 w-4" aria-hidden />
-          Interference with hormones
-        </li>
-        <li>
-          <Droplets className="h-4 w-4" aria-hidden />
-          Higher cholesterol
-        </li>
-      </ul>
-      <p className="pfas-health__stakes-note">
-        That list is from EPA’s PFAS health-risks page. EPA does not assign these effects to one
-        part-per-trillion number.
-      </p>
-      <div className="pfas-health__links">
-        <a className="pfas-text-link" href={hrwPfas.url} target="_blank" rel="noreferrer">
-          Highlands Ranch Water PFAS page
-          <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-          <span className="sr-only"> (opens in a new tab)</span>
-        </a>
-        <a className="pfas-text-link" href={epaHealth.url} target="_blank" rel="noreferrer">
-          EPA: how PFAS can affect health
-          <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-          <span className="sr-only"> (opens in a new tab)</span>
-        </a>
-      </div>
+      {compact ? null : <HealthStakes hrwUrl={hrwPfas.url} epaUrl={epaHealth.url} />}
     </section>
   )
 }

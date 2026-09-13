@@ -1,5 +1,5 @@
-import heroWebp from '../../assets/hero-chatfield.webp'
-import heroJpg from '../../assets/hero-chatfield.jpg'
+import heroWebp from '../../assets/hero-reservoir.webp'
+import heroJpg from '../../assets/hero-reservoir.jpg'
 
 export function LandingHero() {
   return (

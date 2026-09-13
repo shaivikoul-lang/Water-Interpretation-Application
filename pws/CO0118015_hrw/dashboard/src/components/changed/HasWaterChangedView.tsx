@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { ChevronLeft } from 'lucide-react'
 import { ContaminantCard } from '../ContaminantCard'
 import { ChangedDetailNote } from './ChangedDetailNote'
@@ -8,12 +8,45 @@ import { PfasDialog } from '../pfas/PfasDialog'
 import { TrendPanel } from '../TrendPanel'
 import { TrustFooter } from '../TrustFooter'
 import {
+  overlayOfficialChangedSeries,
+  splitChangedAnalytes,
+} from '../../lib/changedSeries'
+import {
   heroSafetyStatus,
   measureSummaryCounts,
   overallStatus,
   watchAlertCopy,
 } from '../../lib/derive'
-import type { EducationPayload, PwsPayload } from '../../types/water'
+import type { AnalytePack, EducationPayload, PwsPayload } from '../../types/water'
+
+function ChangedCardGrid({
+  analytes,
+  selected,
+  highlightName,
+  onSelect,
+  indexOffset = 0,
+}: {
+  analytes: AnalytePack[]
+  selected: string | null
+  highlightName: string | null
+  onSelect: (name: string) => void
+  indexOffset?: number
+}) {
+  return (
+    <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {analytes.map((analyte, index) => (
+        <ContaminantCard
+          key={analyte.analyte_name}
+          analyte={analyte}
+          selected={selected === analyte.analyte_name}
+          highlighted={highlightName === analyte.analyte_name}
+          onSelect={() => onSelect(analyte.analyte_name)}
+          index={indexOffset + index}
+        />
+      ))}
+    </div>
+  )
+}
 
 export function HasWaterChangedView({
   utilityLabel,
@@ -31,13 +64,22 @@ export function HasWaterChangedView({
   const [detailOpen, setDetailOpen] = useState(false)
   const [highlightName, setHighlightName] = useState<string | null>(null)
 
+  const displayAnalytes = useMemo(
+    () => overlayOfficialChangedSeries(water.analytes),
+    [water.analytes],
+  )
+  const { comparable, newerProgram } = useMemo(
+    () => splitChangedAnalytes(displayAnalytes),
+    [displayAnalytes],
+  )
+
   const selectedAnalyte = selected
-    ? (water.analytes.find((a) => a.analyte_name === selected) ?? null)
+    ? (displayAnalytes.find((a) => a.analyte_name === selected) ?? null)
     : null
 
-  const tone = overallStatus(water.analytes)
-  const safetyTone = heroSafetyStatus(water.analytes)
-  const measureSummary = measureSummaryCounts(water.analytes)
+  const tone = overallStatus(displayAnalytes)
+  const safetyTone = heroSafetyStatus(displayAnalytes)
+  const measureSummary = measureSummaryCounts(displayAnalytes)
   const yearSpan =
     water.years_present?.length && water.years_present.length >= 2
       ? `${water.years_present[0]}–${water.years_present[water.years_present.length - 1]}`
@@ -89,29 +131,54 @@ export function HasWaterChangedView({
           tone={tone}
           safetyTone={safetyTone}
           summary={measureSummary}
-          watchCopy={tone === 'watch' ? watchAlertCopy(water.analytes) : undefined}
+          watchCopy={tone === 'watch' ? watchAlertCopy(displayAnalytes) : undefined}
           onViewAffected={openDetail}
         />
 
-        <div id="changed-results" className="changed-page__results">
-          <h2 className="changed-page__heading">Recent monitoring results</h2>
-          <p className="changed-page__sub">
-            Latest reported values across regulated contaminants. Tap a measure for the
-            full trend.
-          </p>
-          <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {water.analytes.map((analyte, index) => (
-              <ContaminantCard
-                key={analyte.analyte_name}
-                analyte={analyte}
-                selected={selected === analyte.analyte_name}
-                highlighted={highlightName === analyte.analyte_name}
-                onSelect={() => openDetail(analyte.analyte_name)}
-                index={index}
-              />
-            ))}
+        {comparable.length > 0 ? (
+          <div id="changed-results" className="changed-page__results">
+            <h2 className="changed-page__heading">
+              Results we can compare over many years
+            </h2>
+            <p className="changed-page__sub">
+              These are yearly public-system results in the Colorado file, so you can
+              see whether the number moved. Tap a measure for the full trend.
+            </p>
+            <ChangedCardGrid
+              analytes={comparable}
+              selected={selected}
+              highlightName={highlightName}
+              onSelect={openDetail}
+            />
           </div>
-        </div>
+        ) : null}
+
+        {newerProgram.length > 0 ? (
+          <div
+            id={comparable.length > 0 ? 'changed-results-newer' : 'changed-results'}
+            className={
+              comparable.length > 0
+                ? 'changed-page__results changed-page__results--follow'
+                : 'changed-page__results'
+            }
+          >
+            <h2 className="changed-page__heading">
+              Newer tests, or a different kind of test
+            </h2>
+            <p className="changed-page__sub">
+              These are official. They just are not a 2000–2025 plant chart. A short
+              graph means the public series is short or the rule uses tap samples, not
+              that the water was ignored. Tap a measure for the full trend.
+            </p>
+            <ChangedCardGrid
+              analytes={newerProgram}
+              selected={selected}
+              highlightName={highlightName}
+              onSelect={openDetail}
+              indexOffset={comparable.length}
+            />
+          </div>
+        ) : null}
 
         <TrustFooter />
       </main>

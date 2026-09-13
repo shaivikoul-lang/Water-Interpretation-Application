@@ -1,181 +1,272 @@
 import { useId } from 'react'
 
-function Molecule({
-  x,
-  y,
-  fill,
-  className,
-}: {
-  x: number
-  y: number
-  fill: string
-  className?: string
-}) {
+function ProductsIcon() {
   return (
-    <g className={className}>
-      <g transform={`translate(${x} ${y})`}>
-        <circle cx="0" cy="0" r="4" fill={fill} />
-        <circle cx="9" cy="3" r="3.2" fill={fill} opacity="0.85" />
-        <circle cx="16" cy="-1" r="2.6" fill={fill} opacity="0.7" />
-        <path
-          d="M4 1 L6 2.2 M12 1.6 L13.6 0.4"
-          stroke={fill}
-          strokeWidth="1.4"
-          strokeLinecap="round"
-        />
-      </g>
-    </g>
-  )
-}
-
-function ProductsMark() {
-  return (
-    <svg viewBox="0 0 88 64" className="pfas-path__ico" aria-hidden>
-      <circle cx="30" cy="34" r="16" fill="#6B7C8F" />
-      <circle cx="30" cy="34" r="11" fill="#334E68" />
-      <circle cx="30" cy="34" r="7" fill="#EAF4FC" />
-      <path d="M46 34h18" stroke="#0B2A4A" strokeWidth="5" strokeLinecap="round" />
-      <path d="M62 22 74 18l4 14-10 6-6-8Z" fill="#9B2C5D" />
-      <path d="M66 24h8" stroke="#F8E8EF" strokeWidth="1.5" strokeLinecap="round" />
+    <svg viewBox="0 0 32 32" className="pfas-path__ico" aria-hidden>
+      <circle cx="10" cy="20" r="6.2" fill="none" stroke="#0B2A4A" strokeWidth="2.3" />
+      <path d="M16.2 20h7.6" stroke="#0B2A4A" strokeWidth="2.4" strokeLinecap="round" />
+      <path
+        d="M20 7.2 25.2 5.4 28.2 9.2v11.4L24.6 22.6 20 19.2Z"
+        fill="#0B74DE"
+      />
+      <path d="M24.2 7.6v12.4" stroke="#EAF4FC" strokeWidth="1.2" />
     </svg>
   )
 }
 
-function FoamMark() {
+function FoamIcon() {
   return (
-    <svg viewBox="0 0 88 64" className="pfas-path__ico" aria-hidden>
-      <path d="M10 40h28l-3-8H13Z" fill="#0B2A4A" />
-      <path d="M38 36h16" stroke="#0B2A4A" strokeWidth="5" strokeLinecap="round" />
-      <circle cx="58" cy="22" r="9" fill="#FFFFFF" stroke="#D4E4F0" strokeWidth="1" />
-      <circle cx="70" cy="18" r="7" fill="#F8E8EF" />
-      <circle cx="66" cy="30" r="8" fill="#F4D0DC" />
-      <circle cx="76" cy="28" r="5" fill="#FFFFFF" />
-      <circle cx="54" cy="32" r="5" fill="#9B2C5D" opacity="0.4" />
+    <svg viewBox="0 0 32 32" className="pfas-path__ico" aria-hidden>
+      <path
+        d="M5 23c1-8 6.5-13 13-13 3.2 0 4.6 2 7.2 2 4 0 6.4 3 6.4 6.4"
+        fill="none"
+        stroke="#0B2A4A"
+        strokeWidth="2.6"
+        strokeLinecap="round"
+      />
+      <path d="M5.2 23h9.2l-1.6-3.6H6.6Z" fill="#0B2A4A" />
+      <circle cx="23.5" cy="9.4" r="3.4" fill="#0B74DE" />
+      <circle cx="28" cy="13.2" r="2.5" fill="#0B74DE" opacity="0.55" />
+      <circle cx="20.2" cy="8" r="2" fill="#0B74DE" opacity="0.45" />
     </svg>
   )
 }
 
-function IndustryMark() {
+function IndustryIcon() {
   return (
-    <svg viewBox="0 0 88 64" className="pfas-path__ico" aria-hidden>
-      <path d="M8 52V30l12-8 12 8v22H8Z" fill="#0B2A4A" />
-      <rect x="44" y="28" width="28" height="24" fill="#334E68" />
-      <path d="M22 10h8v16h-8Z" fill="#526D82" />
-      <path d="M36 6h8v20h-8Z" fill="#526D82" />
-      <rect x="14" y="36" width="7" height="7" fill="#EAF4FC" />
-      <rect x="26" y="36" width="7" height="7" fill="#EAF4FC" />
-      <rect x="50" y="34" width="7" height="7" fill="#EAF4FC" />
-      <rect x="62" y="34" width="7" height="7" fill="#EAF4FC" />
-      <path d="M26 4c5-5 11 0 8 8" stroke="#9B2C5D" strokeWidth="3" fill="none" strokeLinecap="round" />
-      <path d="M40 2c5-5 11 0 8 8" stroke="#9B2C5D" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.65" />
+    <svg viewBox="0 0 32 32" className="pfas-path__ico" aria-hidden>
+      <path d="M4 27V15.2L11 10l7 5.2V27H4Z" fill="#0B2A4A" />
+      <path d="M18 27V13h11v14H18Z" fill="#0B2A4A" />
+      <rect x="7.2" y="19" width="3.6" height="3.6" fill="#EAF4FC" />
+      <rect x="12.2" y="19" width="3.6" height="3.6" fill="#EAF4FC" />
+      <rect x="20.4" y="17.2" width="3.6" height="3.6" fill="#EAF4FC" />
+      <rect x="25" y="17.2" width="3.6" height="3.6" fill="#EAF4FC" />
+      <path d="M21.2 6h3.2v7h-3.2Z" fill="#0B74DE" />
+      <path d="M25.6 4h3.2v9h-3.2Z" fill="#0B74DE" />
     </svg>
   )
 }
 
-function WasteMark() {
+function WasteIcon() {
   return (
-    <svg viewBox="0 0 88 64" className="pfas-path__ico" aria-hidden>
-      <path d="M18 24h40l4 28H14Z" fill="#0B2A4A" />
-      <path d="M16 24h44v6H16Z" fill="#334E68" />
-      <path d="M28 16h20v8H28Z" fill="#526D82" />
-      <rect x="24" y="34" width="10" height="8" fill="#EAF4FC" />
-      <rect x="42" y="34" width="10" height="8" fill="#EAF4FC" />
-      <circle cx="70" cy="40" r="8" fill="#9B2C5D" opacity="0.55" />
-      <path d="M68 12c1 8 0 14-2 20" stroke="#0B74DE" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+    <svg viewBox="0 0 32 32" className="pfas-path__ico" aria-hidden>
+      <path d="M7 12.5h18l1.8 14.2H5.2Z" fill="#0B2A4A" />
+      <path d="M6 12.5h20v3.6H6Z" fill="#334E68" />
+      <path d="M12 7.4h8v5.1h-8Z" fill="#0B74DE" />
+      <rect x="10.4" y="18.6" width="4.4" height="3.8" fill="#EAF4FC" />
+      <rect x="17.2" y="18.6" width="4.4" height="3.8" fill="#EAF4FC" />
     </svg>
   )
 }
 
 const SOURCES = [
-  { label: 'Everyday products', Mark: ProductsMark },
-  { label: 'Firefighting foam', Mark: FoamMark },
-  { label: 'Industry', Mark: IndustryMark },
-  { label: 'Waste', Mark: WasteMark },
+  { label: 'Everyday products', Icon: ProductsIcon },
+  { label: 'Firefighting foam', Icon: FoamIcon },
+  { label: 'Industry', Icon: IndustryIcon },
+  { label: 'Waste', Icon: WasteIcon },
 ] as const
+
+function Molecule() {
+  return (
+    <g>
+      <circle cx="0" cy="0" r="3.1" fill="#9B2C5D" />
+      <path d="M3.1 0h5.4" stroke="#9B2C5D" strokeWidth="1.6" />
+      <circle cx="11.4" cy="0" r="3.1" fill="#9B2C5D" />
+      <path d="M14.5 0h5.4" stroke="#9B2C5D" strokeWidth="1.6" />
+      <circle cx="22.8" cy="0" r="3.1" fill="#9B2C5D" />
+    </g>
+  )
+}
+
+function CanArrow({ direction }: { direction: 'across' | 'down' }) {
+  return (
+    <p className={`pfas-path__can pfas-path__can--${direction}`} aria-hidden>
+      <span>can</span>
+      {direction === 'across' ? (
+        <svg viewBox="0 0 28 12" className="pfas-path__can-svg">
+          <path
+            d="M1 6h20M17 2l6 4-6 4"
+            fill="none"
+            stroke="#0B2A4A"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 12 28" className="pfas-path__can-svg pfas-path__can-svg--down">
+          <path
+            d="M6 1v20M2 17l4 6 4-6"
+            fill="none"
+            stroke="#0B2A4A"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      )}
+    </p>
+  )
+}
+
+function MoveThroughScene({ uid }: { uid: string }) {
+  const soil = `${uid}-soil`
+  const water = `${uid}-water`
+
+  return (
+    <svg
+      className="pfas-path__scene"
+      viewBox="0 0 300 210"
+      role="img"
+      aria-label="PFAS can move downward through rain, soil, and water. Finding PFAS in water does not, by itself, tell us where it came from."
+    >
+      <defs>
+        <linearGradient id={soil} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#E4D4B0" />
+          <stop offset="1" stopColor="#C8B48A" />
+        </linearGradient>
+        <linearGradient id={water} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#8FD0EC" />
+          <stop offset="1" stopColor="#0B74DE" />
+        </linearGradient>
+      </defs>
+
+      <rect width="300" height="210" rx="12" fill="#F7FAFC" />
+      <path d="M0 88c40-14 80 8 120 0s78-16 128 2 70 8 52-2v36H0Z" fill="#8FB56E" />
+      <rect x="0" y="118" width="300" height="36" fill={`url(#${soil})`} />
+      <rect x="0" y="154" width="300" height="56" fill={`url(#${water})`} />
+
+      <text x="150" y="22" textAnchor="middle" className="pfas-path__svg-label">
+        Rain
+      </text>
+      <path
+        d="M58 30c0 3-2.4 6-4 6s-4-3-4-6 2.2-5.4 4-5.4 4 2.4 4 5.4Z"
+        fill="#0B74DE"
+        opacity="0.55"
+      />
+      <path
+        d="M150 28c0 3-2.4 6-4 6s-4-3-4-6 2.2-5.4 4-5.4 4 2.4 4 5.4Z"
+        fill="#0B74DE"
+        opacity="0.55"
+      />
+      <path
+        d="M242 30c0 3-2.4 6-4 6s-4-3-4-6 2.2-5.4 4-5.4 4 2.4 4 5.4Z"
+        fill="#0B74DE"
+        opacity="0.55"
+      />
+
+      <path d="M54 48v118" className="pfas-path__fall-line" />
+      <path d="M146 44v122" className="pfas-path__fall-line" />
+      <path d="M238 48v118" className="pfas-path__fall-line" />
+      <path d="M50 166l4 8 4-8" fill="none" stroke="#9B2C5D" strokeWidth="1.8" />
+      <path d="M142 166l4 8 4-8" fill="none" stroke="#9B2C5D" strokeWidth="1.8" />
+      <path d="M234 166l4 8 4-8" fill="none" stroke="#9B2C5D" strokeWidth="1.8" />
+
+      <g transform="translate(42 40)">
+        <g className="pfas-mol-fall pfas-mol-fall--a">
+          <Molecule />
+        </g>
+      </g>
+      <g transform="translate(134 36)">
+        <g className="pfas-mol-fall pfas-mol-fall--b">
+          <Molecule />
+        </g>
+      </g>
+      <g transform="translate(226 40)">
+        <g className="pfas-mol-fall pfas-mol-fall--c">
+          <Molecule />
+        </g>
+      </g>
+
+      <text x="150" y="141" textAnchor="middle" className="pfas-path__svg-label">
+        Soil
+      </text>
+      <text x="150" y="188" textAnchor="middle" className="pfas-path__svg-label pfas-path__svg-label--on-blue">
+        Water
+      </text>
+    </svg>
+  )
+}
+
+function TapScene() {
+  return (
+    <svg
+      className="pfas-path__tap"
+      viewBox="0 0 140 210"
+      role="img"
+      aria-label="PFAS can reach a drinking-water tap."
+    >
+      <rect x="48" y="16" width="28" height="12" rx="3" fill="#0B2A4A" />
+      <path d="M62 28v16" stroke="#0B2A4A" strokeWidth="10" strokeLinecap="round" />
+      <path
+        d="M62 44h34c10 0 14 6 14 14"
+        fill="none"
+        stroke="#0B2A4A"
+        strokeWidth="10"
+        strokeLinecap="round"
+      />
+      <path
+        d="M110 58v28"
+        stroke="#0B74DE"
+        strokeWidth="5"
+        strokeLinecap="round"
+        className="pfas-path__stream"
+      />
+      <path
+        d="M86 98h48l-5 62H91Z"
+        fill="#FFFFFF"
+        stroke="#0B2A4A"
+        strokeWidth="2.6"
+        strokeLinejoin="round"
+      />
+      <path d="M90 136h40" stroke="#0B74DE" strokeWidth="22" opacity="0.32" />
+    </svg>
+  )
+}
 
 export function PfasPathwayVisual() {
   const uid = useId()
   const headingId = `${uid}-h`
-  const sky = `${uid}-sky`
-  const water = `${uid}-water`
-  const soil = `${uid}-soil`
 
   return (
-    <section className="pfas-path" aria-labelledby={headingId}>
+    <section className="pfas-path pfas-path--zones" aria-labelledby={headingId}>
       <h2 id={headingId} className="pfas-path__h">
         How PFAS can reach water
       </h2>
 
-      <ul className="pfas-path__sources">
-        {SOURCES.map(({ label, Mark }) => (
-          <li key={label} className="pfas-path__source">
-            <Mark />
-            <span>{label}</span>
-          </li>
-        ))}
-      </ul>
-
       <figure className="pfas-path__figure">
-        <svg
-          className="pfas-path__scene"
-          viewBox="0 0 680 168"
-          role="img"
-          aria-label="PFAS from products, firefighting foam, industry, and waste can move through soil, groundwater, and rivers into drinking-water sources."
-        >
-          <defs>
-            <linearGradient id={sky} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#F7FAFC" />
-              <stop offset="1" stopColor="#EAF4FC" />
-            </linearGradient>
-            <linearGradient id={soil} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#C8B48A" />
-              <stop offset="1" stopColor="#8F7A52" />
-            </linearGradient>
-            <linearGradient id={water} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#7EC8E8" />
-              <stop offset="1" stopColor="#0B74DE" />
-            </linearGradient>
-          </defs>
+        <div className="pfas-path__board">
+          <div className="pfas-path__zone">
+            <p className="pfas-path__zone-label">Can come from</p>
+            <ul className="pfas-path__sources">
+              {SOURCES.map(({ label, Icon }) => (
+                <li key={label} className="pfas-path__source">
+                  <span className="pfas-path__ico-wrap">
+                    <Icon />
+                  </span>
+                  <span>{label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <rect width="680" height="168" rx="14" fill={`url(#${sky})`} />
+          <CanArrow direction="across" />
+          <CanArrow direction="down" />
 
-          <path d="M0 58h680" stroke="#9B2C5D" strokeWidth="1.5" strokeDasharray="3 7" opacity="0.35" />
-          <Molecule x={70} y={18} fill="#9B2C5D" className="pfas-mol-drift" />
-          <Molecule x={210} y={10} fill="#9B2C5D" className="pfas-mol-drift" />
-          <Molecule x={350} y={20} fill="#9B2C5D" className="pfas-mol-drift" />
-          <Molecule x={490} y={12} fill="#9B2C5D" className="pfas-mol-drift" />
-          <Molecule x={160} y={36} fill="#C45A86" className="pfas-mol-drift" />
-          <Molecule x={400} y={40} fill="#C45A86" className="pfas-mol-drift" />
+          <div className="pfas-path__zone">
+            <p className="pfas-path__zone-label">Can move through</p>
+            <MoveThroughScene uid={uid} />
+          </div>
 
-          <path d="M0 70c40-10 80 8 120 0s80-12 130 2 90 8 140-6 110 4 150 0 90-8 140 6v28H0Z" fill="#7A9A5C" />
-          <path d="M48 70v-16h22v16" fill="#0B2A4A" />
-          <path d="M44 54h30l-15-12Z" fill="#9B2C5D" />
-          <circle cx="200" cy="62" r="10" fill="#3F7A3A" />
-          <circle cx="214" cy="60" r="8" fill="#5A9A4E" />
-          <rect x="0" y="92" width="680" height="28" fill={`url(#${soil})`} />
-          <Molecule x={120} y={100} fill="#9B2C5D" className="pfas-mol-drift" />
-          <Molecule x={300} y={104} fill="#9B2C5D" className="pfas-mol-drift" />
-          <Molecule x={460} y={98} fill="#C45A86" className="pfas-mol-drift" />
+          <CanArrow direction="across" />
+          <CanArrow direction="down" />
 
-          <path d="M0 120h680v48H0Z" fill={`url(#${water})`} />
-          <path
-            d="M0 128c30 8 60-8 90 0s60 10 90 0 60-10 90 0 60 10 90 0 60-8 90 0 60 10 90 0 70-8 140 2v38H0Z"
-            fill="#005EA8"
-            opacity="0.35"
-          />
-          <Molecule x={90} y={136} fill="#F8E8EF" />
-          <Molecule x={250} y={142} fill="#FFFFFF" />
-          <Molecule x={410} y={134} fill="#F8E8EF" />
+          <div className="pfas-path__zone pfas-path__zone--tap">
+            <p className="pfas-path__zone-label">Can reach a tap</p>
+            <TapScene />
+          </div>
+        </div>
 
-          <g transform="translate(548 70)">
-            <path d="M36 6h28v10H36Z" fill="#0B2A4A" />
-            <path d="M58 16v10" stroke="#0B2A4A" strokeWidth="6" strokeLinecap="round" />
-            <path d="M58 26h18" stroke="#0B2A4A" strokeWidth="6" strokeLinecap="round" />
-            <path d="M76 26v12" stroke="#7EC8E8" strokeWidth="4" strokeLinecap="round" />
-            <path d="M66 48h24l3 22H63Z" fill="#FFFFFF" stroke="#0B2A4A" strokeWidth="2.2" />
-            <path d="M66 62h24" fill="none" stroke="#0B74DE" strokeWidth="10" opacity="0.35" />
-          </g>
-        </svg>
         <figcaption className="pfas-path__caption">
           Finding PFAS in water does not, by itself, tell us where it came from.
         </figcaption>

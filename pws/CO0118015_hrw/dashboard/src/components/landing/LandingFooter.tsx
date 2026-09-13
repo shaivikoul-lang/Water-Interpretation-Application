@@ -181,34 +181,8 @@ export function LandingFooter() {
         </div>
 
         <p className="mt-5 border-t border-[#eef2f7] pt-4 text-[12px] leading-relaxed text-[#5b7590]">
-          Header photograph: Chatfield State Park by{' '}
-          <a
-            className="landing-credit-link"
-            href="https://commons.wikimedia.org/wiki/User:Denverjeffrey"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Denverjeffrey
-          </a>
-          , cropped, via{' '}
-          <a
-            className="landing-credit-link"
-            href="https://commons.wikimedia.org/wiki/File:Chatfield_State_Park.JPG"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Wikimedia Commons
-          </a>
-          , licensed{' '}
-          <a
-            className="landing-credit-link"
-            href="https://creativecommons.org/licenses/by-sa/4.0/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            CC BY-SA 4.0
-          </a>
-          .
+          Header photograph: a Front Range reservoir, cropped to keep the water
+          in view on wide screens.
         </p>
       </div>
     </footer>

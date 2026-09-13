@@ -17,9 +17,6 @@ export type LandingIntent =
 
 const HOME_READING_INTENT: LandingIntent = { kind: 'tds-reading' }
 
-export const MY_WATER_PENDING_MESSAGE =
-  'Saving your own water profile is coming next.'
-
 export const IMPACT_PENDING_MESSAGE =
   'Our community impact page is coming next.'
 

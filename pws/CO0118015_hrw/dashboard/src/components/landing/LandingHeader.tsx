@@ -2,18 +2,20 @@ import { useEffect, useId, useRef, useState } from 'react'
 import { MapPin, Menu, Search, X } from 'lucide-react'
 import { cn } from '../../lib/cn'
 import {
-  MY_WATER_PENDING_MESSAGE,
   resolveSearchIntent,
   searchHrefForIntent,
   type LandingIntent,
 } from '../../lib/landingIntents'
 import waterlensLogo from '../../assets/waterlens-logo.png'
 
+const MY_WATER_INTENT: LandingIntent = { kind: 'guided', concernId: 'changes' }
+
 type NavItem = {
   label: string
   href?: string
   current?: boolean
   action?: 'home' | 'about'
+  intent?: LandingIntent
   /** Items with no destination yet announce a short status instead of navigating. */
   pending?: string
 }
@@ -21,7 +23,11 @@ type NavItem = {
 function navItems(activePage: 'home' | 'about'): NavItem[] {
   return [
     { label: 'Home', href: './', current: activePage === 'home', action: 'home' },
-    { label: 'My Water', pending: MY_WATER_PENDING_MESSAGE },
+    {
+      label: 'My Water',
+      href: searchHrefForIntent(MY_WATER_INTENT) ?? '?concern=changes',
+      intent: MY_WATER_INTENT,
+    },
     { label: 'About', href: '?about=1', current: activePage === 'about', action: 'about' },
   ]
 }
@@ -109,6 +115,12 @@ export function LandingHeader({
           if (item.action === 'about' && onAbout) {
             event.preventDefault()
             onAbout()
+            onNavigate?.()
+            return
+          }
+          if (item.intent && onIntent) {
+            event.preventDefault()
+            onIntent(item.intent)
             onNavigate?.()
             return
           }

@@ -11,7 +11,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview --host --port 4173 --strictPort",
-    "test:tds": "node --experimental-strip-types --test tests/tdsReading.test.ts"
+    "test:tds": "node --experimental-strip-types --test tests/tdsReading.test.ts",
+    "test:changed": "node --experimental-strip-types --test tests/changedSeries.test.ts",
+    "test:changed": "node --experimental-strip-types --test tests/changedSeries.test.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",

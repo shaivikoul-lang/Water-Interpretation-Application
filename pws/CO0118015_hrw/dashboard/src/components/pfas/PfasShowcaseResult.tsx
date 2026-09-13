@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 import { LandingHeader } from '../landing/LandingHeader'
 import { PfasDialog } from './PfasDialog'
-import { PfasHealthSlider } from './PfasHealthSlider'
+import { PfasEpaHealthCard, PfasHealthSlider } from './PfasHealthSlider'
 import { PfasPathwayVisual } from './PfasPathwayVisual'
 import {
   BRL_HELP,
@@ -64,27 +64,55 @@ export function PfasShowcaseResult({
       <LandingHeader utilityLabel={utilityLabel} />
 
       <main id="pfas-main" className="pfas-main">
-        <div className="pfas-shell">
-          <div className="pfas-main-col">
+        <div className="pfas-shell pfas-shell--demo">
             <button type="button" className="obs-back pfas-back" onClick={onBack}>
               <ChevronLeft className="h-4 w-4" aria-hidden />
               Back to contaminants
             </button>
-            <header className="pfas-title-block">
+            <header className="pfas-title-block pfas-title-block--hook">
               <span className="pfas-title-icon" aria-hidden>
                 <FlaskConical className="h-7 w-7" />
               </span>
               <div>
                 <h1 className="pfas-title">PFAS</h1>
+                <p className="pfas-hook">Are there PFAS in my water?</p>
                 <p className="pfas-subtitle">
-                  PFAS are a large family of man-made chemicals that have been used in products
-                  because they resist water, grease and heat. Some can persist in the environment
-                  for a long time, which is why drinking-water systems monitor for them.
+                  Highlands Ranch Water monitors for them. Here is the official result — and what
+                  that number means.{' '}
+                  <button
+                    type="button"
+                    className="pfas-text-link pfas-text-link--inline"
+                    onClick={() => setDialog('pfas')}
+                  >
+                    What are PFAS?
+                  </button>
                 </p>
               </div>
             </header>
 
-            <PfasPathwayVisual />
+            <div className="pfas-path-row">
+              <PfasPathwayVisual />
+              <aside className="pfas-video-block pfas-video-block--path" id="pfas-video" aria-labelledby="pfas-video-heading">
+                <div className="pfas-video">
+                  <iframe
+                    title="Watch: PFAS explained — YouTube video, does not autoplay"
+                    src={PFAS_VIDEO.embedUrl}
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <h2 id="pfas-video-heading" className="pfas-video-h" tabIndex={-1}>
+                  <Play className="h-4 w-4" aria-hidden />
+                  {PFAS_VIDEO.label}
+                </h2>
+                <a className="pfas-video-btn" href={PFAS_VIDEO.watchUrl} target="_blank" rel="noreferrer">
+                  Open on YouTube
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </aside>
+            </div>
 
             <section className="pfas-card pfas-answer" aria-labelledby="pfas-compare-heading">
               <div className="pfas-answer-body">
@@ -113,20 +141,12 @@ export function PfasShowcaseResult({
                       {formatPpt(cmp.averagePpt)}
                       <span>parts per trillion (ppt)</span>
                     </p>
-                    <p className="pfas-meta">
-                      PFAS levels are measured in parts per trillion — extremely small
-                      concentrations.
-                    </p>
                   </div>
                   <div>
                     <p className="pfas-stat-k">Federal drinking-water limit</p>
                     <p className="pfas-metric">
                       {formatPpt(cmp.mclPpt)}
                       <span>ppt</span>
-                    </p>
-                    <p className="pfas-meta">
-                      The U.S. Environmental Protection Agency (EPA) calls this the Maximum
-                      Contaminant Level, or MCL.
                     </p>
                     <button
                       type="button"
@@ -172,70 +192,66 @@ export function PfasShowcaseResult({
                   </div>
                 </div>
 
-                <div className="pfas-high">
-                  <div>
-                    <p className="pfas-stat-k">Highest reported PFOA sample</p>
-                    <p className="pfas-high__v">
-                      {formatPpt(cmp.highestPpt)} <span>ppt</span>
-                    </p>
-                  </div>
-                  <p className="pfas-copy">
-                    Highlands Ranch Water collected {cmp.sampleSize} samples. This is the single
-                    highest reading — {formatPpt(cmp.highestPpt)} ppt, still under the{' '}
-                    {formatPpt(cmp.mclPpt)} ppt limit (about {cmp.highestSharePct}% of that limit).
-                    The official average of {formatPpt(cmp.averagePpt)} ppt is the system-wide
-                    number, not this one sample.
-                  </p>
-                </div>
-
-                <div className="pfas-note">
-                  <p>
-                    <strong>PFOS</strong> — another PFAS compound — was below the laboratory’s
-                    reporting level in this {cmp.year} monitoring set.
-                  </p>
-                  <button
-                    type="button"
-                    className="pfas-text-link"
-                    aria-expanded={brlOpen}
-                    aria-controls={brlId}
-                    onClick={() => setBrlOpen((o) => !o)}
-                  >
-                    What does that mean?
-                  </button>
-                  <p id={brlId} hidden={!brlOpen} className="pfas-copy">
-                    Technical term: below reporting level (BRL). {BRL_HELP} It should not be
-                    interpreted as zero.
-                  </p>
-                </div>
+                <a
+                  className="pfas-source-chip"
+                  href={getSource(cmp.sourceId).url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {cmp.year} monitoring · {cmp.sampleSize} samples
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                  <span className="sr-only">
+                    {' '}
+                    — {getSource(cmp.sourceId).label} (opens in a new tab)
+                  </span>
+                </a>
               </div>
             </section>
-          </div>
 
-          <aside className="pfas-side-col" aria-labelledby="pfas-video-heading">
-            <div className="pfas-video-block" id="pfas-video">
-              <div className="pfas-video">
-                <iframe
-                  title="Watch: PFAS explained — YouTube video, does not autoplay"
-                  src={PFAS_VIDEO.embedUrl}
-                  loading="lazy"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-              <h2 id="pfas-video-heading" className="pfas-video-h" tabIndex={-1}>
-                <Play className="h-4 w-4" aria-hidden />
-                {PFAS_VIDEO.label}
-              </h2>
-              <p className="pfas-copy">A short explanation of PFAS in drinking water.</p>
-              <a className="pfas-video-btn" href={PFAS_VIDEO.watchUrl} target="_blank" rel="noreferrer">
-                Open on YouTube
-                <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
+            <div className="pfas-health-row">
+              <PfasHealthSlider officialPpt={cmp.averagePpt} mclPpt={cmp.mclPpt} compact />
+              <PfasEpaHealthCard officialPpt={cmp.averagePpt} />
             </div>
 
-            <PfasHealthSlider officialPpt={cmp.averagePpt} mclPpt={cmp.mclPpt} />
-          </aside>
+            <section className="pfas-card pfas-follow" aria-labelledby="pfas-high-heading">
+              <div className="pfas-high">
+                <div>
+                  <p id="pfas-high-heading" className="pfas-stat-k">
+                    Highest reported PFOA sample
+                  </p>
+                  <p className="pfas-high__v">
+                    {formatPpt(cmp.highestPpt)} <span>ppt</span>
+                  </p>
+                </div>
+                <p className="pfas-copy">
+                  Highlands Ranch Water collected {cmp.sampleSize} samples. This is the single
+                  highest reading — {formatPpt(cmp.highestPpt)} ppt, still under the{' '}
+                  {formatPpt(cmp.mclPpt)} ppt limit (about {cmp.highestSharePct}% of that limit).
+                  The official average of {formatPpt(cmp.averagePpt)} ppt is the system-wide
+                  number, not this one sample.
+                </p>
+              </div>
+
+              <div className="pfas-note">
+                <p>
+                  <strong>PFOS</strong> — another PFAS compound — was below the laboratory’s
+                  reporting level in this {cmp.year} monitoring set.
+                </p>
+                <button
+                  type="button"
+                  className="pfas-text-link"
+                  aria-expanded={brlOpen}
+                  aria-controls={brlId}
+                  onClick={() => setBrlOpen((o) => !o)}
+                >
+                  What does that mean?
+                </button>
+                <p id={brlId} hidden={!brlOpen} className="pfas-copy">
+                  Technical term: below reporting level (BRL). {BRL_HELP} It should not be
+                  interpreted as zero.
+                </p>
+              </div>
+            </section>
 
           <section className="pfas-explore" aria-labelledby="pfas-explore-heading">
             <h2 id="pfas-explore-heading" className="pfas-sec-h">
@@ -454,8 +470,9 @@ export function PfasShowcaseResult({
       {dialog === 'pfas' ? (
         <PfasDialog title="What are PFAS?" onClose={() => setDialog(null)}>
           <p className="pfas-copy">
-            PFAS are a large group of synthetic chemicals used in many products. Some PFAS persist
-            for long periods in the environment and can enter drinking-water sources.
+            PFAS are a large family of man-made chemicals that have been used in products because
+            they resist water, grease and heat. Some can persist in the environment for a long
+            time, which is why drinking-water systems monitor for them.
           </p>
           <p className="pfas-copy">
             Because different PFAS have different monitoring and regulatory treatment, WaterLens

@@ -20,6 +20,7 @@ import { ObservationPicker } from './components/guided/ObservationPicker'
 import { HasWaterChangedView } from './components/changed/HasWaterChangedView'
 import { LandingPage } from './components/landing/LandingPage'
 import { AboutPage } from './components/landing/AboutPage'
+import type { LandingIntent } from './lib/landingIntents'
 import type { ContaminantRoute } from './lib/contaminantChoices'
 import { TrustFooter } from './components/TrustFooter'
 import { type TopicId } from './components/TopicsHub'
@@ -327,6 +328,21 @@ export default function App() {
     [handleTopicSelect],
   )
 
+  const handleLandingIntent = useCallback(
+    (intent: LandingIntent) => {
+      if (intent.kind === 'guided') handleLandingGuided(intent.concernId)
+      else if (intent.kind === 'explore') handleLandingExplore(intent.topic)
+      else if (intent.kind === 'contaminant') handleLandingContaminant()
+      else if (intent.kind === 'tds-reading') handleLandingTdsReading()
+    },
+    [
+      handleLandingContaminant,
+      handleLandingExplore,
+      handleLandingGuided,
+      handleLandingTdsReading,
+    ],
+  )
+
   const handleExploreHandoff = useCallback(
     (clarifyId: string) => {
       const concern = activeConcern?.id
@@ -491,6 +507,7 @@ export default function App() {
         utilityLabel={UTILITY_LABEL}
         onHome={handleBackHome}
         onAbout={handleAbout}
+        onIntent={handleLandingIntent}
       />
     )
   }

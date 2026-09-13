@@ -5,10 +5,8 @@ Generate the WaterLens landing-page image + font assets.
 Sources
 -------
 Hero photo
-    Chatfield State Park, Colorado — the reservoir immediately north of
-    Highlands Ranch. Wikimedia Commons, CC BY-SA 4.0, by User:Denverjeffrey.
-    https://commons.wikimedia.org/wiki/File:Chatfield_State_Park.JPG
-    Attribution is rendered in the landing-page footer (licence requirement).
+    Images/Reservoir.png — Front Range reservoir. Cropped to the water band so
+    wide screens still show the reservoir instead of sky.
 
 Community photo
     Images/HRW-WaterFrest1.png — Highlands Ranch Water booth at Water Day.
@@ -36,18 +34,15 @@ REPO = Path(__file__).resolve().parent.parent
 ASSETS = REPO / "pws/CO0118015_hrw/dashboard/src/assets"
 FONTS = ASSETS / "fonts"
 
-HERO_SOURCE_URL = (
-    "https://upload.wikimedia.org/wikipedia/commons/3/3a/Chatfield_State_Park.JPG"
-)
+HERO_SOURCE = REPO / "Images/Reservoir.png"
 COMMUNITY_SOURCE = REPO / "Images/HRW-WaterFest1.png"
 COMMUNITY_SOURCE_LEGACY = REPO / "Images/HRW-WaterFrest1.png"
 
 UA = "WaterLens-CAC/1.0 (Congressional App Challenge student project)"
 
-# Hero: keep sky, the full foothill ridgeline, the tree line and a band of water.
-# Source is 6000x4000; this window is the horizon rather than the empty foreground.
-HERO_CROP = (0, 700, 6000, 2115)
-HERO_OUT = (2048, 483)
+# Reservoir.png is 4608x3456. Keep the water band; drop most sky and grass.
+HERO_CROP = (0, 1175, 4608, 2557)
+HERO_OUT = (2560, 768)
 
 # Banner crop: wide landscape strip from the Water Day booth photo.
 COMMUNITY_CROP = (0, 780, 1320, 1680)
@@ -73,12 +68,11 @@ def save_pair(img: Image.Image, stem: str, size: tuple[int, int]) -> None:
 
 
 def build_hero(tmp: Path) -> None:
-    print("hero (Chatfield State Park, CC BY-SA 4.0):")
-    src = tmp / "chatfield.jpg"
-    if not src.exists():
-        fetch(HERO_SOURCE_URL, src)
-    with Image.open(src) as im:
-        save_pair(im.crop(HERO_CROP), "hero-chatfield", HERO_OUT)
+    print("hero (Reservoir.png, water-centered crop):")
+    if not HERO_SOURCE.is_file():
+        sys.exit(f"missing {HERO_SOURCE}")
+    with Image.open(HERO_SOURCE) as im:
+        save_pair(im.crop(HERO_CROP), "hero-reservoir", HERO_OUT)
 
 
 def build_community(tmp: Path) -> None:
