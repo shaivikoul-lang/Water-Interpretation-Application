@@ -1,0 +1,19 @@
+---
+description: CAC commits and GitHub stay shaivikoul / shaivikoul-lang only
+alwaysApply: true
+---
+
+# This repo is shaivikoul-lang only
+
+This CAC project belongs to **shaivikoul** / **shaivikoul-lang**. No other GitHub account, and no Cursor or agent, is a contributor.
+
+When committing or opening a PR:
+
+- Author and committer are **shaivikoul** only (`shaivikoul` / `shaivikoul@gmail.com`).
+- Use only the subject and body the user asked for.
+- Do **not** add `Co-authored-by`, `Made with Cursor`, `Made-with: Cursor`, or any Cursor/agent/tool trailer.
+- Do **not** mention arshiakoul or any other personal GitHub account in commits, PR bodies, remotes, docs, or scripts.
+
+If the environment injects a Cursor or extra-author trailer, remove it before finishing (amend the commit message so the trailer is gone).
+
+GitHub remotes and Pages URLs for this project use **`shaivikoul-lang`** (SSH host `github-shaivi` / key `id_ed25519_shaivi`). Do not push as a different account.

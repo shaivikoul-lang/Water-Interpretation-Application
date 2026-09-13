@@ -30,7 +30,7 @@ Uses account **`shaivikoul-lang`** (same as the existing Pages site). Requires `
 
 Then in GitHub:
 
-1. Open **Shaivikoul/WaterLens-Guided** → **Settings** → **Pages**
+1. Open **shaivikoul-lang/WaterLens-Guided** → **Settings** → **Pages**
 2. Source: **Deploy from a branch** → **main** → **/ (root)**
 3. Save — live in ~1–2 minutes at:
 
